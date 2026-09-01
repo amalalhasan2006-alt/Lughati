@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار تدريبي — أنواع الكلمة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#2f6f68;
+    --teal-dark:#204d48;
+    --cream:#faf6ee;
+    --paper:#ffffff;
+    --gold:#d9a441;
+    --purple:#7b4397;
+    --red:#c0483f;
+    --ink:#22302c;
+    --ink-soft:#5b6a63;
+    --line:#e4ddc9;
+    --good:#2f7a4f;
+    --bad:#c0483f;
+    --radius:18px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Cairo',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:28px 16px 60px;
+  }
+  [dir="ltr"]{direction:ltr;text-align:left;}
+
+  .app{
+    width:100%;
+    max-width:640px;
+  }
+
+  /* top bar */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand-badge{
+    width:38px;height:38px;border-radius:11px;
+    background:linear-gradient(135deg,var(--teal),var(--teal-dark));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:15px;
+    flex-shrink:0;
+  }
+  .brand-text{font-weight:800;font-size:15px;color:var(--teal-dark);line-height:1.3;}
+  .brand-text small{display:block;font-weight:600;color:var(--ink-soft);font-size:12px;}
+
+  .lang-btn{
+    border:1.5px solid var(--line);
+    background:var(--paper);
+    color:var(--ink-soft);
+    font-family:inherit;
+    font-weight:700;
+    font-size:13px;
+    padding:8px 14px;
+    border-radius:100px;
+    cursor:pointer;
+    transition:border-color .15s, color .15s;
+  }
+  .lang-btn:hover{border-color:var(--teal);color:var(--teal-dark);}
+  .lang-btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+
+  .card{
+    background:var(--paper);
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    padding:28px 24px;
+    box-shadow:0 1px 2px rgba(34,48,44,.04);
+  }
+
+  /* ---------- login ---------- */
+  .screen{display:none;}
+  .screen.active{display:block;}
+
+  .login-hero{
+    text-align:center;
+    padding:6px 0 22px;
+  }
+  .login-hero h1{
+    font-size:22px;
+    font-weight:800;
+    color:var(--teal-dark);
+    margin:0 0 6px;
+  }
+  .login-hero p{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    margin:0;
+    line-height:1.7;
+  }
+
+  label.field-label{
+    display:block;
+    font-weight:700;
+    font-size:14px;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  input.name-input{
+    width:100%;
+    font-family:inherit;
+    font-size:16px;
+    padding:14px 16px;
+    border-radius:12px;
+    border:1.5px solid var(--line);
+    background:var(--cream);
+    color:var(--ink);
+    outline:none;
+    transition:border-color .15s;
+  }
+  input.name-input:focus{border-color:var(--teal);}
+
+  .btn{
+    font-family:inherit;
+    font-weight:800;
+    font-size:15px;
+    border:none;
+    border-radius:12px;
+    padding:14px 22px;
+    cursor:pointer;
+    transition:transform .08s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:active{transform:scale(.98);}
+  .btn-primary{
+    background:var(--teal);
+    color:#fff;
+    width:100%;
+    margin-top:18px;
+    box-shadow:0 2px 0 var(--teal-dark);
+  }
+  .btn-primary:hover{background:var(--teal-dark);}
+  .btn-primary:disabled{opacity:.45;cursor:not-allowed;}
+  .btn-ghost{
+    background:transparent;
+    border:1.5px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal-dark);}
+
+  .err-msg{
+    color:var(--bad);
+    font-size:13px;
+    font-weight:700;
+    margin-top:8px;
+    min-height:16px;
+  }
+
+  /* ---------- lesson ---------- */
+  .lesson-head{
+    text-align:center;
+    padding:2px 0 20px;
+  }
+  .eyebrow-pill{
+    display:inline-block;
+    background:var(--teal);
+    color:#fff;
+    font-size:12.5px;
+    font-weight:700;
+    padding:5px 14px;
+    border-radius:100px;
+    margin-bottom:12px;
+  }
+  .lesson-head h1{
+    font-size:22px;
+    font-weight:800;
+    color:var(--teal-dark);
+    margin:0 0 4px;
+  }
+  .lesson-head p{
+    color:var(--ink-soft);
+    font-size:14px;
+    margin:0;
+  }
+
+  .concept-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    margin:18px 0;
+  }
+  .concept-card{
+    border-radius:14px;
+    padding:16px 18px;
+    border:2px solid transparent;
+  }
+  .concept-card.c-noun{background:#f5eefb;border-color:var(--purple);}
+  .concept-card.c-verb{background:#fbf4e3;border-color:var(--gold);}
+  .concept-card.c-letter{background:#fbeeec;border-color:var(--red);}
+  .concept-card h3{
+    margin:0 0 6px;
+    font-size:16px;
+    font-weight:800;
+  }
+  .concept-card.c-noun h3{color:var(--purple);}
+  .concept-card.c-verb h3{color:#a67821;}
+  .concept-card.c-letter h3{color:var(--red);}
+  .concept-card p{
+    margin:0;
+    font-size:14px;
+    line-height:1.8;
+    color:var(--ink);
+  }
+  .concept-card .example{
+    display:inline-block;
+    margin-top:8px;
+    background:rgba(255,255,255,.7);
+    border-radius:8px;
+    padding:3px 10px;
+    font-size:13.5px;
+    font-weight:700;
+  }
+
+  .section-title{
+    font-size:15px;
+    font-weight:800;
+    color:var(--teal-dark);
+    margin:22px 0 10px;
+  }
+
+  .verb-chain{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:8px;
+  }
+  .verb-chip{
+    flex:1 1 auto;
+    min-width:100px;
+    background:var(--cream);
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:10px 12px;
+    text-align:center;
+  }
+  .verb-chip strong{display:block;font-size:14px;color:var(--teal-dark);}
+  .verb-chip span{display:block;font-size:13px;color:var(--ink-soft);margin-top:2px;}
+
+  .sentence-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .sentence-card{
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:14px 16px;
+    background:var(--cream);
+  }
+  .sentence-card h4{
+    margin:0 0 6px;
+    font-size:14.5px;
+    color:var(--teal-dark);
+  }
+  .sentence-card p{
+    margin:0;
+    font-size:13.5px;
+    line-height:1.7;
+    color:var(--ink);
+  }
+
+  /* ---------- quiz ---------- */
+  .quiz-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink-soft);
+  }
+  .progress-track{
+    height:8px;
+    background:var(--line);
+    border-radius:100px;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .progress-fill{
+    height:100%;
+    background:var(--teal);
+    border-radius:100px;
+    transition:width .25s ease;
+  }
+  .q-text{
+    font-size:17px;
+    font-weight:800;
+    line-height:1.7;
+    margin:0 0 18px;
+  }
+  .options{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:13px 14px;
+    cursor:pointer;
+    background:var(--paper);
+    transition:border-color .12s, background .12s;
+    font-size:15px;
+    font-weight:600;
+  }
+  .option:hover{border-color:var(--teal);}
+  .option .dot{
+    width:20px;height:20px;border-radius:50%;
+    border:2px solid var(--line);
+    flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color .12s, background .12s;
+  }
+  .option.selected{border-color:var(--teal);background:#eef6f3;}
+  .option.selected .dot{border-color:var(--teal);background:var(--teal);}
+  .option.selected .dot::after{content:'';width:8px;height:8px;border-radius:50%;background:#fff;}
+
+  .option.correct{border-color:var(--good);background:#eaf6ee;}
+  .option.correct .dot{border-color:var(--good);background:var(--good);}
+  .option.correct .dot::after{content:'✓';color:#fff;font-size:12px;font-weight:900;}
+  .option.wrong{border-color:var(--bad);background:#fbeceb;}
+  .option.wrong .dot{border-color:var(--bad);background:var(--bad);}
+  .option.wrong .dot::after{content:'✕';color:#fff;font-size:11px;font-weight:900;}
+  .option.disabled{cursor:default;}
+
+  .quiz-nav{
+    display:flex;
+    gap:10px;
+    margin-top:22px;
+  }
+  .quiz-nav .btn{flex:1;}
+
+  /* ---------- result ---------- */
+  .result-wrap{text-align:center;padding:6px 0;}
+  .score-ring{
+    width:150px;height:150px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .score-ring svg{position:absolute;inset:0;transform:rotate(-90deg);}
+  .score-ring .pct{
+    font-size:30px;font-weight:900;color:var(--teal-dark);
+    z-index:1;
+  }
+  .result-name{font-size:15px;color:var(--ink-soft);margin:0 0 2px;}
+  .result-title{font-size:20px;font-weight:800;color:var(--teal-dark);margin:0 0 6px;}
+  .result-sub{font-size:14px;color:var(--ink-soft);margin:0 0 20px;}
+  .score-detail{
+    display:flex;justify-content:center;gap:22px;
+    margin-bottom:22px;
+  }
+  .score-detail div{text-align:center;}
+  .score-detail strong{display:block;font-size:20px;color:var(--ink);}
+  .score-detail span{font-size:12.5px;color:var(--ink-soft);}
+  .sheet-status{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    min-height:16px;
+  }
+  .sheet-status.ok{color:var(--good);font-weight:700;}
+  .sheet-status.err{color:var(--bad);font-weight:700;}
+
+  footer.foot{
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:20px;
+    opacity:.7;
+  }
+
+  @media (max-width:480px){
+    .card{padding:22px 18px;}
+    .score-ring{width:130px;height:130px;}
+    .score-ring .pct{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-badge">ع</div>
+      <div class="brand-text" data-i18n="brandTitle">لغتي العربية
+        <small data-i18n="brandSub">الصف الخامس — المنهج السعودي</small>
+      </div>
+    </div>
+    <button class="lang-btn" id="langToggle" type="button">English</button>
+  </div>
+
+  <!-- SCREEN 1: LOGIN -->
+  <section class="screen active" id="screen-login">
+    <div class="card">
+      <div class="login-hero">
+        <h1 data-i18n="loginTitle">مراجعة المكتسبات السابقة</h1>
+        <p data-i18n="loginDesc">أنواع الكلمة — سجّل باسمك لتبدأ الدرس والتمارين</p>
+      </div>
+      <label class="field-label" for="studentName" data-i18n="nameLabel">اسم الطالب</label>
+      <input type="text" id="studentName" class="name-input" data-i18n-placeholder="namePlaceholder" placeholder="اكتب اسمك هنا">
+      <div class="err-msg" id="loginErr"></div>
+      <button class="btn btn-primary" id="startBtn" type="button" data-i18n="startBtn">ابدأ الدرس</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2: LESSON -->
+  <section class="screen" id="screen-lesson">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lessonPill">الدرس الأول</span>
+        <h1 data-i18n="lessonTitle">أنواعُ الكَلِمة</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى التمارين</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="nounTitle">الاسمُ</h3>
+          <p data-i18n="nounDesc">ما دلَّ على معنى في نفسه دون اقتران بزمن. علاماته: التنوين، ال التعريف، الجر.</p>
+          <span class="example" data-i18n="nounExample">مثال: كِتاب، مَدرَسة، شَمس</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="verbTitle">الفعلُ</h3>
+          <p data-i18n="verbDesc">ما دلَّ على حدَثٍ مقترنٍ بزمن. أنواعه: ماضٍ، مضارع، أمر.</p>
+          <span class="example" data-i18n="verbExample">مثال: كَتَبَ، يَكتُبُ، اُكتُبْ</span>
+        </div>
+        <div class="concept-card c-letter">
+          <h3 data-i18n="letterTitle">الحرفُ</h3>
+          <p data-i18n="letterDesc">لفظٌ لا يظهر معناه إلا إذا اقترن بغيره؛ مثل حروف الجر (إلى، عن، في)، والعطف (الواو، ثم، الفاء)، والنداء (يا).</p>
+          <span class="example" data-i18n="letterExample">مثال: في، إلى، الواو، يا</span>
+        </div>
+      </div>
+
+      <div class="section-title" data-i18n="verbTypesTitle">أنواعُ الفعل</div>
+      <div class="verb-chain">
+        <div class="verb-chip"><strong data-i18n="past">ماضٍ</strong><span>دَرَسَ، كَتَبَ</span></div>
+        <div class="verb-chip"><strong data-i18n="present">مضارع</strong><span>يَدرُسُ، يَكتُبُ</span></div>
+        <div class="verb-chip"><strong data-i18n="imperative">أمر</strong><span>اُدرُسْ، اُكتُبْ</span></div>
+      </div>
+
+      <div class="section-title" data-i18n="sentTypesTitle">نَوعا الجُملة</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="verbalSentTitle">الجملة الفعلية</h4>
+          <p data-i18n="verbalSentDesc">تبدأ بفعل، ولها ركنان أساسيان: فِعل يدلُّ على حدَث، وفاعِل يُحدِث الفعل. مثال: يَحرِصُ المسلمُ على فُروضِه.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="nominalSentTitle">الجملة الاسمية</h4>
+          <p data-i18n="nominalSentDesc">تبدأ باسم، ولها ركنان أساسيان: المبتدأ والخبر، وهما مرفوعان دائمًا. مثال: الشمسُ ساطعةٌ.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toQuizBtn" type="button" data-i18n="toQuizBtn">ابدأ التمارين</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 3: QUIZ -->
+  <section class="screen" id="screen-quiz">
+    <div class="card">
+      <div class="quiz-top">
+        <span id="quizProgressLabel">1 / 12</span>
+        <span id="quizScoreLabel"></span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="q-text" id="qText"></p>
+      <div class="options" id="qOptions"></div>
+      <div class="quiz-nav">
+        <button class="btn btn-primary" id="nextBtn" type="button" disabled data-i18n="nextBtn">التالي</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 4: RESULT -->
+  <section class="screen" id="screen-result">
+    <div class="card result-wrap">
+      <div class="score-ring">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <circle cx="75" cy="75" r="66" fill="none" stroke="#e4ddc9" stroke-width="12"/>
+          <circle cx="75" cy="75" r="66" fill="none" stroke="#2f6f68" stroke-width="12"
+                  stroke-linecap="round" id="ringProgress"
+                  stroke-dasharray="414.7" stroke-dashoffset="414.7"/>
+        </svg>
+        <div class="pct" id="pctLabel">0%</div>
+      </div>
+      <p class="result-name" id="resultName"></p>
+      <h1 class="result-title" id="resultTitle" data-i18n="resultTitle">أحسنت!</h1>
+      <p class="result-sub" id="resultSub"></p>
+      <div class="score-detail">
+        <div><strong id="scoreCorrect">0</strong><span data-i18n="correctLabel">إجابات صحيحة</span></div>
+        <div><strong id="scoreTotal">0</strong><span data-i18n="totalLabel">مجموع الأسئلة</span></div>
+      </div>
+      <button class="btn btn-primary" id="retryBtn" type="button" data-i18n="retryBtn">إعادة المحاولة</button>
+      <div class="sheet-status" id="sheetStatus"></div>
+    </div>
+  </section>
+
+  <footer class="foot" data-i18n="footer">لغتي العربية — الصف الخامس</footer>
+</div>
+
+<script>
+/* =====================================================
+   CONFIG — paste your Google Apps Script Web App URL here
+   ===================================================== */
+const GOOGLE_SCRIPT_URL = ""; // e.g. "https://script.google.com/macros/s/xxxxx/exec"
+
+/* =====================================================
+   Translations (UI chrome only — lesson content stays Arabic)
+   ===================================================== */
+const I18N = {
+  ar: {
+    brandTitle: "لغتي العربية", brandSub: "الصف الخامس — المنهج السعودي",
+    loginTitle: "مراجعة المكتسبات السابقة",
+    loginDesc: "أنواع الكلمة — سجّل باسمك لتبدأ الدرس والتمارين",
+    nameLabel: "اسم الطالب", namePlaceholder: "اكتب اسمك هنا",
+    startBtn: "ابدأ الدرس",
+    lessonPill: "الدرس الأول", lessonTitle: "أنواعُ الكَلِمة",
+    lessonDesc: "اقرأ الشرح جيدًا قبل الانتقال إلى التمارين",
+    nounTitle: "الاسمُ", nounDesc: "ما دلَّ على معنى في نفسه دون اقتران بزمن. علاماته: التنوين، ال التعريف، الجر.",
+    nounExample: "مثال: كِتاب، مَدرَسة، شَمس",
+    verbTitle: "الفعلُ", verbDesc: "ما دلَّ على حدَثٍ مقترنٍ بزمن. أنواعه: ماضٍ، مضارع، أمر.",
+    verbExample: "مثال: كَتَبَ، يَكتُبُ، اُكتُبْ",
+    letterTitle: "الحرفُ", letterDesc: "لفظٌ لا يظهر معناه إلا إذا اقترن بغيره؛ مثل حروف الجر (إلى، عن، في)، والعطف (الواو، ثم، الفاء)، والنداء (يا).",
+    letterExample: "مثال: في، إلى، الواو، يا",
+    verbTypesTitle: "أنواعُ الفعل", past: "ماضٍ", present: "مضارع", imperative: "أمر",
+    sentTypesTitle: "نَوعا الجُملة",
+    verbalSentTitle: "الجملة الفعلية",
+    verbalSentDesc: "تبدأ بفعل، ولها ركنان أساسيان: فِعل يدلُّ على حدَث، وفاعِل يُحدِث الفعل. مثال: يَحرِصُ المسلمُ على فُروضِه.",
+    nominalSentTitle: "الجملة الاسمية",
+    nominalSentDesc: "تبدأ باسم، ولها ركنان أساسيان: المبتدأ والخبر، وهما مرفوعان دائمًا. مثال: الشمسُ ساطعةٌ.",
+    toQuizBtn: "ابدأ التمارين",
+    nextBtn: "التالي", finishBtn: "إنهاء الاختبار",
+    resultTitle: "أحسنت!", correctLabel: "إجابات صحيحة", totalLabel: "مجموع الأسئلة",
+    retryBtn: "إعادة المحاولة",
+    footer: "لغتي العربية — الصف الخامس",
+    nameRequired: "من فضلك اكتب اسمك أولًا",
+    sending: "جارٍ إرسال النتيجة...",
+    sentOk: "تم إرسال نتيجتك بنجاح ✓",
+    sentErr: "تعذّر إرسال النتيجة، لكنها ظاهرة أمامك",
+    notConfigured: "",
+    perfMsgs: {
+      great: "أداء ممتاز! أتقنت الدرس بشكل رائع.",
+      good: "أداء جيد جدًا! راجع الأخطاء البسيطة وستتقن الدرس تمامًا.",
+      okay: "بداية جيدة. راجع الشرح مرة أخرى وحاول من جديد.",
+      low: "لا بأس، كل محاولة خطوة للأمام. راجع الدرس وحاول مجددًا."
+    }
+  },
+  en: {
+    brandTitle: "My Arabic", brandSub: "Grade 5 — Saudi Curriculum",
+    loginTitle: "Reviewing Previous Learning",
+    loginDesc: "Word types — sign in with your name to start the lesson and exercises",
+    nameLabel: "Student name", namePlaceholder: "Type your name here",
+    startBtn: "Start the lesson",
+    lessonPill: "Lesson 1", lessonTitle: "أنواعُ الكَلِمة (Word Types)",
+    lessonDesc: "Read the explanation carefully before moving to the exercises",
+    nounTitle: "Noun (الاسم)", nounDesc: "A word with meaning on its own, not tied to a specific time. Signs: tanween, the definite article \"ال\", or being preceded by a preposition.",
+    nounExample: "Examples: كِتاب (book), مَدرَسة (school), شَمس (sun)",
+    verbTitle: "Verb (الفعل)", verbDesc: "A word that indicates an action tied to a specific time. Types: past, present, imperative.",
+    verbExample: "Examples: كَتَبَ (wrote), يَكتُبُ (writes), اُكتُبْ (write!)",
+    letterTitle: "Letter/Particle (الحرف)", letterDesc: "A word whose meaning only appears when linked with another word; e.g. prepositions (إلى، عن، في), conjunctions (و، ثم، ف), and the vocative (يا).",
+    letterExample: "Examples: في (in), إلى (to), و (and), يا (oh)",
+    verbTypesTitle: "Verb Types", past: "Past", present: "Present", imperative: "Imperative",
+    sentTypesTitle: "Sentence Types",
+    verbalSentTitle: "Verbal sentence",
+    verbalSentDesc: "Starts with a verb, and has two main parts: a verb showing an action, and a subject doing it. Example: يَحرِصُ المسلمُ على فُروضِه.",
+    nominalSentTitle: "Nominal sentence",
+    nominalSentDesc: "Starts with a noun, and has two main parts: the subject (مبتدأ) and predicate (خبر), both always in the nominative case. Example: الشمسُ ساطعةٌ.",
+    toQuizBtn: "Start the exercises",
+    nextBtn: "Next", finishBtn: "Finish quiz",
+    resultTitle: "Well done!", correctLabel: "Correct answers", totalLabel: "Total questions",
+    retryBtn: "Try again",
+    footer: "My Arabic — Grade 5",
+    nameRequired: "Please type your name first",
+    sending: "Sending your result...",
+    sentOk: "Your result was sent successfully ✓",
+    sentErr: "Couldn't send the result, but it's shown above",
+    notConfigured: "",
+    perfMsgs: {
+      great: "Excellent work! You've mastered this lesson.",
+      good: "Great job! Review the small mistakes and you'll have it fully mastered.",
+      okay: "Good start. Review the explanation again and try once more.",
+      low: "No worries — every attempt is a step forward. Review the lesson and try again."
+    }
+  }
+};
+
+let lang = "ar";
+
+/* =====================================================
+   Quiz data — Lesson 1: أنواع الكلمة
+   Each question is written once; correct index is fixed.
+   ===================================================== */
+const QUESTIONS = [
+  { q: "ما نوعُ الكلمة التالية: «كِتاب»؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 0 },
+  { q: "ما نوعُ الكلمة التالية: «كَتَبَ»؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 1 },
+  { q: "ما نوعُ الكلمة التالية: «في»؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2 },
+  { q: "من علاماتِ الاسمِ:", options: ["التنوين", "الاقترانُ بزمن", "اقترانُ المعنى بغيره"], correct: 0 },
+  { q: "الفعلُ الذي يدلُّ على حدَثٍ وقعَ في الزمنِ الماضي، مثل «دَرَسَ»، يُسمّى:", options: ["فعلًا مضارعًا", "فعلًا ماضيًا", "فعلَ أمرٍ"], correct: 1 },
+  { q: "صنِّف الكلمةَ: «يَدرُسُ»", options: ["فعلٌ ماضٍ", "فعلٌ مضارعٌ", "فعلُ أمرٍ"], correct: 1 },
+  { q: "صنِّف الكلمةَ: «اُكتُبْ»", options: ["فعلٌ ماضٍ", "فعلٌ مضارعٌ", "فعلُ أمرٍ"], correct: 2 },
+  { q: "الجملةُ «الشمسُ ساطعةٌ» جملةٌ:", options: ["اسميةٌ؛ لأنها تبدأُ باسم", "فعليةٌ؛ لأنها تبدأُ بفعل"], correct: 0 },
+  { q: "الجملةُ «يَحرِصُ المسلمُ على فُروضِه» جملةٌ:", options: ["اسميةٌ", "فعليةٌ؛ لأنها تبدأُ بفعل"], correct: 1 },
+  { q: "ركنا الجملةِ الاسميةِ الأساسيان هما:", options: ["الفعلُ والفاعلُ", "المبتدأُ والخبرُ"], correct: 1 },
+  { q: "ركنا الجملةِ الفعليةِ الأساسيان هما:", options: ["الفعلُ والفاعلُ", "المبتدأُ والخبرُ"], correct: 0 },
+  { q: "لفظٌ لا يظهرُ معناه إلا إذا اقترنَ بغيره، ما نوعُه؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2 }
+];
+
+/* =====================================================
+   State
+   ===================================================== */
+let studentName = "";
+let currentQ = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let locked = false;
+
+/* =====================================================
+   Helpers
+   ===================================================== */
+function t(key){ return I18N[lang][key] ?? key; }
+
+function applyI18n(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.getElementById("langToggle").textContent = lang === "ar" ? "English" : "العربية";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if (I18N[lang][key] !== undefined){
+      // preserve nested <small> for brand text
+      if (key === "brandTitle"){
+        el.childNodes[0].nodeValue = I18N[lang][key] + " ";
+      } else {
+        el.textContent = I18N[lang][key];
+      }
+    }
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.placeholder = I18N[lang][key];
+  });
+  document.getElementById("nextBtn").textContent =
+    currentQ === QUESTIONS.length - 1 ? t("finishBtn") : t("nextBtn");
+}
+
+function showScreen(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* ---------- login ---------- */
+document.getElementById("startBtn").addEventListener("click", ()=>{
+  const val = document.getElementById("studentName").value.trim();
+  if (!val){
+    document.getElementById("loginErr").textContent = t("nameRequired");
+    return;
+  }
+  document.getElementById("loginErr").textContent = "";
+  studentName = val;
+  showScreen("screen-lesson");
+});
+document.getElementById("studentName").addEventListener("keydown", (e)=>{
+  if (e.key === "Enter") document.getElementById("startBtn").click();
+});
+
+/* ---------- lesson -> quiz ---------- */
+document.getElementById("toQuizBtn").addEventListener("click", ()=>{
+  currentQ = 0;
+  answers = new Array(QUESTIONS.length).fill(null);
+  renderQuestion();
+  showScreen("screen-quiz");
+});
+
+/* ---------- quiz rendering ---------- */
+function renderQuestion(){
+  locked = false;
+  const item = QUESTIONS[currentQ];
+  document.getElementById("qText").textContent = item.q;
+  document.getElementById("quizProgressLabel").textContent =
+    `${currentQ+1} / ${QUESTIONS.length}`;
+  document.getElementById("progressFill").style.width =
+    `${((currentQ)/QUESTIONS.length)*100}%`;
+
+  const optsWrap = document.getElementById("qOptions");
+  optsWrap.innerHTML = "";
+  item.options.forEach((optText, idx)=>{
+    const div = document.createElement("div");
+    div.className = "option";
+    div.innerHTML = `<span class="dot"></span><span>${optText}</span>`;
+    div.addEventListener("click", ()=> selectOption(idx));
+    optsWrap.appendChild(div);
+  });
+
+  // restore previous answer if navigating back (not used currently, but safe)
+  const nextBtn = document.getElementById("nextBtn");
+  nextBtn.disabled = true;
+  nextBtn.textContent = currentQ === QUESTIONS.length - 1 ? t("finishBtn") : t("nextBtn");
+}
+
+function selectOption(idx){
+  if (locked) return;
+  locked = true;
+  answers[currentQ] = idx;
+  const item = QUESTIONS[currentQ];
+  const opts = document.querySelectorAll("#qOptions .option");
+  opts.forEach((el, i)=>{
+    el.classList.add("disabled");
+    if (i === item.correct) el.classList.add("correct");
+    else if (i === idx) el.classList.add("wrong");
+  });
+  document.getElementById("nextBtn").disabled = false;
+}
+
+document.getElementById("nextBtn").addEventListener("click", ()=>{
+  if (currentQ < QUESTIONS.length - 1){
+    currentQ++;
+    renderQuestion();
+  } else {
+    finishQuiz();
+  }
+});
+
+/* ---------- result ---------- */
+function finishQuiz(){
+  const total = QUESTIONS.length;
+  const correct = answers.reduce((sum, ans, i)=> sum + (ans === QUESTIONS[i].correct ? 1 : 0), 0);
+  const pct = Math.round((correct/total)*100);
+
+  document.getElementById("resultName").textContent = studentName;
+  document.getElementById("scoreCorrect").textContent = correct;
+  document.getElementById("scoreTotal").textContent = total;
+  document.getElementById("pctLabel").textContent = pct + "%";
+
+  const circumference = 414.7;
+  const offset = circumference - (circumference * pct / 100);
+  document.getElementById("ringProgress").style.strokeDashoffset = offset;
+
+  let ringColor = "#2f6f68";
+  let msgKey = "great";
+  if (pct < 50){ ringColor = "#c0483f"; msgKey = "low"; }
+  else if (pct < 70){ ringColor = "#d9a441"; msgKey = "okay"; }
+  else if (pct < 90){ ringColor = "#2f6f68"; msgKey = "good"; }
+  else { ringColor = "#2f7a4f"; msgKey = "great"; }
+  document.getElementById("ringProgress").setAttribute("stroke", ringColor);
+  document.getElementById("resultSub").textContent = t("perfMsgs")[msgKey] || I18N[lang].perfMsgs[msgKey];
+
+  showScreen("screen-result");
+  sendToSheet(correct, total, pct);
+}
+
+document.getElementById("retryBtn").addEventListener("click", ()=>{
+  currentQ = 0;
+  answers = new Array(QUESTIONS.length).fill(null);
+  renderQuestion();
+  document.getElementById("sheetStatus").textContent = "";
+  document.getElementById("sheetStatus").className = "sheet-status";
+  showScreen("screen-quiz");
+});
+
+/* ---------- Google Sheets ---------- */
+function sendToSheet(correct, total, pct){
+  const statusEl = document.getElementById("sheetStatus");
+  if (!GOOGLE_SCRIPT_URL){
+    statusEl.textContent = "";
+    return;
+  }
+  statusEl.textContent = t("sending");
+  statusEl.className = "sheet-status";
+
+  fetch(GOOGLE_SCRIPT_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({
+      name: studentName,
+      score: correct,
+      total: total,
+      percentage: pct + "%",
+      lesson: "أنواع الكلمة",
+      timestamp: new Date().toISOString()
+    })
+  }).then(()=>{
+    statusEl.textContent = t("sentOk");
+    statusEl.className = "sheet-status ok";
+  }).catch(()=>{
+    statusEl.textContent = t("sentErr");
+    statusEl.className = "sheet-status err";
+  });
+}
+
+/* ---------- language toggle ---------- */
+document.getElementById("langToggle").addEventListener("click", ()=>{
+  lang = lang === "ar" ? "en" : "ar";
+  applyI18n();
+});
+
+/* ---------- init ---------- */
+applyI18n();
+</script>
+</body>
+</html>
