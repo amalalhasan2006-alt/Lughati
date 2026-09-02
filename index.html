@@ -37,305 +37,147 @@
   }
   [dir="ltr"]{direction:ltr;text-align:left;}
 
-  .app{
-    width:100%;
-    max-width:640px;
-  }
+  .app{width:100%;max-width:640px;}
 
-  /* top bar */
-  .topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:18px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .brand-badge{
-    width:38px;height:38px;border-radius:11px;
-    background:linear-gradient(135deg,var(--teal),var(--teal-dark));
-    display:flex;align-items:center;justify-content:center;
-    color:#fff;font-weight:800;font-size:15px;
-    flex-shrink:0;
-  }
+  .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-badge{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;flex-shrink:0;}
   .brand-text{font-weight:800;font-size:15px;color:var(--teal-dark);line-height:1.3;}
   .brand-text small{display:block;font-weight:600;color:var(--ink-soft);font-size:12px;}
 
-  .lang-btn{
-    border:1.5px solid var(--line);
-    background:var(--paper);
-    color:var(--ink-soft);
-    font-family:inherit;
-    font-weight:700;
-    font-size:13px;
-    padding:8px 14px;
-    border-radius:100px;
-    cursor:pointer;
-    transition:border-color .15s, color .15s;
-  }
+  .lang-btn{border:1.5px solid var(--line);background:var(--paper);color:var(--ink-soft);font-family:inherit;font-weight:700;font-size:13px;padding:8px 14px;border-radius:100px;cursor:pointer;transition:border-color .15s, color .15s;}
   .lang-btn:hover{border-color:var(--teal);color:var(--teal-dark);}
   .lang-btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
 
-  .card{
-    background:var(--paper);
-    border-radius:var(--radius);
-    border:1px solid var(--line);
-    padding:28px 24px;
-    box-shadow:0 1px 2px rgba(34,48,44,.04);
-  }
+  .card{background:var(--paper);border-radius:var(--radius);border:1px solid var(--line);padding:28px 24px;box-shadow:0 1px 2px rgba(34,48,44,.04);}
 
-  /* ---------- login ---------- */
   .screen{display:none;}
   .screen.active{display:block;}
 
-  .login-hero{
-    text-align:center;
-    padding:6px 0 22px;
-  }
-  .login-hero h1{
-    font-size:22px;
-    font-weight:800;
-    color:var(--teal-dark);
-    margin:0 0 6px;
-  }
-  .login-hero p{
-    color:var(--ink-soft);
-    font-size:14.5px;
-    margin:0;
-    line-height:1.7;
-  }
+  .login-hero{text-align:center;padding:6px 0 22px;}
+  .login-hero h1{font-size:22px;font-weight:800;color:var(--teal-dark);margin:0 0 6px;}
+  .login-hero p{color:var(--ink-soft);font-size:14.5px;margin:0;line-height:1.7;}
+  .credit-line{font-size:12.5px;color:var(--gold);font-weight:700;margin:0 0 10px !important;}
 
-  label.field-label{
-    display:block;
-    font-weight:700;
-    font-size:14px;
-    margin:0 0 8px;
-    color:var(--ink);
+  .lesson-item{border:1.5px solid var(--line);border-radius:16px;padding:18px;background:var(--cream);}
+  .lesson-item-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+  .lesson-item-num{
+    flex-shrink:0;width:36px;height:36px;border-radius:10px;
+    background:linear-gradient(135deg,var(--teal),var(--teal-dark));
+    color:#fff;font-weight:800;font-size:15px;
+    display:flex;align-items:center;justify-content:center;
   }
-  input.name-input{
-    width:100%;
-    font-family:inherit;
-    font-size:16px;
-    padding:14px 16px;
-    border-radius:12px;
-    border:1.5px solid var(--line);
-    background:var(--cream);
-    color:var(--ink);
-    outline:none;
-    transition:border-color .15s;
+  .lesson-item-text{flex:1;min-width:0;}
+  .lesson-item-text h3{margin:0 0 4px;font-size:15.5px;color:var(--teal-dark);font-weight:800;line-height:1.4;}
+  .lesson-item-text p{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.6;}
+  .lesson-item-tag{
+    display:inline-block;margin-top:8px;background:#eaf6ee;color:var(--good);
+    font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:100px;
   }
+  .btn-inline{width:100%;margin:0;padding:12px 18px;font-size:14px;box-shadow:0 2px 0 var(--teal-dark);}
+
+  label.field-label{display:block;font-weight:700;font-size:14px;margin:0 0 8px;color:var(--ink);}
+  input.name-input{width:100%;font-family:inherit;font-size:16px;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink);outline:none;transition:border-color .15s;}
   input.name-input:focus{border-color:var(--teal);}
 
-  .btn{
-    font-family:inherit;
-    font-weight:800;
-    font-size:15px;
-    border:none;
-    border-radius:12px;
-    padding:14px 22px;
-    cursor:pointer;
-    transition:transform .08s ease, box-shadow .15s ease, background .15s ease;
-  }
+  .btn{font-family:inherit;font-weight:800;font-size:15px;border:none;border-radius:12px;padding:14px 22px;cursor:pointer;transition:transform .08s ease, box-shadow .15s ease, background .15s ease;}
   .btn:active{transform:scale(.98);}
-  .btn-primary{
-    background:var(--teal);
-    color:#fff;
-    width:100%;
-    margin-top:18px;
-    box-shadow:0 2px 0 var(--teal-dark);
-  }
+  .btn-primary{background:var(--teal);color:#fff;width:100%;margin-top:18px;box-shadow:0 2px 0 var(--teal-dark);}
   .btn-primary:hover{background:var(--teal-dark);}
   .btn-primary:disabled{opacity:.45;cursor:not-allowed;}
-  .btn-ghost{
-    background:transparent;
-    border:1.5px solid var(--line);
-    color:var(--ink-soft);
-  }
+  .btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink-soft);}
   .btn-ghost:hover{border-color:var(--teal);color:var(--teal-dark);}
 
-  .err-msg{
-    color:var(--bad);
-    font-size:13px;
-    font-weight:700;
-    margin-top:8px;
-    min-height:16px;
-  }
+  .err-msg{color:var(--bad);font-size:13px;font-weight:700;margin-top:8px;min-height:16px;}
 
-  /* ---------- lesson ---------- */
-  .lesson-head{
-    text-align:center;
-    padding:2px 0 20px;
-  }
-  .eyebrow-pill{
-    display:inline-block;
-    background:var(--teal);
-    color:#fff;
-    font-size:12.5px;
-    font-weight:700;
-    padding:5px 14px;
-    border-radius:100px;
-    margin-bottom:12px;
-  }
-  .lesson-head h1{
-    font-size:22px;
-    font-weight:800;
-    color:var(--teal-dark);
-    margin:0 0 4px;
-  }
-  .lesson-head p{
-    color:var(--ink-soft);
-    font-size:14px;
-    margin:0;
-  }
+  .lesson-head{text-align:center;padding:2px 0 20px;}
+  .eyebrow-pill{display:inline-block;background:var(--teal);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:12px;}
+  .lesson-head h1{font-size:22px;font-weight:800;color:var(--teal-dark);margin:0 0 4px;}
+  .lesson-head p{color:var(--ink-soft);font-size:14px;margin:0;}
 
-  .concept-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    margin:18px 0;
-  }
-  .concept-card{
-    border-radius:14px;
-    padding:16px 18px;
-    border:2px solid transparent;
-  }
+  .family-intro{background:linear-gradient(135deg,#eef6f3,#f7f3e6);border-radius:14px;padding:16px 18px;margin-bottom:18px;font-size:14px;line-height:1.85;}
+  .family-intro h2{margin:0 0 6px;font-size:16px;color:var(--teal-dark);}
+
+  .concept-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0;}
+  .concept-card{border-radius:14px;padding:16px 18px;border:2px solid transparent;}
   .concept-card.c-noun{background:#f5eefb;border-color:var(--purple);}
   .concept-card.c-verb{background:#fbf4e3;border-color:var(--gold);}
   .concept-card.c-letter{background:#fbeeec;border-color:var(--red);}
-  .concept-card h3{
-    margin:0 0 6px;
-    font-size:16px;
-    font-weight:800;
-  }
+  .concept-card h3{margin:0 0 2px;font-size:16px;font-weight:800;}
+  .concept-card .en-term{display:block;font-size:12px;font-weight:700;color:var(--ink-soft);margin-bottom:8px;}
   .concept-card.c-noun h3{color:var(--purple);}
   .concept-card.c-verb h3{color:#a67821;}
   .concept-card.c-letter h3{color:var(--red);}
-  .concept-card p{
-    margin:0;
-    font-size:14px;
-    line-height:1.8;
-    color:var(--ink);
-  }
-  .concept-card .example{
-    display:inline-block;
-    margin-top:8px;
-    background:rgba(255,255,255,.7);
-    border-radius:8px;
-    padding:3px 10px;
-    font-size:13.5px;
-    font-weight:700;
-  }
+  .concept-card p{margin:0;font-size:14px;line-height:1.8;color:var(--ink);}
+  .concept-card .example{display:inline-block;margin-top:8px;background:rgba(255,255,255,.7);border-radius:8px;padding:3px 10px;font-size:13.5px;font-weight:700;}
+  .signs-list{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+  .signs-list li{background:rgba(255,255,255,.75);border-radius:8px;padding:7px 11px;font-size:13px;}
 
-  .section-title{
-    font-size:15px;
-    font-weight:800;
-    color:var(--teal-dark);
-    margin:22px 0 10px;
-  }
+  .section-title{font-size:15px;font-weight:800;color:var(--teal-dark);margin:22px 0 10px;}
 
-  .verb-chain{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:8px;
-  }
-  .verb-chip{
-    flex:1 1 auto;
-    min-width:100px;
-    background:var(--cream);
-    border:1.5px solid var(--line);
-    border-radius:12px;
-    padding:10px 12px;
-    text-align:center;
-  }
+  .verb-chain{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+  .verb-chip{flex:1 1 auto;min-width:100px;background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;text-align:center;}
   .verb-chip strong{display:block;font-size:14px;color:var(--teal-dark);}
   .verb-chip span{display:block;font-size:13px;color:var(--ink-soft);margin-top:2px;}
 
-  .sentence-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-  }
-  .sentence-card{
-    border:1.5px solid var(--line);
-    border-radius:12px;
-    padding:14px 16px;
-    background:var(--cream);
-  }
-  .sentence-card h4{
-    margin:0 0 6px;
-    font-size:14.5px;
-    color:var(--teal-dark);
-  }
-  .sentence-card p{
-    margin:0;
-    font-size:13.5px;
-    line-height:1.7;
-    color:var(--ink);
-  }
+  .sentence-grid{display:grid;grid-template-columns:1fr;gap:12px;}
+  .sentence-card{border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--cream);}
+  .sentence-card h4{margin:0 0 6px;font-size:14.5px;color:var(--teal-dark);}
+  .sentence-card p{margin:0;font-size:13.5px;line-height:1.7;color:var(--ink);}
+
+  /* ---------- games shared ---------- */
+  .game-head{text-align:center;padding:2px 0 14px;}
+  .game-head h1{font-size:20px;font-weight:800;color:var(--teal-dark);margin:0 0 4px;}
+  .game-head p{color:var(--ink-soft);font-size:13.5px;margin:0;}
+  .game-meta{display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:var(--ink-soft);margin:14px 0 8px;}
+  .toast-wrap{text-align:center;min-height:26px;margin-bottom:6px;}
+  .toast-pill{display:inline-block;background:var(--good);color:#fff;font-weight:800;padding:9px 20px;border-radius:100px;font-size:13.5px;box-shadow:0 4px 10px rgba(47,122,79,.25);}
+
+  /* ---------- fishing game ---------- */
+  .target-banner-wrap{text-align:center;margin-bottom:10px;}
+  .target-banner{display:inline-block;background:#fff;border:2px dashed var(--teal);border-radius:100px;padding:8px 20px;font-weight:800;font-size:15px;color:var(--teal-dark);}
+  .pond{position:relative;height:330px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#8fd3e8 0%,#3f8fb0 45%,#1c5470 100%);margin-bottom:6px;}
+  .fish-decor{position:absolute;font-size:20px;opacity:.32;pointer-events:none;}
+  .bubble{position:absolute;background:#fff;color:var(--teal-dark);font-weight:800;font-size:14.5px;padding:9px 15px;border-radius:16px;border:2px solid var(--teal);cursor:pointer;box-shadow:0 3px 6px rgba(0,0,0,.18);animation:bob 2.8s ease-in-out infinite;user-select:none;transition:transform .15s, opacity .3s;white-space:nowrap;}
+  .bubble:nth-child(3n+1){animation-delay:.2s;}
+  .bubble:nth-child(3n+2){animation-delay:.6s;}
+  .bubble.caught{background:var(--good);color:#fff;border-color:var(--good);transform:scale(1.2);opacity:0;pointer-events:none;}
+  .bubble.wrong-shake{animation:shake .4s;border-color:var(--bad);background:#fdeceb;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  @keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-7px);}75%{transform:translateX(7px);}}
+
+  .game-complete{text-align:center;padding:26px 0 6px;}
+  .game-complete .big-emoji{font-size:46px;margin-bottom:8px;}
+  .game-complete h2{font-size:19px;font-weight:800;color:var(--teal-dark);margin:0 0 6px;}
+  .game-complete p{color:var(--ink-soft);font-size:14px;margin:0 0 6px;}
+
+  /* ---------- memory game ---------- */
+  .memory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:6px 0 4px;}
+  .mem-card{height:94px;cursor:pointer;perspective:700px;}
+  .mem-card-inner{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d;}
+  .mem-card.flipped .mem-card-inner,.mem-card.matched .mem-card-inner{transform:rotateY(180deg);}
+  .mem-face{position:absolute;inset:0;border-radius:12px;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;padding:8px;text-align:center;font-weight:800;font-size:13.5px;line-height:1.4;}
+  .mem-back{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;font-size:24px;}
+  .mem-front{transform:rotateY(180deg);border:2px solid var(--line);}
+  .mem-front.cat-noun{background:#f5eefb;border-color:var(--purple);color:var(--purple);}
+  .mem-front.cat-verb{background:#fbf4e3;border-color:var(--gold);color:#a67821;}
+  .mem-front.cat-letter{background:#fbeeec;border-color:var(--red);color:var(--red);}
+  .mem-front.cat-nominal{background:#eaf3f1;border-color:var(--teal);color:var(--teal-dark);}
+  .mem-front.cat-verbal{background:#e2eeea;border-color:var(--teal-dark);color:var(--teal-dark);}
+  .mem-card.matched{opacity:.55;}
 
   /* ---------- quiz ---------- */
-  .quiz-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:14px;
-    font-size:13px;
-    font-weight:700;
-    color:var(--ink-soft);
-  }
-  .progress-track{
-    height:8px;
-    background:var(--line);
-    border-radius:100px;
-    overflow:hidden;
-    margin-bottom:22px;
-  }
-  .progress-fill{
-    height:100%;
-    background:var(--teal);
-    border-radius:100px;
-    transition:width .25s ease;
-  }
-  .q-text{
-    font-size:17px;
-    font-weight:800;
-    line-height:1.7;
-    margin:0 0 18px;
-  }
-  .options{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
-  .option{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    border:1.5px solid var(--line);
-    border-radius:12px;
-    padding:13px 14px;
-    cursor:pointer;
-    background:var(--paper);
-    transition:border-color .12s, background .12s;
-    font-size:15px;
-    font-weight:600;
-  }
+  .quiz-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:13px;font-weight:700;color:var(--ink-soft);}
+  .progress-track{height:8px;background:var(--line);border-radius:100px;overflow:hidden;margin-bottom:22px;}
+  .progress-fill{height:100%;background:var(--teal);border-radius:100px;transition:width .25s ease;}
+  .q-text{font-size:17px;font-weight:800;line-height:1.7;margin:0 0 18px;}
+  .options{display:flex;flex-direction:column;gap:10px;}
+  .option{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;cursor:pointer;background:var(--paper);transition:border-color .12s, background .12s;font-size:15px;font-weight:600;}
   .option:hover{border-color:var(--teal);}
-  .option .dot{
-    width:20px;height:20px;border-radius:50%;
-    border:2px solid var(--line);
-    flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    transition:border-color .12s, background .12s;
-  }
+  .option .dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .12s, background .12s;}
   .option.selected{border-color:var(--teal);background:#eef6f3;}
   .option.selected .dot{border-color:var(--teal);background:var(--teal);}
   .option.selected .dot::after{content:'';width:8px;height:8px;border-radius:50%;background:#fff;}
-
   .option.correct{border-color:var(--good);background:#eaf6ee;}
   .option.correct .dot{border-color:var(--good);background:var(--good);}
   .option.correct .dot::after{content:'✓';color:#fff;font-size:12px;font-weight:900;}
@@ -344,58 +186,35 @@
   .option.wrong .dot::after{content:'✕';color:#fff;font-size:11px;font-weight:900;}
   .option.disabled{cursor:default;}
 
-  .quiz-nav{
-    display:flex;
-    gap:10px;
-    margin-top:22px;
-  }
+  .quiz-nav{display:flex;gap:10px;margin-top:22px;}
   .quiz-nav .btn{flex:1;}
 
   /* ---------- result ---------- */
   .result-wrap{text-align:center;padding:6px 0;}
-  .score-ring{
-    width:150px;height:150px;
-    border-radius:50%;
-    margin:0 auto 20px;
-    display:flex;align-items:center;justify-content:center;
-    position:relative;
-  }
+  .score-ring{width:150px;height:150px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;position:relative;}
   .score-ring svg{position:absolute;inset:0;transform:rotate(-90deg);}
-  .score-ring .pct{
-    font-size:30px;font-weight:900;color:var(--teal-dark);
-    z-index:1;
-  }
+  .score-ring .pct{font-size:30px;font-weight:900;color:var(--teal-dark);z-index:1;}
   .result-name{font-size:15px;color:var(--ink-soft);margin:0 0 2px;}
   .result-title{font-size:20px;font-weight:800;color:var(--teal-dark);margin:0 0 6px;}
   .result-sub{font-size:14px;color:var(--ink-soft);margin:0 0 20px;}
-  .score-detail{
-    display:flex;justify-content:center;gap:22px;
-    margin-bottom:22px;
-  }
+  .score-detail{display:flex;justify-content:center;gap:22px;margin-bottom:18px;}
   .score-detail div{text-align:center;}
   .score-detail strong{display:block;font-size:20px;color:var(--ink);}
   .score-detail span{font-size:12.5px;color:var(--ink-soft);}
-  .sheet-status{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    margin-top:14px;
-    min-height:16px;
-  }
+  .advice-box{background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 18px;text-align:right;font-size:13.5px;line-height:1.8;color:var(--ink);}
+  [dir="ltr"] .advice-box{text-align:left;}
+  .advice-box strong{display:block;margin-bottom:4px;color:var(--teal-dark);font-size:14px;}
+  .sheet-status{font-size:12.5px;color:var(--ink-soft);margin-top:14px;min-height:16px;}
   .sheet-status.ok{color:var(--good);font-weight:700;}
   .sheet-status.err{color:var(--bad);font-weight:700;}
 
-  footer.foot{
-    text-align:center;
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-top:20px;
-    opacity:.7;
-  }
+  footer.foot{text-align:center;font-size:12px;color:var(--ink-soft);margin-top:20px;opacity:.7;}
 
   @media (max-width:480px){
     .card{padding:22px 18px;}
     .score-ring{width:130px;height:130px;}
     .score-ring .pct{font-size:26px;}
+    .pond{height:300px;}
   }
 </style>
 </head>
@@ -416,13 +235,35 @@
   <section class="screen active" id="screen-login">
     <div class="card">
       <div class="login-hero">
-        <h1 data-i18n="loginTitle">مراجعة المكتسبات السابقة</h1>
-        <p data-i18n="loginDesc">أنواع الكلمة — سجّل باسمك لتبدأ الدرس والتمارين</p>
+        <h1 data-i18n="appTitle">لغتي الجميلة</h1>
+        <p class="credit-line" data-i18n="creditLine">إعداد: الأستاذة أمل الحسن</p>
+        <p data-i18n="loginDesc">سجّل باسمك للدخول إلى دروسك</p>
       </div>
       <label class="field-label" for="studentName" data-i18n="nameLabel">اسم الطالب</label>
       <input type="text" id="studentName" class="name-input" data-i18n-placeholder="namePlaceholder" placeholder="اكتب اسمك هنا">
       <div class="err-msg" id="loginErr"></div>
-      <button class="btn btn-primary" id="startBtn" type="button" data-i18n="startBtn">ابدأ الدرس</button>
+      <button class="btn btn-primary" id="startBtn" type="button" data-i18n="startBtn">دخول</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 1.5: LESSONS MENU -->
+  <section class="screen" id="screen-menu">
+    <div class="card">
+      <div class="login-hero">
+        <h1 id="menuWelcome"></h1>
+        <p data-i18n="menuSub">اختر الدرس الذي تريد مراجعته</p>
+      </div>
+      <div class="lesson-item">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum1">١</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson1CardTitle">الدرس الأول: أنواعُ الكَلِمة</h3>
+            <p data-i18n="lesson1CardDesc">الاسمُ، والفعلُ، والحرفُ، وأنواع الجملة</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson1ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
     </div>
   </section>
 
@@ -432,24 +273,41 @@
       <div class="lesson-head">
         <span class="eyebrow-pill" data-i18n="lessonPill">الدرس الأول</span>
         <h1 data-i18n="lessonTitle">أنواعُ الكَلِمة</h1>
-        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى التمارين</p>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="familyTitle">قصة عائلة الكلمات</h2>
+        <p data-i18n="familyDesc">كل الكلمات في اللغة العربية تنتمي إلى عائلة كبيرة لها 3 أبناء فقط: الاسم، والفعل، والحرف.</p>
       </div>
 
       <div class="concept-grid">
         <div class="concept-card c-noun">
           <h3 data-i18n="nounTitle">الاسمُ</h3>
-          <p data-i18n="nounDesc">ما دلَّ على معنى في نفسه دون اقتران بزمن. علاماته: التنوين، ال التعريف، الجر.</p>
-          <span class="example" data-i18n="nounExample">مثال: كِتاب، مَدرَسة، شَمس</span>
+          <span class="en-term" data-i18n="nounEn">Noun</span>
+          <p data-i18n="nounDesc">اسم أي شيء نراه أو نحسّ به: إنسان، حيوان، نبات، جماد، أو مكان.</p>
+          <span class="example" data-i18n="nounExample">مثال: أحمَد، أسَد، قَلَم، مَدرَسة</span>
+          <ul class="signs-list">
+            <li data-i18n="nounSign1">يقبل «الـ» التعريف: كتاب ⬅️ الكتاب</li>
+            <li data-i18n="nounSign2">يقبل التنوين: ولدٌ، ولداً، ولدٍ</li>
+            <li data-i18n="nounSign3">يأتي بعد حرف الجر: في البيتِ</li>
+          </ul>
         </div>
         <div class="concept-card c-verb">
           <h3 data-i18n="verbTitle">الفعلُ</h3>
-          <p data-i18n="verbDesc">ما دلَّ على حدَثٍ مقترنٍ بزمن. أنواعه: ماضٍ، مضارع، أمر.</p>
-          <span class="example" data-i18n="verbExample">مثال: كَتَبَ، يَكتُبُ، اُكتُبْ</span>
+          <span class="en-term" data-i18n="verbEn">Verb</span>
+          <p data-i18n="verbDesc">حركة أو عمل نقوم به في وقتٍ معيّن: ماضٍ، أو حاضر، أو أمر.</p>
+          <span class="example" data-i18n="verbExample">مثال: شَرِبَ، يَلعَبُ، اُقرَأْ</span>
+          <ul class="signs-list">
+            <li data-i18n="verbSign1">لا يقبل «الـ»: الـيَكتُب ❌</li>
+            <li data-i18n="verbSign2">لا يقبل التنوين: يَكتُبٌ ❌</li>
+          </ul>
         </div>
         <div class="concept-card c-letter">
           <h3 data-i18n="letterTitle">الحرفُ</h3>
-          <p data-i18n="letterDesc">لفظٌ لا يظهر معناه إلا إذا اقترن بغيره؛ مثل حروف الجر (إلى، عن، في)، والعطف (الواو، ثم، الفاء)، والنداء (يا).</p>
-          <span class="example" data-i18n="letterExample">مثال: في، إلى، الواو، يا</span>
+          <span class="en-term" data-i18n="letterEn">Particle / Preposition</span>
+          <p data-i18n="letterDesc">كلمة صغيرة ليس لها معنى وحدها، لكنها تربط بين الكلمات لتجعل الجملة مفيدة.</p>
+          <span class="example" data-i18n="letterExample">مثال: في، على، إلى، مِن</span>
         </div>
       </div>
 
@@ -472,11 +330,66 @@
         </div>
       </div>
 
-      <button class="btn btn-primary" id="toQuizBtn" type="button" data-i18n="toQuizBtn">ابدأ التمارين</button>
+      <button class="btn btn-primary" id="toGamesBtn" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
     </div>
   </section>
 
-  <!-- SCREEN 3: QUIZ -->
+  <!-- SCREEN 3: GAME 1 - FISHING -->
+  <section class="screen" id="screen-game1">
+    <div class="card">
+      <div class="game-head">
+        <h1 data-i18n="fishTitle">لعبة اصطياد الكلمات</h1>
+        <p data-i18n="fishInstructions">اضغط على الفقاعة الصحيحة لتصطادها</p>
+      </div>
+      <div class="game-meta">
+        <span id="fishRoundLabel">1 / 5</span>
+        <span id="fishScoreLabel"></span>
+      </div>
+      <div class="toast-wrap" id="fishToastWrap"></div>
+
+      <div id="fishActive">
+        <div class="target-banner-wrap">
+          <span class="target-banner" id="fishTargetLabel"></span>
+        </div>
+        <div class="pond" id="pond"></div>
+      </div>
+
+      <div id="fishComplete" class="game-complete" style="display:none;">
+        <div class="big-emoji">🎣</div>
+        <h2 data-i18n="fishDoneTitle">أحسنت! أنهيت لعبة الصيد</h2>
+        <p data-i18n="fishDoneDesc">أنت الآن جاهز للعبة القادمة</p>
+        <button class="btn btn-primary" id="toGame2Btn" type="button" data-i18n="toGame2Btn">التالي: لعبة الذاكرة</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 4: GAME 2 - MEMORY CARDS -->
+  <section class="screen" id="screen-game2">
+    <div class="card">
+      <div class="game-head">
+        <h1 data-i18n="memTitle">لعبة كروت الذاكرة</h1>
+        <p data-i18n="memInstructions">اقلب كرتين ووفّق بين الكلمة ونوعها</p>
+      </div>
+      <div class="game-meta">
+        <span><span data-i18n="movesLabel">المحاولات</span>: <span id="memMoves">0</span></span>
+        <span><span data-i18n="matchedLabel">التوافقات</span>: <span id="memMatched">0</span>/5</span>
+      </div>
+      <div class="toast-wrap" id="memToastWrap"></div>
+
+      <div id="memActive">
+        <div class="memory-grid" id="memGrid"></div>
+      </div>
+
+      <div id="memComplete" class="game-complete" style="display:none;">
+        <div class="big-emoji">🧠</div>
+        <h2 data-i18n="memDoneTitle">رائع! وفّقت بين كل الكروت</h2>
+        <p data-i18n="memDoneDesc">حان وقت التمرين الرسمي</p>
+        <button class="btn btn-primary" id="toQuizBtn" type="button" data-i18n="toQuizBtn">ابدأ التمرين</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 5: QUIZ -->
   <section class="screen" id="screen-quiz">
     <div class="card">
       <div class="quiz-top">
@@ -492,7 +405,7 @@
     </div>
   </section>
 
-  <!-- SCREEN 4: RESULT -->
+  <!-- SCREEN 6: RESULT -->
   <section class="screen" id="screen-result">
     <div class="card result-wrap">
       <div class="score-ring">
@@ -511,13 +424,17 @@
         <div><strong id="scoreCorrect">0</strong><span data-i18n="correctLabel">إجابات صحيحة</span></div>
         <div><strong id="scoreTotal">0</strong><span data-i18n="totalLabel">مجموع الأسئلة</span></div>
       </div>
+      <div class="advice-box" id="adviceBox" style="display:none;">
+        <strong data-i18n="adviceHeading">نصيحة لك</strong>
+        <span id="adviceText"></span>
+      </div>
       <button class="btn btn-primary" id="retryBtn" type="button" data-i18n="retryBtn">إعادة المحاولة</button>
+      <button class="btn btn-ghost" id="backToMenuBtn" type="button" style="width:100%;margin-top:10px;" data-i18n="backToMenuBtn">رجوع للقائمة الرئيسية</button>
       <div class="sheet-status" id="sheetStatus"></div>
     </div>
   </section>
 
   <footer class="foot" data-i18n="footer">لغتي العربية — الصف الخامس</footer>
-  <p style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:6px;opacity:.7;" data-i18n="credit">إعداد الأستاذة أمل الحسن</p>
 </div>
 
 <script>
@@ -527,40 +444,79 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyG9iKuYnMe-7dSNUfU1EaIhZcXVLYotgtS-hjANHKvQbJb77CC5E5ABvNn7cb5GKNL/exec";
 
 /* =====================================================
-   Translations (UI chrome only — lesson content stays Arabic)
+   Translations (UI chrome / instructions only —
+   lesson explanations, quiz questions, game words and
+   sentences to be solved always stay in Arabic)
    ===================================================== */
 const I18N = {
   ar: {
-    brandTitle: "لغتي العربية", brandSub: "الصف الخامس — المنهج السعودي",
-    loginTitle: "مراجعة المكتسبات السابقة",
-    loginDesc: "أنواع الكلمة — سجّل باسمك لتبدأ الدرس والتمارين",
+    brandTitle: "لغتي الجميلة", brandSub: "الصف الخامس — المنهج السعودي",
+    appTitle: "لغتي الجميلة",
+    creditLine: "إعداد: الأستاذة أمل الحسن",
+    loginDesc: "سجّل باسمك للدخول إلى دروسك",
     nameLabel: "اسم الطالب", namePlaceholder: "اكتب اسمك هنا",
-    startBtn: "ابدأ الدرس",
+    startBtn: "دخول",
+    menuWelcomePrefix: "أهلًا",
+    menuSub: "اختر الدرس الذي تريد مراجعته",
+    lesson1CardTitle: "الدرس الأول: أنواعُ الكَلِمة",
+    lesson1CardDesc: "الاسمُ، والفعلُ، والحرفُ، وأنواع الجملة",
+    lessonReadyTag: "✓ جاهز للمراجعة",
+    lessonNum1: "١",
+    reviewBtn: "مراجعة",
+    backToMenuBtn: "رجوع للقائمة الرئيسية",
     lessonPill: "الدرس الأول", lessonTitle: "أنواعُ الكَلِمة",
-    lessonDesc: "اقرأ الشرح جيدًا قبل الانتقال إلى التمارين",
-    nounTitle: "الاسمُ", nounDesc: "ما دلَّ على معنى في نفسه دون اقتران بزمن. علاماته: التنوين، ال التعريف، الجر.",
-    nounExample: "مثال: كِتاب، مَدرَسة، شَمس",
-    verbTitle: "الفعلُ", verbDesc: "ما دلَّ على حدَثٍ مقترنٍ بزمن. أنواعه: ماضٍ، مضارع، أمر.",
-    verbExample: "مثال: كَتَبَ، يَكتُبُ، اُكتُبْ",
-    letterTitle: "الحرفُ", letterDesc: "لفظٌ لا يظهر معناه إلا إذا اقترن بغيره؛ مثل حروف الجر (إلى، عن، في)، والعطف (الواو، ثم، الفاء)، والنداء (يا).",
-    letterExample: "مثال: في، إلى، الواو، يا",
+    lessonDesc: "اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين",
+    familyTitle: "قصة عائلة الكلمات",
+    familyDesc: "كل الكلمات في اللغة العربية تنتمي إلى عائلة كبيرة لها 3 أبناء فقط: الاسم، والفعل، والحرف.",
+    nounTitle: "الاسمُ", nounEn: "Noun",
+    nounDesc: "اسم أي شيء نراه أو نحسّ به: إنسان، حيوان، نبات، جماد، أو مكان.",
+    nounExample: "مثال: أحمَد، أسَد، قَلَم، مَدرَسة",
+    nounSign1: "يقبل «الـ» التعريف: كتاب ⬅️ الكتاب",
+    nounSign2: "يقبل التنوين: ولدٌ، ولداً، ولدٍ",
+    nounSign3: "يأتي بعد حرف الجر: في البيتِ",
+    verbTitle: "الفعلُ", verbEn: "Verb",
+    verbDesc: "حركة أو عمل نقوم به في وقتٍ معيّن: ماضٍ، أو حاضر، أو أمر.",
+    verbExample: "مثال: شَرِبَ، يَلعَبُ، اُقرَأْ",
+    verbSign1: "لا يقبل «الـ»: الـيَكتُب ❌",
+    verbSign2: "لا يقبل التنوين: يَكتُبٌ ❌",
+    letterTitle: "الحرفُ", letterEn: "Particle / Preposition",
+    letterDesc: "كلمة صغيرة ليس لها معنى وحدها، لكنها تربط بين الكلمات لتجعل الجملة مفيدة.",
+    letterExample: "مثال: في، على، إلى، مِن",
     verbTypesTitle: "أنواعُ الفعل", past: "ماضٍ", present: "مضارع", imperative: "أمر",
     sentTypesTitle: "نَوعا الجُملة",
     verbalSentTitle: "الجملة الفعلية",
     verbalSentDesc: "تبدأ بفعل، ولها ركنان أساسيان: فِعل يدلُّ على حدَث، وفاعِل يُحدِث الفعل. مثال: يَحرِصُ المسلمُ على فُروضِه.",
     nominalSentTitle: "الجملة الاسمية",
     nominalSentDesc: "تبدأ باسم، ولها ركنان أساسيان: المبتدأ والخبر، وهما مرفوعان دائمًا. مثال: الشمسُ ساطعةٌ.",
-    toQuizBtn: "ابدأ التمارين",
+    toGamesBtn: "ابدأ الألعاب التفاعلية",
+    fishTitle: "لعبة اصطياد الكلمات",
+    fishInstructions: "اضغط على الفقاعة الصحيحة لتصطادها",
+    catchPrefix: "اصطد",
+    fishDoneTitle: "أحسنت! أنهيت لعبة الصيد",
+    fishDoneDesc: "أنت الآن جاهز للعبة القادمة",
+    toGame2Btn: "التالي: لعبة الذاكرة",
+    roundToastGood: "أحسنت! 🎉",
+    memTitle: "لعبة كروت الذاكرة",
+    memInstructions: "اقلب كرتين ووفّق بين الكلمة ونوعها",
+    movesLabel: "المحاولات", matchedLabel: "التوافقات", pointsLabel: "النقاط",
+    memDoneTitle: "رائع! وفّقت بين كل الكروت",
+    memDoneDesc: "حان وقت التمرين الرسمي",
+    matchToast: "تطابق صحيح! ✓",
+    toQuizBtn: "ابدأ التمرين",
     nextBtn: "التالي", finishBtn: "إنهاء الاختبار",
     resultTitle: "أحسنت!", correctLabel: "إجابات صحيحة", totalLabel: "مجموع الأسئلة",
+    adviceHeading: "نصيحة لك",
+    advicePerfect: "أداء رائع بلا أي خطأ! يمكنك الانتقال للدرس التالي بثقة.",
+    adviceNoun: "راجع علامات الاسم: التنوين، «الـ» التعريف، والوقوع بعد حرف الجر.",
+    adviceVerb: "راجع أنواع الفعل الثلاثة: الماضي، والمضارع، والأمر، وعلامات كل نوع.",
+    adviceLetter: "راجع الحروف وتذكّر أن معناها لا يظهر إلا مع كلمة أخرى.",
+    adviceSentence: "راجع نوعي الجملة: الاسمية (مبتدأ وخبر) والفعلية (فعل وفاعل).",
     retryBtn: "إعادة المحاولة",
-    footer: "لغتي العربية — الصف الخامس",
-    credit: "إعداد الأستاذة أمل الحسن",
+    footer: "لغتي الجميلة — إعداد: الأستاذة أمل الحسن",
     nameRequired: "من فضلك اكتب اسمك أولًا",
     sending: "جارٍ إرسال النتيجة...",
     sentOk: "تم إرسال نتيجتك بنجاح ✓",
     sentErr: "تعذّر إرسال النتيجة، لكنها ظاهرة أمامك",
-    notConfigured: "",
     perfMsgs: {
       great: "أداء ممتاز! أتقنت الدرس بشكل رائع.",
       good: "أداء جيد جدًا! راجع الأخطاء البسيطة وستتقن الدرس تمامًا.",
@@ -569,36 +525,73 @@ const I18N = {
     }
   },
   en: {
-    brandTitle: "My Arabic", brandSub: "Grade 5 — Saudi Curriculum",
-    loginTitle: "Reviewing Previous Learning",
-    loginDesc: "Word types — sign in with your name to start the lesson and exercises",
+    brandTitle: "My Beautiful Language", brandSub: "Grade 5 — Saudi Curriculum",
+    appTitle: "My Beautiful Language",
+    creditLine: "Prepared by: Ms. Amal Alhasan",
+    loginDesc: "Sign in with your name to access your lessons",
     nameLabel: "Student name", namePlaceholder: "Type your name here",
-    startBtn: "Start the lesson",
+    startBtn: "Enter",
+    menuWelcomePrefix: "Welcome",
+    menuSub: "Choose the lesson you'd like to review",
+    lesson1CardTitle: "Lesson 1: أنواعُ الكَلِمة (Word Types)",
+    lesson1CardDesc: "Noun, Verb, Particle, and sentence types",
+    lessonReadyTag: "✓ Ready to review",
+    lessonNum1: "1",
+    reviewBtn: "Review",
+    backToMenuBtn: "Back to main menu",
     lessonPill: "Lesson 1", lessonTitle: "أنواعُ الكَلِمة (Word Types)",
-    lessonDesc: "Read the explanation carefully before moving to the exercises",
-    nounTitle: "Noun (الاسم)", nounDesc: "A word with meaning on its own, not tied to a specific time. Signs: tanween, the definite article \"ال\", or being preceded by a preposition.",
-    nounExample: "Examples: كِتاب (book), مَدرَسة (school), شَمس (sun)",
-    verbTitle: "Verb (الفعل)", verbDesc: "A word that indicates an action tied to a specific time. Types: past, present, imperative.",
-    verbExample: "Examples: كَتَبَ (wrote), يَكتُبُ (writes), اُكتُبْ (write!)",
-    letterTitle: "Letter/Particle (الحرف)", letterDesc: "A word whose meaning only appears when linked with another word; e.g. prepositions (إلى، عن، في), conjunctions (و، ثم، ف), and the vocative (يا).",
-    letterExample: "Examples: في (in), إلى (to), و (and), يا (oh)",
+    lessonDesc: "Read the explanation carefully before moving to the games and exercises",
+    familyTitle: "The Words Family Story",
+    familyDesc: "Every word in Arabic belongs to one big family with only 3 children: the Noun, the Verb, and the Particle.",
+    nounTitle: "الاسمُ", nounEn: "Noun",
+    nounDesc: "The name of anything we see or sense: a person, animal, plant, object, or place.",
+    nounExample: "Examples: أحمَد (Ahmed), أسَد (lion), قَلَم (pen), مَدرَسة (school)",
+    nounSign1: "Accepts \"the\" (ال): كتاب ⬅️ الكتاب (book ⬅️ the book)",
+    nounSign2: "Accepts tanween: ولدٌ، ولداً، ولدٍ",
+    nounSign3: "Comes after a preposition: في البيتِ (in the house)",
+    verbTitle: "الفعلُ", verbEn: "Verb",
+    verbDesc: "An action tied to a specific time: past, present, or command.",
+    verbExample: "Examples: شَرِبَ (drank), يَلعَبُ (plays), اُقرَأْ (read!)",
+    verbSign1: "Never takes \"the\" (ال): الـيَكتُب ❌",
+    verbSign2: "Never takes tanween: يَكتُبٌ ❌",
+    letterTitle: "الحرفُ", letterEn: "Particle / Preposition",
+    letterDesc: "A small word with no complete meaning on its own — it connects other words to make the sentence useful.",
+    letterExample: "Examples: في (in), على (on), إلى (to), مِن (from)",
     verbTypesTitle: "Verb Types", past: "Past", present: "Present", imperative: "Imperative",
     sentTypesTitle: "Sentence Types",
     verbalSentTitle: "Verbal sentence",
     verbalSentDesc: "Starts with a verb, and has two main parts: a verb showing an action, and a subject doing it. Example: يَحرِصُ المسلمُ على فُروضِه.",
     nominalSentTitle: "Nominal sentence",
-    nominalSentDesc: "Starts with a noun, and has two main parts: the subject (مبتدأ) and predicate (خبر), both always in the nominative case. Example: الشمسُ ساطعةٌ.",
-    toQuizBtn: "Start the exercises",
+    nominalSentDesc: "Starts with a noun, and has two main parts: the subject (مبتدأ) and predicate (خبر), always in the nominative case. Example: الشمسُ ساطعةٌ.",
+    toGamesBtn: "Start the interactive games",
+    fishTitle: "Word Fishing Game",
+    fishInstructions: "Tap the correct bubble to catch it",
+    catchPrefix: "Catch",
+    fishDoneTitle: "Well done! You finished the fishing game",
+    fishDoneDesc: "You're ready for the next game",
+    toGame2Btn: "Next: Memory Game",
+    roundToastGood: "Great job! 🎉",
+    memTitle: "Memory Cards Game",
+    memInstructions: "Flip two cards and match the word with its type",
+    movesLabel: "Moves", matchedLabel: "Matches", pointsLabel: "Points",
+    memDoneTitle: "Amazing! You matched every card",
+    memDoneDesc: "Time for the official exercise",
+    matchToast: "Correct match! ✓",
+    toQuizBtn: "Start the exercise",
     nextBtn: "Next", finishBtn: "Finish quiz",
     resultTitle: "Well done!", correctLabel: "Correct answers", totalLabel: "Total questions",
+    adviceHeading: "A tip for you",
+    advicePerfect: "Flawless performance! You can move on to the next lesson with confidence.",
+    adviceNoun: "Review the signs of a noun: tanween, the article \"ال\", and coming after a preposition.",
+    adviceVerb: "Review the three verb types: past, present, and imperative, and the sign of each.",
+    adviceLetter: "Review particles, and remember their meaning only appears together with another word.",
+    adviceSentence: "Review the two sentence types: nominal (subject + predicate) and verbal (verb + subject).",
     retryBtn: "Try again",
-    footer: "My Arabic — Grade 5",
-    credit: "Prepared by Ms. Amal Alhasan",
+    footer: "My Beautiful Language — Prepared by: Ms. Amal Alhasan",
     nameRequired: "Please type your name first",
     sending: "Sending your result...",
     sentOk: "Your result was sent successfully ✓",
     sentErr: "Couldn't send the result, but it's shown above",
-    notConfigured: "",
     perfMsgs: {
       great: "Excellent work! You've mastered this lesson.",
       good: "Great job! Review the small mistakes and you'll have it fully mastered.",
@@ -609,28 +602,86 @@ const I18N = {
 };
 
 let lang = "ar";
+function t(key){ return I18N[lang][key] ?? key; }
 
 /* =====================================================
    Quiz data — Lesson 1: أنواع الكلمة
-   Each question is written once; correct index is fixed.
    ===================================================== */
+/* Each question's "q" is bilingual (instruction wording translates),
+   but the quoted Arabic word/sentence «...» being classified, and all
+   the answer options, always stay in Arabic on purpose. */
 const QUESTIONS = [
-  { q: "ما نوعُ الكلمة التالية: «كِتاب»؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 0 },
-  { q: "ما نوعُ الكلمة التالية: «كَتَبَ»؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 1 },
-  { q: "ما نوعُ الكلمة التالية: «في»؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2 },
-  { q: "من علاماتِ الاسمِ:", options: ["التنوين", "الاقترانُ بزمن", "اقترانُ المعنى بغيره"], correct: 0 },
-  { q: "الفعلُ الذي يدلُّ على حدَثٍ وقعَ في الزمنِ الماضي، مثل «دَرَسَ»، يُسمّى:", options: ["فعلًا مضارعًا", "فعلًا ماضيًا", "فعلَ أمرٍ"], correct: 1 },
-  { q: "صنِّف الكلمةَ: «يَدرُسُ»", options: ["فعلٌ ماضٍ", "فعلٌ مضارعٌ", "فعلُ أمرٍ"], correct: 1 },
-  { q: "صنِّف الكلمةَ: «اُكتُبْ»", options: ["فعلٌ ماضٍ", "فعلٌ مضارعٌ", "فعلُ أمرٍ"], correct: 2 },
-  { q: "الجملةُ «الشمسُ ساطعةٌ» جملةٌ:", options: ["اسميةٌ؛ لأنها تبدأُ باسم", "فعليةٌ؛ لأنها تبدأُ بفعل"], correct: 0 },
-  { q: "الجملةُ «يَحرِصُ المسلمُ على فُروضِه» جملةٌ:", options: ["اسميةٌ", "فعليةٌ؛ لأنها تبدأُ بفعل"], correct: 1 },
-  { q: "ركنا الجملةِ الاسميةِ الأساسيان هما:", options: ["الفعلُ والفاعلُ", "المبتدأُ والخبرُ"], correct: 1 },
-  { q: "ركنا الجملةِ الفعليةِ الأساسيان هما:", options: ["الفعلُ والفاعلُ", "المبتدأُ والخبرُ"], correct: 0 },
-  { q: "لفظٌ لا يظهرُ معناه إلا إذا اقترنَ بغيره، ما نوعُه؟", options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2 }
+  { q:{ ar:"ما نوعُ الكلمة التالية: «كِتاب»؟", en:"What type is the following word: «كِتاب»؟" },
+    options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 0, category:"noun" },
+  { q:{ ar:"ما نوعُ الكلمة التالية: «كَتَبَ»؟", en:"What type is the following word: «كَتَبَ»؟" },
+    options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 1, category:"verb" },
+  { q:{ ar:"ما نوعُ الكلمة التالية: «في»؟", en:"What type is the following word: «في»؟" },
+    options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2, category:"letter" },
+  { q:{ ar:"من علاماتِ الاسمِ:", en:"One of the signs of a noun is:" },
+    options: ["التنوين", "الاقترانُ بزمن", "اقترانُ المعنى بغيره"], correct: 0, category:"noun" },
+  { q:{ ar:"الفعلُ الذي يدلُّ على حدَثٍ وقعَ في الزمنِ الماضي، مثل «دَرَسَ»، يُسمّى:", en:"A verb that indicates an action that happened in the past, like «دَرَسَ», is called:" },
+    options: ["فعلًا مضارعًا", "فعلًا ماضيًا", "فعلَ أمرٍ"], correct: 1, category:"verb" },
+  { q:{ ar:"صنِّف الكلمةَ: «يَدرُسُ»", en:"Classify the word: «يَدرُسُ»" },
+    options: ["فعلٌ ماضٍ", "فعلٌ مضارعٌ", "فعلُ أمرٍ"], correct: 1, category:"verb" },
+  { q:{ ar:"صنِّف الكلمةَ: «اُكتُبْ»", en:"Classify the word: «اُكتُبْ»" },
+    options: ["فعلٌ ماضٍ", "فعلٌ مضارعٌ", "فعلُ أمرٍ"], correct: 2, category:"verb" },
+  { q:{ ar:"الجملةُ «الشمسُ ساطعةٌ» جملةٌ:", en:"The sentence «الشمسُ ساطعةٌ» is a:" },
+    options: ["اسميةٌ؛ لأنها تبدأُ باسم", "فعليةٌ؛ لأنها تبدأُ بفعل"], correct: 0, category:"sentence" },
+  { q:{ ar:"الجملةُ «يَحرِصُ المسلمُ على فُروضِه» جملةٌ:", en:"The sentence «يَحرِصُ المسلمُ على فُروضِه» is a:" },
+    options: ["اسميةٌ", "فعليةٌ؛ لأنها تبدأُ بفعل"], correct: 1, category:"sentence" },
+  { q:{ ar:"ركنا الجملةِ الاسميةِ الأساسيان هما:", en:"The two main parts of a nominal sentence are:" },
+    options: ["الفعلُ والفاعلُ", "المبتدأُ والخبرُ"], correct: 1, category:"sentence" },
+  { q:{ ar:"ركنا الجملةِ الفعليةِ الأساسيان هما:", en:"The two main parts of a verbal sentence are:" },
+    options: ["الفعلُ والفاعلُ", "المبتدأُ والخبرُ"], correct: 0, category:"sentence" },
+  { q:{ ar:"لفظٌ لا يظهرُ معناه إلا إذا اقترنَ بغيره، ما نوعُه؟", en:"A word whose meaning only appears when linked with another word — what type is it?" },
+    options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2, category:"letter" }
+];
+
+const ADVICE_KEY = { noun:"adviceNoun", verb:"adviceVerb", letter:"adviceLetter", sentence:"adviceSentence" };
+
+/* =====================================================
+   Fishing game data (always Arabic — content to solve)
+   ===================================================== */
+const FISH_ROUNDS = [
+  { target: "اسم", items: [
+      {text:"ولدٌ", correct:true}, {text:"زيدٍ", correct:true}, {text:"قلمٌ", correct:true},
+      {text:"في", correct:false}, {text:"يلعبُ", correct:false}, {text:"مِن", correct:false}
+  ]},
+  { target: "فعل", items: [
+      {text:"كتبَ", correct:true}, {text:"يلعبُ", correct:true}, {text:"اُكتُبْ", correct:true},
+      {text:"كتابٌ", correct:false}, {text:"على", correct:false}, {text:"مدرسةٌ", correct:false}
+  ]},
+  { target: "حرف", items: [
+      {text:"في", correct:true}, {text:"إلى", correct:true}, {text:"على", correct:true},
+      {text:"ولدٌ", correct:false}, {text:"يقرأُ", correct:false}, {text:"قلمٌ", correct:false}
+  ]},
+  { target: "جملة اسمية", items: [
+      {text:"الشمسُ ساطعةٌ", correct:true}, {text:"الجوُّ جميلٌ", correct:true},
+      {text:"يلعبُ الولدُ", correct:false}, {text:"ذهبَ الطالبُ", correct:false}
+  ]},
+  { target: "جملة فعلية", items: [
+      {text:"كتبَ الطالبُ الدرسَ", correct:true}, {text:"يَحرِصُ المسلمُ على فروضِه", correct:true},
+      {text:"العلمُ نورٌ", correct:false}, {text:"الكتابُ مفيدٌ", correct:false}
+  ]}
+];
+const FISH_POS = {
+  6:[{top:6,left:6},{top:10,left:58},{top:36,left:30},{top:42,left:76},{top:66,left:8},{top:74,left:54}],
+  4:[{top:10,left:12},{top:16,left:60},{top:54,left:22},{top:64,left:64}]
+};
+
+/* =====================================================
+   Memory game data (always Arabic — content to solve)
+   ===================================================== */
+const MEMORY_PAIRS = [
+  { id:0, cat:"noun",    label:"اسم",          instance:"قَلَمٌ" },
+  { id:1, cat:"verb",    label:"فعل",          instance:"يَكْتُبُ" },
+  { id:2, cat:"letter",  label:"حرف",          instance:"عَلَى" },
+  { id:3, cat:"nominal", label:"جملة اسمية",   instance:"الولدُ ذكيٌّ" },
+  { id:4, cat:"verbal",  label:"جملة فعلية",   instance:"يَلعَبُ الولدُ" }
 ];
 
 /* =====================================================
-   State
+   Global state
    ===================================================== */
 let studentName = "";
 let currentQ = 0;
@@ -638,10 +689,8 @@ let answers = new Array(QUESTIONS.length).fill(null);
 let locked = false;
 
 /* =====================================================
-   Helpers
+   i18n apply
    ===================================================== */
-function t(key){ return I18N[lang][key] ?? key; }
-
 function applyI18n(){
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
@@ -649,7 +698,6 @@ function applyI18n(){
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
     if (I18N[lang][key] !== undefined){
-      // preserve nested <small> for brand text
       if (key === "brandTitle"){
         el.childNodes[0].nodeValue = I18N[lang][key] + " ";
       } else {
@@ -663,6 +711,11 @@ function applyI18n(){
   });
   document.getElementById("nextBtn").textContent =
     currentQ === QUESTIONS.length - 1 ? t("finishBtn") : t("nextBtn");
+  updateFishHeader();
+  updateMemHeader();
+  if (studentName) updateMenuWelcome();
+  const qTextEl = document.getElementById("qText");
+  if (qTextEl && QUESTIONS[currentQ]) qTextEl.textContent = QUESTIONS[currentQ].q[lang];
 }
 
 function showScreen(id){
@@ -671,7 +724,7 @@ function showScreen(id){
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
-/* ---------- login ---------- */
+/* ---------- login -> menu ---------- */
 document.getElementById("startBtn").addEventListener("click", ()=>{
   const val = document.getElementById("studentName").value.trim();
   if (!val){
@@ -680,13 +733,240 @@ document.getElementById("startBtn").addEventListener("click", ()=>{
   }
   document.getElementById("loginErr").textContent = "";
   studentName = val;
-  showScreen("screen-lesson");
+  updateMenuWelcome();
+  showScreen("screen-menu");
 });
 document.getElementById("studentName").addEventListener("keydown", (e)=>{
   if (e.key === "Enter") document.getElementById("startBtn").click();
 });
 
-/* ---------- lesson -> quiz ---------- */
+function updateMenuWelcome(){
+  const el = document.getElementById("menuWelcome");
+  if (el) el.textContent = `${t("menuWelcomePrefix")} ${studentName} 👋`;
+}
+
+/* ---------- menu -> lesson 1 ---------- */
+document.getElementById("lesson1ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson");
+});
+
+/* ---------- lesson -> game1 ---------- */
+document.getElementById("toGamesBtn").addEventListener("click", ()=>{
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- result -> back to menu ---------- */
+document.getElementById("backToMenuBtn").addEventListener("click", ()=>{
+  updateMenuWelcome();
+  showScreen("screen-menu");
+});
+
+/* =====================================================
+   GAME 1 — Fishing
+   ===================================================== */
+let fishRoundIdx = 0;
+let fishCaughtInRound = 0;
+let fishTotalCorrectInRound = 0;
+let fishScore = 0;
+
+function startFishGame(){
+  fishRoundIdx = 0;
+  fishScore = 0;
+  document.getElementById("fishActive").style.display = "";
+  document.getElementById("fishComplete").style.display = "none";
+  renderFishRound();
+}
+
+function updateFishHeader(){
+  const total = FISH_ROUNDS.length;
+  const labelEl = document.getElementById("fishRoundLabel");
+  const scoreEl = document.getElementById("fishScoreLabel");
+  if (labelEl) labelEl.textContent = `${Math.min(fishRoundIdx+1,total)} / ${total}`;
+  if (scoreEl) scoreEl.textContent = `${t("pointsLabel")}: ${fishScore}`;
+  const tEl = document.getElementById("fishTargetLabel");
+  if (tEl && FISH_ROUNDS[fishRoundIdx]){
+    tEl.textContent = `${t("catchPrefix")}: ${FISH_ROUNDS[fishRoundIdx].target}`;
+  }
+}
+
+function renderFishRound(){
+  const round = FISH_ROUNDS[fishRoundIdx];
+  fishCaughtInRound = 0;
+  fishTotalCorrectInRound = round.items.filter(i=>i.correct).length;
+
+  updateFishHeader();
+
+  const pond = document.getElementById("pond");
+  pond.innerHTML = "";
+
+  // decorative background fish
+  const decor = ["🐠","🐟","🐡","🐠"];
+  decor.forEach((d,i)=>{
+    const s = document.createElement("span");
+    s.className = "fish-decor";
+    s.textContent = d;
+    s.style.top = (10 + i*22) + "%";
+    s.style.left = (i%2===0 ? "80%" : "4%");
+    pond.appendChild(s);
+  });
+
+  const positions = FISH_POS[round.items.length] || FISH_POS[6];
+  round.items.forEach((item, idx)=>{
+    const b = document.createElement("div");
+    b.className = "bubble";
+    b.textContent = item.text;
+    const pos = positions[idx % positions.length];
+    b.style.top = pos.top + "%";
+    b.style.left = pos.left + "%";
+    b.addEventListener("click", ()=> handleFishClick(b, item));
+    pond.appendChild(b);
+  });
+}
+
+function handleFishClick(bubbleEl, item){
+  if (bubbleEl.classList.contains("caught")) return;
+  if (item.correct){
+    bubbleEl.classList.add("caught");
+    fishScore++;
+    fishCaughtInRound++;
+    updateFishHeader();
+    if (fishCaughtInRound >= fishTotalCorrectInRound){
+      showFishToast();
+      setTimeout(nextFishRound, 1000);
+    }
+  } else {
+    bubbleEl.classList.add("wrong-shake");
+    setTimeout(()=> bubbleEl.classList.remove("wrong-shake"), 450);
+  }
+}
+
+function showFishToast(){
+  const wrap = document.getElementById("fishToastWrap");
+  wrap.innerHTML = `<span class="toast-pill">${t("roundToastGood")}</span>`;
+  setTimeout(()=>{ wrap.innerHTML = ""; }, 1400);
+}
+
+function nextFishRound(){
+  fishRoundIdx++;
+  if (fishRoundIdx >= FISH_ROUNDS.length){
+    document.getElementById("fishActive").style.display = "none";
+    document.getElementById("fishComplete").style.display = "";
+  } else {
+    renderFishRound();
+  }
+}
+
+document.getElementById("toGame2Btn").addEventListener("click", ()=>{
+  startMemoryGame();
+  showScreen("screen-game2");
+});
+
+/* =====================================================
+   GAME 2 — Memory cards
+   ===================================================== */
+let memCards = [];
+let memFlipped = [];
+let memMatchedCount = 0;
+let memMoves = 0;
+let memBusy = false;
+
+function shuffle(arr){
+  const a = arr.slice();
+  for (let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function startMemoryGame(){
+  const raw = [];
+  MEMORY_PAIRS.forEach(p=>{
+    raw.push({pairId:p.id, cat:p.cat, text:p.label, matched:false});
+    raw.push({pairId:p.id, cat:p.cat, text:p.instance, matched:false});
+  });
+  memCards = shuffle(raw);
+  memFlipped = [];
+  memMatchedCount = 0;
+  memMoves = 0;
+  memBusy = false;
+  document.getElementById("memActive").style.display = "";
+  document.getElementById("memComplete").style.display = "none";
+  updateMemHeader();
+  renderMemGrid();
+}
+
+function updateMemHeader(){
+  const mv = document.getElementById("memMoves");
+  const mt = document.getElementById("memMatched");
+  if (mv) mv.textContent = memMoves;
+  if (mt) mt.textContent = memMatchedCount;
+}
+
+function renderMemGrid(){
+  const grid = document.getElementById("memGrid");
+  grid.innerHTML = "";
+  memCards.forEach((card, idx)=>{
+    const el = document.createElement("div");
+    el.className = "mem-card";
+    el.dataset.idx = idx;
+    el.innerHTML = `
+      <div class="mem-card-inner">
+        <div class="mem-face mem-back">؟</div>
+        <div class="mem-face mem-front cat-${card.cat}">${card.text}</div>
+      </div>`;
+    el.addEventListener("click", ()=> handleMemClick(idx, el));
+    grid.appendChild(el);
+  });
+}
+
+function handleMemClick(idx, el){
+  if (memBusy) return;
+  const card = memCards[idx];
+  if (card.matched || el.classList.contains("flipped")) return;
+  if (memFlipped.length >= 2) return;
+
+  el.classList.add("flipped");
+  memFlipped.push({idx, el});
+
+  if (memFlipped.length === 2){
+    memMoves++;
+    updateMemHeader();
+    const [a,b] = memFlipped;
+    const cardA = memCards[a.idx], cardB = memCards[b.idx];
+    if (cardA.pairId === cardB.pairId){
+      cardA.matched = true; cardB.matched = true;
+      a.el.classList.add("matched"); b.el.classList.add("matched");
+      memMatchedCount++;
+      updateMemHeader();
+      memFlipped = [];
+      showMemToast();
+      if (memMatchedCount >= MEMORY_PAIRS.length){
+        setTimeout(()=>{
+          document.getElementById("memActive").style.display = "none";
+          document.getElementById("memComplete").style.display = "";
+        }, 700);
+      }
+    } else {
+      memBusy = true;
+      setTimeout(()=>{
+        a.el.classList.remove("flipped");
+        b.el.classList.remove("flipped");
+        memFlipped = [];
+        memBusy = false;
+      }, 800);
+    }
+  }
+}
+
+function showMemToast(){
+  const wrap = document.getElementById("memToastWrap");
+  wrap.innerHTML = `<span class="toast-pill">${t("matchToast")}</span>`;
+  setTimeout(()=>{ wrap.innerHTML = ""; }, 1000);
+}
+
+/* ---------- game2 -> quiz ---------- */
 document.getElementById("toQuizBtn").addEventListener("click", ()=>{
   currentQ = 0;
   answers = new Array(QUESTIONS.length).fill(null);
@@ -694,11 +974,13 @@ document.getElementById("toQuizBtn").addEventListener("click", ()=>{
   showScreen("screen-quiz");
 });
 
-/* ---------- quiz rendering ---------- */
+/* =====================================================
+   QUIZ
+   ===================================================== */
 function renderQuestion(){
   locked = false;
   const item = QUESTIONS[currentQ];
-  document.getElementById("qText").textContent = item.q;
+  document.getElementById("qText").textContent = item.q[lang];
   document.getElementById("quizProgressLabel").textContent =
     `${currentQ+1} / ${QUESTIONS.length}`;
   document.getElementById("progressFill").style.width =
@@ -714,7 +996,6 @@ function renderQuestion(){
     optsWrap.appendChild(div);
   });
 
-  // restore previous answer if navigating back (not used currently, but safe)
   const nextBtn = document.getElementById("nextBtn");
   nextBtn.disabled = true;
   nextBtn.textContent = currentQ === QUESTIONS.length - 1 ? t("finishBtn") : t("nextBtn");
@@ -743,7 +1024,9 @@ document.getElementById("nextBtn").addEventListener("click", ()=>{
   }
 });
 
-/* ---------- result ---------- */
+/* =====================================================
+   RESULT
+   ===================================================== */
 function finishQuiz(){
   const total = QUESTIONS.length;
   const correct = answers.reduce((sum, ans, i)=> sum + (ans === QUESTIONS[i].correct ? 1 : 0), 0);
@@ -765,7 +1048,28 @@ function finishQuiz(){
   else if (pct < 90){ ringColor = "#2f6f68"; msgKey = "good"; }
   else { ringColor = "#2f7a4f"; msgKey = "great"; }
   document.getElementById("ringProgress").setAttribute("stroke", ringColor);
-  document.getElementById("resultSub").textContent = t("perfMsgs")[msgKey] || I18N[lang].perfMsgs[msgKey];
+  document.getElementById("resultSub").textContent = I18N[lang].perfMsgs[msgKey];
+
+  // advice based on missed categories
+  const missCount = { noun:0, verb:0, letter:0, sentence:0 };
+  answers.forEach((ans,i)=>{
+    if (ans !== QUESTIONS[i].correct){
+      missCount[QUESTIONS[i].category]++;
+    }
+  });
+  const adviceBox = document.getElementById("adviceBox");
+  const adviceText = document.getElementById("adviceText");
+  const totalMiss = Object.values(missCount).reduce((a,b)=>a+b,0);
+  if (totalMiss === 0){
+    adviceText.textContent = t("advicePerfect");
+  } else {
+    let worstCat = "noun", worstCount = -1;
+    Object.keys(missCount).forEach(cat=>{
+      if (missCount[cat] > worstCount){ worstCount = missCount[cat]; worstCat = cat; }
+    });
+    adviceText.textContent = t(ADVICE_KEY[worstCat]);
+  }
+  adviceBox.style.display = "";
 
   showScreen("screen-result");
   sendToSheet(correct, total, pct);
