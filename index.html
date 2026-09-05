@@ -264,6 +264,17 @@
         </div>
         <button class="btn btn-primary btn-inline" id="lesson1ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
       </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum2">٢</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson2CardTitle">الدرس الثاني: أنواعُ الجُموع</h3>
+            <p data-i18n="lesson2CardDesc">المفرد والجمع، وأنواع الجموع الثلاثة</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson2ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
     </div>
   </section>
 
@@ -331,6 +342,74 @@
       </div>
 
       <button class="btn btn-primary" id="toGamesBtn" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2B: LESSON 2 -->
+  <section class="screen" id="screen-lesson2">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lesson2Pill">الدرس الثاني</span>
+        <h1 data-i18n="lesson2Title">أنواعُ الجُموع</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="pluralFamilyTitle">قصة الجموع في اللغة العربية</h2>
+        <p data-i18n="pluralFamilyDesc">المفردُ يعني شيئًا واحدًا فقط. أما الجمعُ فهو أكثر من اثنين (3 فأكثر). وفي اللغة العربية 3 أنواع من الجموع.</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="mascTitle">جمع المذكر السالم</h3>
+          <span class="en-term" data-i18n="mascEn">Sound Masculine Plural</span>
+          <p data-i18n="mascDesc">خاصٌّ بالذكور العاقلين، مثل الأشخاص وأصحاب المهن. تبقى الكلمةُ سليمةً، ونضيف في آخرها (ون) أو (ين).</p>
+          <span class="example" data-i18n="mascExample">مثال: مُعَلِّم ⬅️ مُعَلِّمُون / مُعَلِّمِين</span>
+          <ul class="signs-list">
+            <li data-i18n="mascSign1">ينتهي بـ (ون) في حالة الرفع</li>
+            <li data-i18n="mascSign2">ينتهي بـ (ين) في حالة النصب والجر</li>
+            <li data-i18n="mascSign3">خاصٌّ بالذكور العاقلين وأصحاب المهن</li>
+          </ul>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="femTitle">جمع المؤنث السالم</h3>
+          <span class="en-term" data-i18n="femEn">Sound Feminine Plural</span>
+          <p data-i18n="femDesc">خاصٌّ بالإناث أو الأشياء المنتهية بتاءٍ مربوطة. نحذف التاء المربوطة ونضيف مكانها (ات).</p>
+          <span class="example" data-i18n="femExample">مثال: مُعَلِّمَة ⬅️ مُعَلِّمَات</span>
+          <ul class="signs-list">
+            <li data-i18n="femSign1">نحذف التاء المربوطة (ة) من آخر الكلمة</li>
+            <li data-i18n="femSign2">نضيف (ات) مكانها دون تغيير باقي الحروف</li>
+          </ul>
+        </div>
+        <div class="concept-card c-letter">
+          <h3 data-i18n="brokenTitle">جمع التكسير</h3>
+          <span class="en-term" data-i18n="brokenEn">Broken Plural</span>
+          <p data-i18n="brokenDesc">جمعٌ «مشاغب» يكسر الكلمة المفردة، فيغيّر ترتيب حروفها أو يزيد عليها أو ينقص منها، وليس له قاعدة ثابتة.</p>
+          <span class="example" data-i18n="brokenExample">مثال: كِتَاب ⬅️ كُتُب</span>
+          <ul class="signs-list">
+            <li data-i18n="brokenSign1">لا ينتهي بـ (ون / ين) ولا بـ (ات)</li>
+            <li data-i18n="brokenSign2">تتغيّر حروف الكلمة نفسها، فيجب حفظ كل جمع على حدة</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-title" data-i18n="quickSummaryTitle">تلخيص سريع للعلامات المميزة</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="summaryMascTitle">جمع مذكر سالم</h4>
+          <p data-i18n="summaryMascDesc">إذا انتهت الكلمة بـ (ون) أو (ين) وكانت لذكور عاقلين، فهي جمع مذكر سالم. مثال: صَادِقُونَ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="summaryFemTitle">جمع مؤنث سالم</h4>
+          <p data-i18n="summaryFemDesc">إذا انتهت الكلمة بـ (ات)، فهي جمع مؤنث سالم. مثال: مُهَنْدِسَات.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="summaryBrokenTitle">جمع تكسير</h4>
+          <p data-i18n="summaryBrokenDesc">إذا تغيّرت حروف الكلمة نفسها ولم تنتهِ بـ (ون/ين) أو (ات)، فهي جمع تكسير. مثال: أَطْفَال.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtn2" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
     </div>
   </section>
 
@@ -462,10 +541,39 @@ const I18N = {
     lesson1CardDesc: "الاسمُ، والفعلُ، والحرفُ، وأنواع الجملة",
     lessonReadyTag: "✓ جاهز للمراجعة",
     lessonNum1: "١",
+    lessonNum2: "٢",
+    lesson2CardTitle: "الدرس الثاني: أنواعُ الجُموع",
+    lesson2CardDesc: "المفرد والجمع، وأنواع الجموع الثلاثة",
     reviewBtn: "مراجعة",
     backToMenuBtn: "رجوع للقائمة الرئيسية",
     lessonPill: "الدرس الأول", lessonTitle: "أنواعُ الكَلِمة",
+    lesson2Pill: "الدرس الثاني", lesson2Title: "أنواعُ الجُموع",
     lessonDesc: "اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين",
+    pluralFamilyTitle: "قصة الجموع في اللغة العربية",
+    pluralFamilyDesc: "المفردُ يعني شيئًا واحدًا فقط. أما الجمعُ فهو أكثر من اثنين (3 فأكثر). وفي اللغة العربية 3 أنواع من الجموع.",
+    mascTitle: "جمع المذكر السالم", mascEn: "Sound Masculine Plural",
+    mascDesc: "خاصٌّ بالذكور العاقلين، مثل الأشخاص وأصحاب المهن. تبقى الكلمةُ سليمةً، ونضيف في آخرها (ون) أو (ين).",
+    mascExample: "مثال: مُعَلِّم ⬅️ مُعَلِّمُون / مُعَلِّمِين",
+    mascSign1: "ينتهي بـ (ون) في حالة الرفع",
+    mascSign2: "ينتهي بـ (ين) في حالة النصب والجر",
+    mascSign3: "خاصٌّ بالذكور العاقلين وأصحاب المهن",
+    femTitle: "جمع المؤنث السالم", femEn: "Sound Feminine Plural",
+    femDesc: "خاصٌّ بالإناث أو الأشياء المنتهية بتاءٍ مربوطة. نحذف التاء المربوطة ونضيف مكانها (ات).",
+    femExample: "مثال: مُعَلِّمَة ⬅️ مُعَلِّمَات",
+    femSign1: "نحذف التاء المربوطة (ة) من آخر الكلمة",
+    femSign2: "نضيف (ات) مكانها دون تغيير باقي الحروف",
+    brokenTitle: "جمع التكسير", brokenEn: "Broken Plural",
+    brokenDesc: "جمعٌ «مشاغب» يكسر الكلمة المفردة، فيغيّر ترتيب حروفها أو يزيد عليها أو ينقص منها، وليس له قاعدة ثابتة.",
+    brokenExample: "مثال: كِتَاب ⬅️ كُتُب",
+    brokenSign1: "لا ينتهي بـ (ون / ين) ولا بـ (ات)",
+    brokenSign2: "تتغيّر حروف الكلمة نفسها، فيجب حفظ كل جمع على حدة",
+    quickSummaryTitle: "تلخيص سريع للعلامات المميزة",
+    summaryMascTitle: "جمع مذكر سالم",
+    summaryMascDesc: "إذا انتهت الكلمة بـ (ون) أو (ين) وكانت لذكور عاقلين، فهي جمع مذكر سالم. مثال: صَادِقُونَ.",
+    summaryFemTitle: "جمع مؤنث سالم",
+    summaryFemDesc: "إذا انتهت الكلمة بـ (ات)، فهي جمع مؤنث سالم. مثال: مُهَنْدِسَات.",
+    summaryBrokenTitle: "جمع تكسير",
+    summaryBrokenDesc: "إذا تغيّرت حروف الكلمة نفسها ولم تنتهِ بـ (ون/ين) أو (ات)، فهي جمع تكسير. مثال: أَطْفَال.",
     familyTitle: "قصة عائلة الكلمات",
     familyDesc: "كل الكلمات في اللغة العربية تنتمي إلى عائلة كبيرة لها 3 أبناء فقط: الاسم، والفعل، والحرف.",
     nounTitle: "الاسمُ", nounEn: "Noun",
@@ -511,6 +619,9 @@ const I18N = {
     adviceVerb: "راجع أنواع الفعل الثلاثة: الماضي، والمضارع، والأمر، وعلامات كل نوع.",
     adviceLetter: "راجع الحروف وتذكّر أن معناها لا يظهر إلا مع كلمة أخرى.",
     adviceSentence: "راجع نوعي الجملة: الاسمية (مبتدأ وخبر) والفعلية (فعل وفاعل).",
+    adviceMascPlural: "راجع علامة جمع المذكر السالم: زيادة (ون) أو (ين) في نهاية الكلمة السليمة.",
+    adviceFemPlural: "راجع علامة جمع المؤنث السالم: حذف التاء المربوطة وإضافة (ات).",
+    adviceBrokenPlural: "راجع جمع التكسير: الكلمة نفسها تتغيّر ولا تتبع قاعدة ثابتة، فاحفظ كل كلمة وجمعها.",
     retryBtn: "إعادة المحاولة",
     footer: "لغتي الجميلة — إعداد: الأستاذة أمل الحسن",
     nameRequired: "من فضلك اكتب اسمك أولًا",
@@ -537,10 +648,39 @@ const I18N = {
     lesson1CardDesc: "Noun, Verb, Particle, and sentence types",
     lessonReadyTag: "✓ Ready to review",
     lessonNum1: "1",
+    lessonNum2: "2",
+    lesson2CardTitle: "Lesson 2: أنواعُ الجُموع (Types of Plurals)",
+    lesson2CardDesc: "Singular and plural, and the three plural types",
     reviewBtn: "Review",
     backToMenuBtn: "Back to main menu",
     lessonPill: "Lesson 1", lessonTitle: "أنواعُ الكَلِمة (Word Types)",
+    lesson2Pill: "Lesson 2", lesson2Title: "أنواعُ الجُموع (Types of Plurals)",
     lessonDesc: "Read the explanation carefully before moving to the games and exercises",
+    pluralFamilyTitle: "The Story of Plurals in Arabic",
+    pluralFamilyDesc: "Singular (مفرد) means just one thing. Plural (جمع) means more than two (3 or more). Arabic has 3 types of plurals.",
+    mascTitle: "جمع المذكر السالم", mascEn: "Sound Masculine Plural",
+    mascDesc: "For rational males, such as people and professions. The word stays intact, and we add (ون) or (ين) at the end.",
+    mascExample: "Examples: مُعَلِّم ⬅️ مُعَلِّمُون / مُعَلِّمِين (Teachers)",
+    mascSign1: "Ends with (ون) in the nominative case",
+    mascSign2: "Ends with (ين) in the accusative/genitive case",
+    mascSign3: "Used for rational males and professions",
+    femTitle: "جمع المؤنث السالم", femEn: "Sound Feminine Plural",
+    femDesc: "For females, or words ending in taa marbuta. We remove the taa marbuta and add (ات) in its place.",
+    femExample: "Examples: مُعَلِّمَة ⬅️ مُعَلِّمَات (Female teachers)",
+    femSign1: "We remove the taa marbuta (ة) from the end of the word",
+    femSign2: "We add (ات) in its place, without changing the rest of the letters",
+    brokenTitle: "جمع التكسير", brokenEn: "Broken Plural",
+    brokenDesc: "An \"irregular\" plural that breaks the singular word, changing the order of its letters or adding to or removing from it, with no fixed rule.",
+    brokenExample: "Examples: كِتَاب ⬅️ كُتُب (Books)",
+    brokenSign1: "Does not end with (ون / ين) or (ات)",
+    brokenSign2: "The word's own letters change, so each plural must be memorized individually",
+    quickSummaryTitle: "Quick Summary of the Distinguishing Signs",
+    summaryMascTitle: "Sound Masculine Plural",
+    summaryMascDesc: "If the word ends with (ون) or (ين) and refers to rational males, it's a sound masculine plural. Example: صَادِقُونَ.",
+    summaryFemTitle: "Sound Feminine Plural",
+    summaryFemDesc: "If the word ends with (ات), it's a sound feminine plural. Example: مُهَنْدِسَات.",
+    summaryBrokenTitle: "Broken Plural",
+    summaryBrokenDesc: "If the word's own letters change and it doesn't end with (ون/ين) or (ات), it's a broken plural. Example: أَطْفَال.",
     familyTitle: "The Words Family Story",
     familyDesc: "Every word in Arabic belongs to one big family with only 3 children: the Noun, the Verb, and the Particle.",
     nounTitle: "الاسمُ", nounEn: "Noun",
@@ -586,6 +726,9 @@ const I18N = {
     adviceVerb: "Review the three verb types: past, present, and imperative, and the sign of each.",
     adviceLetter: "Review particles, and remember their meaning only appears together with another word.",
     adviceSentence: "Review the two sentence types: nominal (subject + predicate) and verbal (verb + subject).",
+    adviceMascPlural: "Review the sign of the sound masculine plural: adding (ون) or (ين) to the end of the intact word.",
+    adviceFemPlural: "Review the sign of the sound feminine plural: removing the taa marbuta and adding (ات).",
+    adviceBrokenPlural: "Review the broken plural: the word itself changes with no fixed rule, so memorize each word's plural individually.",
     retryBtn: "Try again",
     footer: "My Beautiful Language — Prepared by: Ms. Amal Alhasan",
     nameRequired: "Please type your name first",
@@ -610,7 +753,7 @@ function t(key){ return I18N[lang][key] ?? key; }
 /* Each question's "q" is bilingual (instruction wording translates),
    but the quoted Arabic word/sentence «...» being classified, and all
    the answer options, always stay in Arabic on purpose. */
-const QUESTIONS = [
+const QUESTIONS_L1 = [
   { q:{ ar:"ما نوعُ الكلمة التالية: «كِتاب»؟", en:"What type is the following word: «كِتاب»؟" },
     options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 0, category:"noun" },
   { q:{ ar:"ما نوعُ الكلمة التالية: «كَتَبَ»؟", en:"What type is the following word: «كَتَبَ»؟" },
@@ -637,12 +780,44 @@ const QUESTIONS = [
     options: ["اسمٌ", "فعلٌ", "حرفٌ"], correct: 2, category:"letter" }
 ];
 
-const ADVICE_KEY = { noun:"adviceNoun", verb:"adviceVerb", letter:"adviceLetter", sentence:"adviceSentence" };
+const ADVICE_KEY_L1 = { noun:"adviceNoun", verb:"adviceVerb", letter:"adviceLetter", sentence:"adviceSentence" };
+
+/* =====================================================
+   Quiz data — Lesson 2: أنواع الجموع
+   ===================================================== */
+const QUESTIONS_L2 = [
+  { q:{ ar:"«مُهَنْدِسَات» ⬅️ ما نوعُ هذا الجمع؟", en:"«مُهَنْدِسَات» ⬅️ What type of plural is this?" },
+    options: ["جمعُ مذكرٍ سالم", "جمعُ مؤنثٍ سالم", "جمعُ تكسير"], correct: 1, category:"fem" },
+  { q:{ ar:"«أَطْفَال» ⬅️ ما نوعُ هذا الجمع؟", en:"«أَطْفَال» ⬅️ What type of plural is this?" },
+    options: ["جمعُ مذكرٍ سالم", "جمعُ مؤنثٍ سالم", "جمعُ تكسير"], correct: 2, category:"broken" },
+  { q:{ ar:"«صَادِقُونَ» ⬅️ ما نوعُ هذا الجمع؟", en:"«صَادِقُونَ» ⬅️ What type of plural is this?" },
+    options: ["جمعُ مذكرٍ سالم", "جمعُ مؤنثٍ سالم", "جمعُ تكسير"], correct: 0, category:"masc" },
+  { q:{ ar:"علامةُ جمع المذكر السالم هي:", en:"The sign of the sound masculine plural is:" },
+    options: ["إضافةُ (ات)", "إضافةُ (ون) أو (ين)", "تغييرُ حروف الكلمة"], correct: 1, category:"masc" },
+  { q:{ ar:"علامةُ جمع المؤنث السالم هي:", en:"The sign of the sound feminine plural is:" },
+    options: ["إضافةُ (ات)", "إضافةُ (ون) أو (ين)", "تغييرُ حروف الكلمة"], correct: 0, category:"fem" },
+  { q:{ ar:"جمعُ كلمةِ «طَالِبَة» هو:", en:"The plural of the word «طَالِبَة» is:" },
+    options: ["طَالِبَات", "طَالِبُون", "طُلَّاب"], correct: 0, category:"fem" },
+  { q:{ ar:"جمعُ كلمةِ «كِتَاب» هو:", en:"The plural of the word «كِتَاب» is:" },
+    options: ["كِتَابُون", "كِتَابَات", "كُتُب"], correct: 2, category:"broken" },
+  { q:{ ar:"جمعُ كلمةِ «مُسْلِم» هو:", en:"The plural of the word «مُسْلِم» is:" },
+    options: ["مُسْلِمُون", "مُسْلِمَات", "مَسَالِم"], correct: 0, category:"masc" },
+  { q:{ ar:"سببُ تسمية جمع التكسير بهذا الاسم:", en:"The reason the broken plural is called by this name:" },
+    options: ["لأنه ينتهي بحروف ثابتة", "لأنه يكسر الكلمة ويغيّر ترتيب حروفها", "لأنه خاصٌّ بالإناث"], correct: 1, category:"broken" },
+  { q:{ ar:"جمعُ كلمةِ «سَيَّارَة» هو:", en:"The plural of the word «سَيَّارَة» is:" },
+    options: ["سَيَّارَات", "سَيَّارُون", "سَيَّارِين"], correct: 0, category:"fem" },
+  { q:{ ar:"جمعُ كلمةِ «قَلَم» هو:", en:"The plural of the word «قَلَم» is:" },
+    options: ["أَقْلَام", "قَلَمُون", "قَلَمَات"], correct: 0, category:"broken" },
+  { q:{ ar:"جمعُ كلمةِ «مُعَلِّمَة» هو:", en:"The plural of the word «مُعَلِّمَة» is:" },
+    options: ["مُعَلِّمُون", "مُعَلِّمَات", "مُعَلِّمِين"], correct: 1, category:"fem" }
+];
+
+const ADVICE_KEY_L2 = { masc:"adviceMascPlural", fem:"adviceFemPlural", broken:"adviceBrokenPlural" };
 
 /* =====================================================
    Fishing game data (always Arabic — content to solve)
    ===================================================== */
-const FISH_ROUNDS = [
+const FISH_ROUNDS_L1 = [
   { target: "اسم", items: [
       {text:"ولدٌ", correct:true}, {text:"زيدٍ", correct:true}, {text:"قلمٌ", correct:true},
       {text:"في", correct:false}, {text:"يلعبُ", correct:false}, {text:"مِن", correct:false}
@@ -664,6 +839,24 @@ const FISH_ROUNDS = [
       {text:"العلمُ نورٌ", correct:false}, {text:"الكتابُ مفيدٌ", correct:false}
   ]}
 ];
+
+/* ---------- Lesson 2 fishing rounds ---------- */
+const FISH_ROUNDS_L2 = [
+  { target: "جمع مذكر سالم", items: [
+      {text:"مُعَلِّمُونَ", correct:true}, {text:"مُهَنْدِسُونَ", correct:true}, {text:"مُسْلِمِينَ", correct:true},
+      {text:"مُعَلِّمَات", correct:false}, {text:"كُتُب", correct:false}, {text:"سَيَّارَات", correct:false}
+  ]},
+  { target: "جمع مؤنث سالم", items: [
+      {text:"مُعَلِّمَات", correct:true}, {text:"طَالِبَات", correct:true}, {text:"سَيَّارَات", correct:true},
+      {text:"مُعَلِّمُونَ", correct:false}, {text:"أَقْلَام", correct:false}, {text:"مُهَنْدِسِينَ", correct:false}
+  ]},
+  { target: "جمع تكسير", items: [
+      {text:"كُتُب", correct:true}, {text:"أَقْلَام", correct:true}, {text:"أَطْفَال", correct:true}, {text:"مَدَارِس", correct:true},
+      {text:"مُعَلِّمُونَ", correct:false}, {text:"طَالِبَات", correct:false}
+  ]}
+];
+
+let FISH_ROUNDS = FISH_ROUNDS_L1;
 const FISH_POS = {
   6:[{top:6,left:6},{top:10,left:58},{top:36,left:30},{top:42,left:76},{top:66,left:8},{top:74,left:54}],
   4:[{top:10,left:12},{top:16,left:60},{top:54,left:22},{top:64,left:64}]
@@ -672,13 +865,27 @@ const FISH_POS = {
 /* =====================================================
    Memory game data (always Arabic — content to solve)
    ===================================================== */
-const MEMORY_PAIRS = [
+const MEMORY_PAIRS_L1 = [
   { id:0, cat:"noun",    label:"اسم",          instance:"قَلَمٌ" },
   { id:1, cat:"verb",    label:"فعل",          instance:"يَكْتُبُ" },
   { id:2, cat:"letter",  label:"حرف",          instance:"عَلَى" },
   { id:3, cat:"nominal", label:"جملة اسمية",   instance:"الولدُ ذكيٌّ" },
   { id:4, cat:"verbal",  label:"جملة فعلية",   instance:"يَلعَبُ الولدُ" }
 ];
+
+/* ---------- Lesson 2 memory pairs ---------- */
+const MEMORY_PAIRS_L2 = [
+  { id:0, cat:"noun",    label:"مفرد",                    instance:"قَلَم" },
+  { id:1, cat:"verb",    label:"جمع مذكر سالم (رفع)",      instance:"مُعَلِّمُونَ" },
+  { id:2, cat:"letter",  label:"جمع مذكر سالم (نصب/جر)",   instance:"مُهَنْدِسِينَ" },
+  { id:3, cat:"nominal", label:"جمع مؤنث سالم",           instance:"طَالِبَات" },
+  { id:4, cat:"verbal",  label:"جمع تكسير",               instance:"أَقْلَام" }
+];
+
+let MEMORY_PAIRS = MEMORY_PAIRS_L1;
+let QUESTIONS = QUESTIONS_L1;
+let ADVICE_KEY = ADVICE_KEY_L1;
+let currentLessonSheetName = "أنواع الكلمة";
 
 /* =====================================================
    Global state
@@ -745,13 +952,32 @@ function updateMenuWelcome(){
   if (el) el.textContent = `${t("menuWelcomePrefix")} ${studentName} 👋`;
 }
 
-/* ---------- menu -> lesson 1 ---------- */
+/* ---------- menu -> lesson 1 / lesson 2 ---------- */
 document.getElementById("lesson1ReviewBtn").addEventListener("click", ()=>{
   showScreen("screen-lesson");
 });
+document.getElementById("lesson2ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson2");
+});
 
-/* ---------- lesson -> game1 ---------- */
+/* ---------- lesson 1 -> game1 ---------- */
 document.getElementById("toGamesBtn").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L1;
+  MEMORY_PAIRS = MEMORY_PAIRS_L1;
+  QUESTIONS = QUESTIONS_L1;
+  ADVICE_KEY = ADVICE_KEY_L1;
+  currentLessonSheetName = "أنواع الكلمة";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- lesson 2 -> game1 ---------- */
+document.getElementById("toGamesBtn2").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L2;
+  MEMORY_PAIRS = MEMORY_PAIRS_L2;
+  QUESTIONS = QUESTIONS_L2;
+  ADVICE_KEY = ADVICE_KEY_L2;
+  currentLessonSheetName = "أنواع الجموع";
   startFishGame();
   showScreen("screen-game1");
 });
@@ -1050,8 +1276,9 @@ function finishQuiz(){
   document.getElementById("ringProgress").setAttribute("stroke", ringColor);
   document.getElementById("resultSub").textContent = I18N[lang].perfMsgs[msgKey];
 
-  // advice based on missed categories
-  const missCount = { noun:0, verb:0, letter:0, sentence:0 };
+  // advice based on missed categories (dynamic per active lesson)
+  const missCount = {};
+  Object.keys(ADVICE_KEY).forEach(cat=>{ missCount[cat] = 0; });
   answers.forEach((ans,i)=>{
     if (ans !== QUESTIONS[i].correct){
       missCount[QUESTIONS[i].category]++;
@@ -1103,7 +1330,7 @@ function sendToSheet(correct, total, pct){
       score: correct,
       total: total,
       percentage: pct + "%",
-      lesson: "أنواع الكلمة",
+      lesson: currentLessonSheetName,
       timestamp: new Date().toISOString()
     })
   }).then(()=>{
