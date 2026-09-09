@@ -103,11 +103,13 @@
   .concept-card.c-noun{background:#f5eefb;border-color:var(--purple);}
   .concept-card.c-verb{background:#fbf4e3;border-color:var(--gold);}
   .concept-card.c-letter{background:#fbeeec;border-color:var(--red);}
+  .concept-card.c-extra{background:#eaf3f1;border-color:var(--teal);}
   .concept-card h3{margin:0 0 2px;font-size:16px;font-weight:800;}
   .concept-card .en-term{display:block;font-size:12px;font-weight:700;color:var(--ink-soft);margin-bottom:8px;}
   .concept-card.c-noun h3{color:var(--purple);}
   .concept-card.c-verb h3{color:#a67821;}
   .concept-card.c-letter h3{color:var(--red);}
+  .concept-card.c-extra h3{color:var(--teal-dark);}
   .concept-card p{margin:0;font-size:14px;line-height:1.8;color:var(--ink);}
   .concept-card .example{display:inline-block;margin-top:8px;background:rgba(255,255,255,.7);border-radius:8px;padding:3px 10px;font-size:13.5px;font-weight:700;}
   .signs-list{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
@@ -275,6 +277,17 @@
         </div>
         <button class="btn btn-primary btn-inline" id="lesson2ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
       </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum3">٣</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson3CardTitle">الدرس الثالث: الهمزات والتاءات</h3>
+            <p data-i18n="lesson3CardDesc">همزة الوصل والقطع، والتاء المفتوحة والمربوطة</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson3ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
     </div>
   </section>
 
@@ -413,6 +426,86 @@
     </div>
   </section>
 
+  <!-- SCREEN 2C: LESSON 3 -->
+  <section class="screen" id="screen-lesson3">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lesson3Pill">الدرس الثالث</span>
+        <h1 data-i18n="lesson3Title">الهمزات والتاءات</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="hamzaTaFamilyTitle">قصة الهمزتين والتاءين</h2>
+        <p data-i18n="hamzaTaFamilyDesc">في أول الكلمة همزتان مختلفتا الشخصية، وفي آخرها تاءان مختلفتا الشخصية أيضًا. تعالَ نتعرّف عليهما بالحيل الذكية!</p>
+      </div>
+
+      <div class="section-title" data-i18n="hamzaSectionTitle">همزة الوصل وهمزة القطع</div>
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="qatTitle">همزة القطع</h3>
+          <span class="en-term" data-i18n="qatEn">Hamzat Al-Qat' (Cut Hamza)</span>
+          <p data-i18n="qatDesc">همزةٌ قويةٌ حادة، تُكتب صريحةً فوق الألف أو تحتها (أ / إ)، وتُنطق دائمًا سواء في بداية الكلام أو وسطه.</p>
+          <span class="example" data-i18n="qatExample">مثال: أُسْرَة، إِخْوَة، أَكَلَ</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="waslTitle">همزة الوصل</h3>
+          <span class="en-term" data-i18n="waslEn">Hamzat Al-Wasl (Connecting Hamza)</span>
+          <p data-i18n="waslDesc">همزةٌ خجولة، تُكتب ألفًا مجردة بلا رأس همزة (ا)، تُنطق فقط إذا بدأنا بها الكلام، وتختفي وتتصل بما قبلها إذا وصلنا الكلام.</p>
+          <span class="example" data-i18n="waslExample">مثال: اِسْم، اِبْن، اِلْعَبْ، اَلْكِتَاب</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="hamzaTrickTitle">🪄 السر العجيب: اختبار الواو أو الفاء</h2>
+        <p data-i18n="hamzaTrickDesc">ضع حرف (وَ) أو (فَ) قبل الكلمة واقرأها: إذا نُطقت الهمزة واصطدمت بلسانك فهي همزة قطع (وَأَحْمَد)، وإذا اختفت الهمزة وقفزت فورًا للحرف التالي فهي همزة وصل (اِكْتُبْ ⬅️ وَكْتُبْ).</p>
+      </div>
+
+      <div class="section-title" data-i18n="taSectionTitle">التاء المفتوحة والتاء المربوطة</div>
+      <div class="concept-grid">
+        <div class="concept-card c-letter">
+          <h3 data-i18n="maftouhaTitle">التاء المفتوحة</h3>
+          <span class="en-term" data-i18n="maftouhaEn">Open Ta'</span>
+          <p data-i18n="maftouhaDesc">تاءٌ شجاعةٌ وقوية، تُنطق (ت) في كل الأحوال، عند الحركة وعند الوقوف عليها بالسكون أيضًا.</p>
+          <span class="example" data-i18n="maftouhaExample">مثال: بِنْتٌ، لَعِبْتُ، بُيُوتٌ</span>
+        </div>
+        <div class="concept-card c-extra">
+          <h3 data-i18n="marboutaTitle">التاء المربوطة</h3>
+          <span class="en-term" data-i18n="marboutaEn">Tied Ta'</span>
+          <p data-i18n="marboutaDesc">تاءٌ متخفيةٌ ولطيفة، تُنطق (ت) عندما نتحرّك بالكلمة، وتتحوّل إلى (هـ) عندما نقف عليها بالسكون.</p>
+          <span class="example" data-i18n="marboutaExample">مثال: مَدْرَسَةٌ، قِصَّةٌ، كُرَةٌ</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="taTrickTitle">🪄 السر العجيب: اختبار الوقف بالسكون</h2>
+        <p data-i18n="taTrickDesc">انطق الكلمة بسكون (قف عليها بدون حركة): إذا بقيت (ت) صريحة فهي تاء مفتوحة (بِنْتْ)، وإذا تحوّلت إلى (هـ) فهي تاء مربوطة (مَدْرَسَهْ).</p>
+      </div>
+
+      <div class="section-title" data-i18n="quickChallengeTitle">🧩 لعبة التحدي السريع</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="challenge1Title">«كَتَبَتْ»</h4>
+          <p data-i18n="challenge1Desc">نقف بالسكون: (كتبتْ) تاءٌ صريحة ⬅️ تاء مفتوحة.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="challenge2Title">«شَجَرَة»</h4>
+          <p data-i18n="challenge2Desc">نقف بالسكون: (شجرهْ) تحوّلت إلى هاء ⬅️ تاء مربوطة.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="challenge3Title">«اِسْتَمِعْ»</h4>
+          <p data-i18n="challenge3Desc">نضع واوًا: (وَسْتَمِعْ) اختفت الهمزة ⬅️ همزة وصل.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="challenge4Title">«أُمِّي»</h4>
+          <p data-i18n="challenge4Desc">نضع واوًا: (وَأُمِّي) اصطدمت بلساننا ⬅️ همزة قطع.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtn3" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
   <!-- SCREEN 3: GAME 1 - FISHING -->
   <section class="screen" id="screen-game1">
     <div class="card">
@@ -451,7 +544,7 @@
       </div>
       <div class="game-meta">
         <span><span data-i18n="movesLabel">المحاولات</span>: <span id="memMoves">0</span></span>
-        <span><span data-i18n="matchedLabel">التوافقات</span>: <span id="memMatched">0</span>/5</span>
+        <span><span data-i18n="matchedLabel">التوافقات</span>: <span id="memMatched">0</span>/<span id="memTotal">5</span></span>
       </div>
       <div class="toast-wrap" id="memToastWrap"></div>
 
@@ -542,13 +635,42 @@ const I18N = {
     lessonReadyTag: "✓ جاهز للمراجعة",
     lessonNum1: "١",
     lessonNum2: "٢",
+    lessonNum3: "٣",
     lesson2CardTitle: "الدرس الثاني: أنواعُ الجُموع",
     lesson2CardDesc: "المفرد والجمع، وأنواع الجموع الثلاثة",
+    lesson3CardTitle: "الدرس الثالث: الهمزات والتاءات",
+    lesson3CardDesc: "همزة الوصل والقطع، والتاء المفتوحة والمربوطة",
     reviewBtn: "مراجعة",
     backToMenuBtn: "رجوع للقائمة الرئيسية",
     lessonPill: "الدرس الأول", lessonTitle: "أنواعُ الكَلِمة",
     lesson2Pill: "الدرس الثاني", lesson2Title: "أنواعُ الجُموع",
+    lesson3Pill: "الدرس الثالث", lesson3Title: "الهمزات والتاءات",
     lessonDesc: "اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين",
+    hamzaTaFamilyTitle: "قصة الهمزتين والتاءين",
+    hamzaTaFamilyDesc: "في أول الكلمة همزتان مختلفتا الشخصية، وفي آخرها تاءان مختلفتا الشخصية أيضًا. تعالَ نتعرّف عليهما بالحيل الذكية!",
+    hamzaSectionTitle: "همزة الوصل وهمزة القطع",
+    qatTitle: "همزة القطع", qatEn: "Hamzat Al-Qat' (Cut Hamza)",
+    qatDesc: "همزةٌ قويةٌ حادة، تُكتب صريحةً فوق الألف أو تحتها (أ / إ)، وتُنطق دائمًا سواء في بداية الكلام أو وسطه.",
+    qatExample: "مثال: أُسْرَة، إِخْوَة، أَكَلَ",
+    waslTitle: "همزة الوصل", waslEn: "Hamzat Al-Wasl (Connecting Hamza)",
+    waslDesc: "همزةٌ خجولة، تُكتب ألفًا مجردة بلا رأس همزة (ا)، تُنطق فقط إذا بدأنا بها الكلام، وتختفي وتتصل بما قبلها إذا وصلنا الكلام.",
+    waslExample: "مثال: اِسْم، اِبْن، اِلْعَبْ، اَلْكِتَاب",
+    hamzaTrickTitle: "🪄 السر العجيب: اختبار الواو أو الفاء",
+    hamzaTrickDesc: "ضع حرف (وَ) أو (فَ) قبل الكلمة واقرأها: إذا نُطقت الهمزة واصطدمت بلسانك فهي همزة قطع (وَأَحْمَد)، وإذا اختفت الهمزة وقفزت فورًا للحرف التالي فهي همزة وصل (اِكْتُبْ ⬅️ وَكْتُبْ).",
+    taSectionTitle: "التاء المفتوحة والتاء المربوطة",
+    maftouhaTitle: "التاء المفتوحة", maftouhaEn: "Open Ta'",
+    maftouhaDesc: "تاءٌ شجاعةٌ وقوية، تُنطق (ت) في كل الأحوال، عند الحركة وعند الوقوف عليها بالسكون أيضًا.",
+    maftouhaExample: "مثال: بِنْتٌ، لَعِبْتُ، بُيُوتٌ",
+    marboutaTitle: "التاء المربوطة", marboutaEn: "Tied Ta'",
+    marboutaDesc: "تاءٌ متخفيةٌ ولطيفة، تُنطق (ت) عندما نتحرّك بالكلمة، وتتحوّل إلى (هـ) عندما نقف عليها بالسكون.",
+    marboutaExample: "مثال: مَدْرَسَةٌ، قِصَّةٌ، كُرَةٌ",
+    taTrickTitle: "🪄 السر العجيب: اختبار الوقف بالسكون",
+    taTrickDesc: "انطق الكلمة بسكون (قف عليها بدون حركة): إذا بقيت (ت) صريحة فهي تاء مفتوحة (بِنْتْ)، وإذا تحوّلت إلى (هـ) فهي تاء مربوطة (مَدْرَسَهْ).",
+    quickChallengeTitle: "🧩 لعبة التحدي السريع",
+    challenge1Title: "«كَتَبَتْ»", challenge1Desc: "نقف بالسكون: (كتبتْ) تاءٌ صريحة ⬅️ تاء مفتوحة.",
+    challenge2Title: "«شَجَرَة»", challenge2Desc: "نقف بالسكون: (شجرهْ) تحوّلت إلى هاء ⬅️ تاء مربوطة.",
+    challenge3Title: "«اِسْتَمِعْ»", challenge3Desc: "نضع واوًا: (وَسْتَمِعْ) اختفت الهمزة ⬅️ همزة وصل.",
+    challenge4Title: "«أُمِّي»", challenge4Desc: "نضع واوًا: (وَأُمِّي) اصطدمت بلساننا ⬅️ همزة قطع.",
     pluralFamilyTitle: "قصة الجموع في اللغة العربية",
     pluralFamilyDesc: "المفردُ يعني شيئًا واحدًا فقط. أما الجمعُ فهو أكثر من اثنين (3 فأكثر). وفي اللغة العربية 3 أنواع من الجموع.",
     mascTitle: "جمع المذكر السالم", mascEn: "Sound Masculine Plural",
@@ -622,6 +744,10 @@ const I18N = {
     adviceMascPlural: "راجع علامة جمع المذكر السالم: زيادة (ون) أو (ين) في نهاية الكلمة السليمة.",
     adviceFemPlural: "راجع علامة جمع المؤنث السالم: حذف التاء المربوطة وإضافة (ات).",
     adviceBrokenPlural: "راجع جمع التكسير: الكلمة نفسها تتغيّر ولا تتبع قاعدة ثابتة، فاحفظ كل كلمة وجمعها.",
+    adviceQat: "راجع همزة القطع: تُنطق دائمًا وتظهر واضحة فوق أو تحت الألف (أ/إ)، حتى لو وضعنا قبلها واو أو فاء.",
+    adviceWasl: "راجع همزة الوصل: تُكتب ألفًا بلا رأس همزة (ا)، وتختفي في النطق عند وصل الكلام، فجرّبي اختبار الواو أو الفاء.",
+    adviceMaftouha: "راجع التاء المفتوحة: تبقى تُنطق (ت) دائمًا، حتى عند الوقف عليها بالسكون.",
+    adviceMarbouta: "راجع التاء المربوطة: تتحوّل إلى صوت (هـ) عند الوقف عليها بالسكون، فجرّبي اختبار الوقف.",
     retryBtn: "إعادة المحاولة",
     footer: "لغتي الجميلة — إعداد: الأستاذة أمل الحسن",
     nameRequired: "من فضلك اكتب اسمك أولًا",
@@ -649,13 +775,42 @@ const I18N = {
     lessonReadyTag: "✓ Ready to review",
     lessonNum1: "1",
     lessonNum2: "2",
+    lessonNum3: "3",
     lesson2CardTitle: "Lesson 2: أنواعُ الجُموع (Types of Plurals)",
     lesson2CardDesc: "Singular and plural, and the three plural types",
+    lesson3CardTitle: "Lesson 3: الهمزات والتاءات (Hamzas & Ta's)",
+    lesson3CardDesc: "Hamzat Al-Wasl & Al-Qat', and Open & Tied Ta'",
     reviewBtn: "Review",
     backToMenuBtn: "Back to main menu",
     lessonPill: "Lesson 1", lessonTitle: "أنواعُ الكَلِمة (Word Types)",
     lesson2Pill: "Lesson 2", lesson2Title: "أنواعُ الجُموع (Types of Plurals)",
+    lesson3Pill: "Lesson 3", lesson3Title: "الهمزات والتاءات (Hamzas & Ta's)",
     lessonDesc: "Read the explanation carefully before moving to the games and exercises",
+    hamzaTaFamilyTitle: "The Tale of the Hamzas and the Ta's",
+    hamzaTaFamilyDesc: "At the start of a word there are two hamzas with different personalities, and at its end there are two ta's with different personalities too. Let's meet them through smart tricks!",
+    hamzaSectionTitle: "Hamzat Al-Wasl & Hamzat Al-Qat'",
+    qatTitle: "همزة القطع", qatEn: "Hamzat Al-Qat' (Cut Hamza)",
+    qatDesc: "A strong, sharp hamza, written explicitly above or below the alif (أ / إ), and always pronounced, whether at the start or in the middle of speech.",
+    qatExample: "Examples: أُسْرَة (family), إِخْوَة (brothers), أَكَلَ (ate)",
+    waslTitle: "همزة الوصل", waslEn: "Hamzat Al-Wasl (Connecting Hamza)",
+    waslDesc: "A shy hamza, written as a plain alif with no hamza mark (ا). It's only pronounced when we begin speech with it, and disappears, connecting to the word before it, when speech flows on.",
+    waslExample: "Examples: اِسْم (name), اِبْن (son), اِلْعَبْ (play!), اَلْكِتَاب (the book)",
+    hamzaTrickTitle: "🪄 The Secret Trick: The Waw or Faa Test",
+    hamzaTrickDesc: "Put the letter (وَ) or (فَ) before the word and read it: if the hamza is pronounced and hits your tongue, it's Hamzat Al-Qat' (وَأَحْمَد). If the hamza disappears and jumps straight to the next letter, it's Hamzat Al-Wasl (اِكْتُبْ ⬅️ وَكْتُبْ).",
+    taSectionTitle: "Open Ta' & Tied Ta'",
+    maftouhaTitle: "التاء المفتوحة", maftouhaEn: "Open Ta'",
+    maftouhaDesc: "A brave, strong ta' that is always pronounced \"T\" — whether the word is moving with a vowel or stopped in a pause.",
+    maftouhaExample: "Examples: بِنْتٌ (girl), لَعِبْتُ (I played), بُيُوتٌ (houses)",
+    marboutaTitle: "التاء المربوطة", marboutaEn: "Tied Ta'",
+    marboutaDesc: "A gentle, shy ta' that is pronounced \"T\" when the word moves with a vowel, but turns into an \"H\" sound when we stop on it in a pause.",
+    marboutaExample: "Examples: مَدْرَسَةٌ (school), قِصَّةٌ (story), كُرَةٌ (ball)",
+    taTrickTitle: "🪄 The Secret Trick: The Freeze Test",
+    taTrickDesc: "Say the word with a pause (freeze it without a vowel): if it still sounds like a clear \"T\", it's an Open Ta' (بِنْتْ). If it turns into an \"H\" sound, it's a Tied Ta' (مَدْرَسَهْ).",
+    quickChallengeTitle: "🧩 The Quick Challenge Game",
+    challenge1Title: "«كَتَبَتْ»", challenge1Desc: "Freeze it: (كتبتْ) a clear \"T\" ⬅️ Open Ta'.",
+    challenge2Title: "«شَجَرَة»", challenge2Desc: "Freeze it: (شجرهْ) it turned into an \"H\" ⬅️ Tied Ta'.",
+    challenge3Title: "«اِسْتَمِعْ»", challenge3Desc: "Add a waw: (وَسْتَمِعْ) the hamza disappeared ⬅️ Hamzat Al-Wasl.",
+    challenge4Title: "«أُمِّي»", challenge4Desc: "Add a waw: (وَأُمِّي) it hit our tongue ⬅️ Hamzat Al-Qat'.",
     pluralFamilyTitle: "The Story of Plurals in Arabic",
     pluralFamilyDesc: "Singular (مفرد) means just one thing. Plural (جمع) means more than two (3 or more). Arabic has 3 types of plurals.",
     mascTitle: "جمع المذكر السالم", mascEn: "Sound Masculine Plural",
@@ -729,6 +884,10 @@ const I18N = {
     adviceMascPlural: "Review the sign of the sound masculine plural: adding (ون) or (ين) to the end of the intact word.",
     adviceFemPlural: "Review the sign of the sound feminine plural: removing the taa marbuta and adding (ات).",
     adviceBrokenPlural: "Review the broken plural: the word itself changes with no fixed rule, so memorize each word's plural individually.",
+    adviceQat: "Review Hamzat Al-Qat': it's always pronounced and appears explicitly above or below the alif (أ/إ), even with a waw or faa before it.",
+    adviceWasl: "Review Hamzat Al-Wasl: it's written as a plain alif with no hamza mark (ا), and disappears in pronunciation when speech connects — try the waw or faa test.",
+    adviceMaftouha: "Review the Open Ta': it stays pronounced \"T\" always, even when you stop on it with a pause.",
+    adviceMarbouta: "Review the Tied Ta': it turns into an \"H\" sound when you stop on it with a pause — try the freeze test.",
     retryBtn: "Try again",
     footer: "My Beautiful Language — Prepared by: Ms. Amal Alhasan",
     nameRequired: "Please type your name first",
@@ -815,6 +974,38 @@ const QUESTIONS_L2 = [
 const ADVICE_KEY_L2 = { masc:"adviceMascPlural", fem:"adviceFemPlural", broken:"adviceBrokenPlural" };
 
 /* =====================================================
+   Quiz data — Lesson 3: الهمزات والتاءات
+   ===================================================== */
+const QUESTIONS_L3 = [
+  { q:{ ar:"«أَحْمَد» ⬅️ ما نوعُ الهمزة فيها؟", en:"«أَحْمَد» ⬅️ What type of hamza is this?" },
+    options: ["همزةُ قطع", "همزةُ وصل"], correct: 0, category:"qat" },
+  { q:{ ar:"«اِكْتُبْ» ⬅️ ما نوعُ الهمزة فيها؟", en:"«اِكْتُبْ» ⬅️ What type of hamza is this?" },
+    options: ["همزةُ قطع", "همزةُ وصل"], correct: 1, category:"wasl" },
+  { q:{ ar:"عند نطق «وَأُمِّي» تُسمَع الهمزةُ واضحةً، فهي:", en:"When pronouncing «وَأُمِّي» the hamza is heard clearly, so it is:" },
+    options: ["همزةُ قطع", "همزةُ وصل"], correct: 0, category:"qat" },
+  { q:{ ar:"عند نطق «وَسْتَمِعْ» تختفي الهمزةُ، فهي:", en:"When pronouncing «وَسْتَمِعْ» the hamza disappears, so it is:" },
+    options: ["همزةُ قطع", "همزةُ وصل"], correct: 1, category:"wasl" },
+  { q:{ ar:"«بِنْتٌ» عند الوقفِ عليها بالسكون تُنطق:", en:"«بِنْتٌ» when paused with a sukoon, is pronounced:" },
+    options: ["بِنْتْ (تاء واضحة)", "بِنْهْ (هاء)"], correct: 0, category:"maftouha" },
+  { q:{ ar:"«مَدْرَسَةٌ» عند الوقفِ عليها بالسكون تُنطق:", en:"«مَدْرَسَةٌ» when paused with a sukoon, is pronounced:" },
+    options: ["مَدْرَسَتْ", "مَدْرَسَهْ"], correct: 1, category:"marbouta" },
+  { q:{ ar:"«كَتَبَتْ» ⬅️ ما نوعُ التاء فيها؟", en:"«كَتَبَتْ» ⬅️ What type of ta' is this?" },
+    options: ["تاءٌ مفتوحة", "تاءٌ مربوطة"], correct: 0, category:"maftouha" },
+  { q:{ ar:"«شَجَرَة» ⬅️ ما نوعُ التاء فيها؟", en:"«شَجَرَة» ⬅️ What type of ta' is this?" },
+    options: ["تاءٌ مفتوحة", "تاءٌ مربوطة"], correct: 1, category:"marbouta" },
+  { q:{ ar:"الاختبارُ المستخدَم للتفريق بين همزتي الوصل والقطع هو:", en:"The test used to distinguish between Hamzat Al-Wasl and Al-Qat' is:" },
+    options: ["وضعُ حرف واو أو فاء قبل الكلمة", "الوقفُ بالسكون على الكلمة"], correct: 0, category:"wasl" },
+  { q:{ ar:"الاختبارُ المستخدَم للتفريق بين التاء المفتوحة والمربوطة هو:", en:"The test used to distinguish between the Open and Tied Ta' is:" },
+    options: ["وضعُ حرف واو قبل الكلمة", "الوقفُ بالسكون على الكلمة"], correct: 1, category:"maftouha" },
+  { q:{ ar:"«إِبْرَاهِيم» ⬅️ ما نوعُ الهمزة فيها؟", en:"«إِبْرَاهِيم» ⬅️ What type of hamza is this?" },
+    options: ["همزةُ قطع", "همزةُ وصل"], correct: 0, category:"qat" },
+  { q:{ ar:"همزةُ «اَلْكِتَاب» (أل التعريف) نوعُها:", en:"The hamza in «اَلْكِتَاب» (the definite article) is:" },
+    options: ["همزةُ قطع", "همزةُ وصل"], correct: 1, category:"wasl" }
+];
+
+const ADVICE_KEY_L3 = { qat:"adviceQat", wasl:"adviceWasl", maftouha:"adviceMaftouha", marbouta:"adviceMarbouta" };
+
+/* =====================================================
    Fishing game data (always Arabic — content to solve)
    ===================================================== */
 const FISH_ROUNDS_L1 = [
@@ -857,6 +1048,26 @@ const FISH_ROUNDS_L2 = [
 ];
 
 let FISH_ROUNDS = FISH_ROUNDS_L1;
+
+/* ---------- Lesson 3 fishing rounds ---------- */
+const FISH_ROUNDS_L3 = [
+  { target: "همزة قطع", items: [
+      {text:"أَحْمَد", correct:true}, {text:"إِبْرَاهِيم", correct:true}, {text:"أُسْرَة", correct:true},
+      {text:"اِكْتُبْ", correct:false}, {text:"اَلْمَدْرَسَة", correct:false}, {text:"اِسْم", correct:false}
+  ]},
+  { target: "همزة وصل", items: [
+      {text:"اِكْتُبْ", correct:true}, {text:"اَلْمَدْرَسَة", correct:true}, {text:"اِسْم", correct:true},
+      {text:"أَحْمَد", correct:false}, {text:"إِخْوَة", correct:false}, {text:"أَكَلَ", correct:false}
+  ]},
+  { target: "تاء مفتوحة", items: [
+      {text:"بِنْتٌ", correct:true}, {text:"لَعِبْتُ", correct:true}, {text:"بُيُوتٌ", correct:true},
+      {text:"مَدْرَسَةٌ", correct:false}, {text:"قِصَّةٌ", correct:false}, {text:"كُرَةٌ", correct:false}
+  ]},
+  { target: "تاء مربوطة", items: [
+      {text:"مَدْرَسَةٌ", correct:true}, {text:"قِصَّةٌ", correct:true}, {text:"كُرَةٌ", correct:true}, {text:"شَجَرَةٌ", correct:true},
+      {text:"بِنْتٌ", correct:false}, {text:"لَعِبْتُ", correct:false}
+  ]}
+];
 const FISH_POS = {
   6:[{top:6,left:6},{top:10,left:58},{top:36,left:30},{top:42,left:76},{top:66,left:8},{top:74,left:54}],
   4:[{top:10,left:12},{top:16,left:60},{top:54,left:22},{top:64,left:64}]
@@ -883,6 +1094,15 @@ const MEMORY_PAIRS_L2 = [
 ];
 
 let MEMORY_PAIRS = MEMORY_PAIRS_L1;
+
+/* ---------- Lesson 3 memory pairs ---------- */
+const MEMORY_PAIRS_L3 = [
+  { id:0, cat:"noun",   label:"همزة قطع",     instance:"أَحْمَد" },
+  { id:1, cat:"verb",   label:"همزة وصل",     instance:"اِكْتُبْ" },
+  { id:2, cat:"letter", label:"تاء مفتوحة",   instance:"بِنْتٌ" },
+  { id:3, cat:"nominal",label:"تاء مربوطة",   instance:"مَدْرَسَةٌ" }
+];
+
 let QUESTIONS = QUESTIONS_L1;
 let ADVICE_KEY = ADVICE_KEY_L1;
 let currentLessonSheetName = "أنواع الكلمة";
@@ -959,6 +1179,9 @@ document.getElementById("lesson1ReviewBtn").addEventListener("click", ()=>{
 document.getElementById("lesson2ReviewBtn").addEventListener("click", ()=>{
   showScreen("screen-lesson2");
 });
+document.getElementById("lesson3ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson3");
+});
 
 /* ---------- lesson 1 -> game1 ---------- */
 document.getElementById("toGamesBtn").addEventListener("click", ()=>{
@@ -978,6 +1201,17 @@ document.getElementById("toGamesBtn2").addEventListener("click", ()=>{
   QUESTIONS = QUESTIONS_L2;
   ADVICE_KEY = ADVICE_KEY_L2;
   currentLessonSheetName = "أنواع الجموع";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- lesson 3 -> game1 ---------- */
+document.getElementById("toGamesBtn3").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L3;
+  MEMORY_PAIRS = MEMORY_PAIRS_L3;
+  QUESTIONS = QUESTIONS_L3;
+  ADVICE_KEY = ADVICE_KEY_L3;
+  currentLessonSheetName = "الهمزات والتاءات";
   startFishGame();
   showScreen("screen-game1");
 });
@@ -1126,8 +1360,10 @@ function startMemoryGame(){
 function updateMemHeader(){
   const mv = document.getElementById("memMoves");
   const mt = document.getElementById("memMatched");
+  const total = document.getElementById("memTotal");
   if (mv) mv.textContent = memMoves;
   if (mt) mt.textContent = memMatchedCount;
+  if (total) total.textContent = MEMORY_PAIRS.length;
 }
 
 function renderMemGrid(){
