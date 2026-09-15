@@ -40,6 +40,23 @@
   .app{width:100%;max-width:640px;}
 
   .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+  .topbar-left{display:flex;align-items:center;gap:10px;}
+  .back-btn{
+    border:1.5px solid var(--line);
+    background:var(--paper);
+    color:var(--teal-dark);
+    font-family:inherit;
+    font-weight:800;
+    font-size:18px;
+    width:34px;height:34px;
+    border-radius:50%;
+    cursor:pointer;
+    flex-shrink:0;
+    align-items:center;justify-content:center;
+    transition:border-color .15s, background .15s;
+  }
+  .back-btn:hover{border-color:var(--teal);background:var(--cream);}
+  .back-btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
   .brand{display:flex;align-items:center;gap:10px;}
   .brand-badge{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;flex-shrink:0;}
   .brand-text{font-weight:800;font-size:15px;color:var(--teal-dark);line-height:1.3;}
@@ -104,12 +121,14 @@
   .concept-card.c-verb{background:#fbf4e3;border-color:var(--gold);}
   .concept-card.c-letter{background:#fbeeec;border-color:var(--red);}
   .concept-card.c-extra{background:#eaf3f1;border-color:var(--teal);}
+  .concept-card.c-blue{background:#eef2fb;border-color:#4472c4;}
   .concept-card h3{margin:0 0 2px;font-size:16px;font-weight:800;}
   .concept-card .en-term{display:block;font-size:12px;font-weight:700;color:var(--ink-soft);margin-bottom:8px;}
   .concept-card.c-noun h3{color:var(--purple);}
   .concept-card.c-verb h3{color:#a67821;}
   .concept-card.c-letter h3{color:var(--red);}
   .concept-card.c-extra h3{color:var(--teal-dark);}
+  .concept-card.c-blue h3{color:#2f4f8f;}
   .concept-card p{margin:0;font-size:14px;line-height:1.8;color:var(--ink);}
   .concept-card .example{display:inline-block;margin-top:8px;background:rgba(255,255,255,.7);border-radius:8px;padding:3px 10px;font-size:13.5px;font-weight:700;}
   .signs-list{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
@@ -224,10 +243,13 @@
 
 <div class="app">
   <div class="topbar">
-    <div class="brand">
-      <div class="brand-badge">ع</div>
-      <div class="brand-text" data-i18n="brandTitle">لغتي العربية
-        <small data-i18n="brandSub">الصف الخامس — المنهج السعودي</small>
+    <div class="topbar-left">
+      <button class="back-btn" id="backBtn" type="button" title="رجوع" style="display:none;">‹</button>
+      <div class="brand">
+        <div class="brand-badge">ع</div>
+        <div class="brand-text" data-i18n="brandTitle">لغتي العربية
+          <small data-i18n="brandSub">الصف الخامس — المنهج السعودي</small>
+        </div>
       </div>
     </div>
     <button class="lang-btn" id="langToggle" type="button">English</button>
@@ -287,6 +309,50 @@
           </div>
         </div>
         <button class="btn btn-primary btn-inline" id="lesson3ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum4">٤</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson4CardTitle">الدرس الرابع: المبتدأ والخبر</h3>
+            <p data-i18n="lesson4CardDesc">أركان الجملة الاسمية وعلامة الرفع</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson4ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum5">٥</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson5CardTitle">الدرس الخامس: الألف اللينة</h3>
+            <p data-i18n="lesson5CardDesc">متى تُكتب ألفًا ومتى تُكتب ياءً</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson5ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum6">٦</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson6CardTitle">الدرس السادس: أنواع المعارف</h3>
+            <p data-i18n="lesson6CardDesc">الضمير، اسم الإشارة، الموصول، العلم، المعرّف بأل</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson6ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+      </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" data-i18n="lessonNum7">٧</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="lesson7CardTitle">الدرس السابع: الفاعل والمفعول به</h3>
+            <p data-i18n="lesson7CardDesc">من قام بالفعل ومن وقع عليه الفعل</p>
+            <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lesson7ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
       </div>
     </div>
   </section>
@@ -506,6 +572,240 @@
     </div>
   </section>
 
+  <!-- SCREEN 2D: LESSON 4 -->
+  <section class="screen" id="screen-lesson4">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lesson4Pill">الدرس الرابع</span>
+        <h1 data-i18n="lesson4Title">المبتدأ والخبر</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="mkFamilyTitle">قصة الجملة الاسمية</h2>
+        <p data-i18n="mkFamilyDesc">الجملة الاسمية تبدأ باسم، ولها ركنان أساسيان لا تكتمل بدونهما: المبتدأ والخبر، وكلاهما مرفوع.</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="mubtadaTitle">المبتدأ</h3>
+          <span class="en-term" data-i18n="mubtadaEn">Subject (Mubtada')</span>
+          <p data-i18n="mubtadaDesc">اسمٌ معرفةٌ يقع غالبًا في أوّل الجملة الاسمية، وهو الذي نتحدّث عنه، وهو مرفوعٌ.</p>
+          <span class="example" data-i18n="mubtadaExample">مثال: الشمسُ ساطعةٌ ⬅️ المبتدأ: الشمسُ</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="khabarTitle">الخبر</h3>
+          <span class="en-term" data-i18n="khabarEn">Predicate (Khabar)</span>
+          <p data-i18n="khabarDesc">يُكمِل معنى الجملة ويُخبِر عن المبتدأ، وهو مرفوعٌ أيضًا، وقد يكون كلمةً واحدة أو جملة.</p>
+          <span class="example" data-i18n="khabarExample">مثال: الشمسُ ساطعةٌ ⬅️ الخبر: ساطعةٌ</span>
+        </div>
+        <div class="concept-card c-letter">
+          <h3 data-i18n="rafaaTitle">علامة الرفع</h3>
+          <span class="en-term" data-i18n="rafaaEn">The Sign of Rafaa</span>
+          <p data-i18n="rafaaDesc">المبتدأ والخبر كلاهما مرفوعٌ، وعلامةُ رفع الاسم المفرد هي الضمّةُ الظاهرة في آخره.</p>
+          <span class="example" data-i18n="rafaaExample">مثال: المدينةُ نظيفةٌ ⬅️ ضمّةٌ على التاء والفاء</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="mkTrickTitle">🪄 السر العجيب: كيف أُميّزُ المبتدأ من الخبر؟</h2>
+        <p data-i18n="mkTrickDesc">اسأل: «مَن هذا؟» أو «ما هذا؟» فالجواب هو المبتدأ. ثم اسأل: «ماذا عنه؟» أو «كيف هو؟» فالجواب هو الخبر. مثال: مَن الجديُّ؟ العمل ⬅️ مبتدأ. كيف هو؟ مفيدٌ ⬅️ خبر.</p>
+      </div>
+
+      <div class="section-title" data-i18n="quickChallengeTitle">🧩 لعبة التحدي السريع</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="mkChallenge1Title">«أَزْهَارُ الحَديقَةِ فَوَّاحَةٌ»</h4>
+          <p data-i18n="mkChallenge1Desc">المبتدأ: أَزْهَارُ الحَديقَةِ — الخبر: فَوَّاحَةٌ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="mkChallenge2Title">«المَدينَةُ نَظيفَةٌ»</h4>
+          <p data-i18n="mkChallenge2Desc">المبتدأ: المَدينَةُ — الخبر: نَظيفَةٌ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="mkChallenge3Title">«العَمَلُ الجِديُّ مُفيدٌ»</h4>
+          <p data-i18n="mkChallenge3Desc">المبتدأ: العَمَلُ الجِديُّ — الخبر: مُفيدٌ.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtn4" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2E: LESSON 5 -->
+  <section class="screen" id="screen-lesson5">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lesson5Pill">الدرس الخامس</span>
+        <h1 data-i18n="lesson5Title">الألف اللينة</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="alifFamilyTitle">قصة الألف اللينة</h2>
+        <p data-i18n="alifFamilyDesc">الألفُ اللينةُ هي ألفٌ ساكنةٌ تقع في آخر الكلمة، ولها شكلان: ألفٌ طويلة (ا) أو ألفٌ مقصورة (ى)، ولكل شكلٍ قاعدةٌ تُعرَف بالرجوع إلى أصل الكلمة.</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="alifV3Title">ألف اللين في الفعل الثلاثي</h3>
+          <span class="en-term" data-i18n="alifV3En">Soft Alif in 3-Letter Verbs</span>
+          <p data-i18n="alifV3Desc">نرجع إلى الفعل المضارع: إن كانت الألف واوًا في المضارع (يَفعُو) نكتبها ألفًا (ا)، وإن كانت ياءً (يَفعِي) نكتبها ياءً (ى).</p>
+          <span class="example" data-i18n="alifV3Example">مثال: دَعَا ⬅️ يَدْعُو ⬅️ ألف (ا)</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="alifNon3Title">ألف اللين في غير الثلاثي</h3>
+          <span class="en-term" data-i18n="alifNon3En">Soft Alif in Non-3-Letter Words</span>
+          <p data-i18n="alifNon3Desc">في الفعل والاسم اللذين يزيدان على ثلاثة أحرف، تُكتب الألف اللينة ياءً (ى) في الغالب.</p>
+          <span class="example" data-i18n="alifNon3Example">مثال: اهْتَدَى، الحَلْوى ⬅️ ياء (ى)</span>
+        </div>
+        <div class="concept-card c-letter">
+          <h3 data-i18n="alifExcTitle">كلماتٌ نحفظها (استثناءات)</h3>
+          <span class="en-term" data-i18n="alifExcEn">Words to Memorize (Exceptions)</span>
+          <p data-i18n="alifExcDesc">بعض الكلمات الثلاثية القليلة تُكتب بالألف الطويلة رغم أن قاعدتها المتوقعة غير ذلك، فنحفظها كما هي.</p>
+          <span class="example" data-i18n="alifExcExample">مثال: رِضَا، عَصَا</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="alifTrickTitle">🪄 السر العجيب: كيف أعرف أصل الألف؟</h2>
+        <p data-i18n="alifTrickDesc">إن كانت الكلمة فعلًا ثلاثيًا، ارجع إلى المضارع: يَفعُو ⬅️ ألف، يَفعِي ⬅️ ياء. وإن كانت الكلمة غير ثلاثية (فعلًا أو اسمًا)، فالأصل الغالب هو الياء.</p>
+      </div>
+
+      <div class="section-title" data-i18n="quickChallengeTitle">🧩 لعبة التحدي السريع</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="alifChallenge1Title">«دَعَا المؤمنُ ربَّه»</h4>
+          <p data-i18n="alifChallenge1Desc">دَعَا ثلاثيٌّ، من «يَدْعُو» ⬅️ تُكتب ألفًا.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="alifChallenge2Title">«اهْتَدَى المسافرُ إلى الطريق»</h4>
+          <p data-i18n="alifChallenge2Desc">اهْتَدَى غيرُ ثلاثي ⬅️ تُكتب ياءً.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="alifChallenge3Title">«يرجو الحُجَّاجُ رِضَا الله»</h4>
+          <p data-i18n="alifChallenge3Desc">رِضَا من الكلمات المستثناة ⬅️ تُكتب ألفًا.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="alifChallenge4Title">«الإفراطُ في تناول الحَلْوى»</h4>
+          <p data-i18n="alifChallenge4Desc">الحَلْوى غيرُ ثلاثي ⬅️ تُكتب ياءً.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtn5" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2F: LESSON 6 -->
+  <section class="screen" id="screen-lesson6">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lesson6Pill">الدرس السادس</span>
+        <h1 data-i18n="lesson6Title">أنواع المعارف</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="marifaFamilyTitle">قصة أسرة المعارف</h2>
+        <p data-i18n="marifaFamilyDesc">المعرفةُ اسمٌ يدلّ على شيء معيّن ومحدّد. ولها خمسةُ أفراد في هذه الأسرة: الضمير، واسم الإشارة، والاسم الموصول، والعلم، والمعرّف بأل.</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="damirTitle">الضمير</h3>
+          <span class="en-term" data-i18n="damirEn">Pronoun</span>
+          <p data-i18n="damirDesc">كلمةٌ تدلّ على متكلمٍ أو مخاطبٍ أو غائبٍ، ولا تحتاج إلى اسمٍ قبلها.</p>
+          <span class="example" data-i18n="damirExample">مثال: أَنْتَ، هُوَ، هِيَ</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="isharaTitle">اسم الإشارة</h3>
+          <span class="en-term" data-i18n="isharaEn">Demonstrative Pronoun</span>
+          <p data-i18n="isharaDesc">كلمةٌ تُستخدَم للإشارة إلى شيءٍ قريبٍ أو بعيد.</p>
+          <span class="example" data-i18n="isharaExample">مثال: هَذَا، هَذِهِ، أُولَئِكَ</span>
+        </div>
+        <div class="concept-card c-letter">
+          <h3 data-i18n="mawsulTitle">الاسم الموصول</h3>
+          <span class="en-term" data-i18n="mawsulEn">Relative Pronoun</span>
+          <p data-i18n="mawsulDesc">كلمةٌ تحتاج إلى جملةٍ بعدها تُكمِل معناها (صلة الموصول).</p>
+          <span class="example" data-i18n="mawsulExample">مثال: الَّذِي، الَّتِي، الَّذِينَ</span>
+        </div>
+        <div class="concept-card c-blue">
+          <h3 data-i18n="alamTitle">العَلَم</h3>
+          <span class="en-term" data-i18n="alamEn">Proper Noun</span>
+          <p data-i18n="alamDesc">اسمٌ يدلّ على شخصٍ أو مكانٍ بعينه، ولا يحتاج إلى «أل» ليصبح معرفة.</p>
+          <span class="example" data-i18n="alamExample">مثال: مُحَمَّدٌ، هِنْدُ، مَكَّةُ</span>
+        </div>
+        <div class="concept-card c-extra">
+          <h3 data-i18n="alTitle">المعرَّف بأل</h3>
+          <span class="en-term" data-i18n="alEn">Defined with "Al"</span>
+          <p data-i18n="alDesc">اسمٌ نكرةٌ أضفنا إلى أوّله «أل» فأصبح معرفة.</p>
+          <span class="example" data-i18n="alExample">مثال: القَلَمُ، الحَليبُ، الكِتَابُ</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="marifaTrickTitle">🪄 السر العجيب: كيف أُميّز نوع المعرفة؟</h2>
+        <p data-i18n="marifaTrickDesc">تشير لمتكلم أو مخاطب أو غائب ⬅️ ضمير. تشير لقريب أو بعيد ⬅️ اسم إشارة. يتبعها جملة تُكمل معناها ⬅️ اسم موصول. اسم شخص أو مكان بلا «أل» ⬅️ علم. نكرة دخلت عليها «أل» ⬅️ معرَّف بأل.</p>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtn6" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2G: LESSON 7 -->
+  <section class="screen" id="screen-lesson7">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="lesson7Pill">الدرس السابع</span>
+        <h1 data-i18n="lesson7Title">الفاعل والمفعول به</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="fmFamilyTitle">قصة الجملة الفعلية الكاملة</h2>
+        <p data-i18n="fmFamilyDesc">الجملة الفعلية تبدأ بفعل، وبعده غالبًا فاعلٌ يقوم بالفعل، وقد يأتي بعدهما مفعولٌ به وقع عليه الفعل.</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="faailTitle">الفاعل</h3>
+          <span class="en-term" data-i18n="faailEn">The Doer (Fa'il)</span>
+          <p data-i18n="faailDesc">اسمٌ مرفوعٌ يدلّ على من قام بالفعل، ويأتي بعد الفعل غالبًا.</p>
+          <span class="example" data-i18n="faailExample">مثال: تَفَقَّدَ الفَلَّاحُ الزَّرْعَ ⬅️ الفاعل: الفَلَّاحُ</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="mafoolTitle">المفعول به</h3>
+          <span class="en-term" data-i18n="mafoolEn">The Direct Object</span>
+          <p data-i18n="mafoolDesc">اسمٌ منصوبٌ وقع عليه فعل الفاعل، ويأتي بعد الفاعل غالبًا.</p>
+          <span class="example" data-i18n="mafoolExample">مثال: تَفَقَّدَ الفَلَّاحُ الزَّرْعَ ⬅️ المفعول به: الزَّرْعَ</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="fmTrickTitle">🪄 السر العجيب: كيف أُميّز الفاعل من المفعول به؟</h2>
+        <p data-i18n="fmTrickDesc">اسأل: «مَن فعل؟» فالجواب فاعلٌ مرفوع. ثم اسأل: «فعل ماذا؟» فالجواب مفعولٌ به منصوب. مثال: راجعَ التلميذُ الدرسَ. مَن راجع؟ التلميذُ (فاعل). راجعَ ماذا؟ الدرسَ (مفعول به).</p>
+      </div>
+
+      <div class="section-title" data-i18n="quickChallengeTitle">🧩 لعبة التحدي السريع</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="fmChallenge1Title">«تَفَقَّدَ الفَلَّاحُ الزَّرْعَ»</h4>
+          <p data-i18n="fmChallenge1Desc">الفاعل: الفَلَّاحُ — المفعول به: الزَّرْعَ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="fmChallenge2Title">«رَاجَعَ التِّلمِيذُ الدَّرْسَ»</h4>
+          <p data-i18n="fmChallenge2Desc">الفاعل: التِّلمِيذُ — المفعول به: الدَّرْسَ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="fmChallenge3Title">«يَحترمُ السَّائِقُ إِشَارَاتِ المُرُور»</h4>
+          <p data-i18n="fmChallenge3Desc">الفاعل: السَّائِقُ — المفعول به: إِشَارَاتِ المُرُور.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtn7" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
   <!-- SCREEN 3: GAME 1 - FISHING -->
   <section class="screen" id="screen-game1">
     <div class="card">
@@ -623,6 +923,7 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyG9iKuYnMe-7
 const I18N = {
   ar: {
     brandTitle: "لغتي الجميلة", brandSub: "الصف الخامس — المنهج السعودي",
+    backNavBtn: "رجوع",
     appTitle: "لغتي الجميلة",
     creditLine: "إعداد: الأستاذة أمل الحسن",
     loginDesc: "سجّل باسمك للدخول إلى دروسك",
@@ -636,16 +937,97 @@ const I18N = {
     lessonNum1: "١",
     lessonNum2: "٢",
     lessonNum3: "٣",
+    lessonNum4: "٤",
+    lessonNum5: "٥",
+    lessonNum6: "٦",
+    lessonNum7: "٧",
     lesson2CardTitle: "الدرس الثاني: أنواعُ الجُموع",
     lesson2CardDesc: "المفرد والجمع، وأنواع الجموع الثلاثة",
     lesson3CardTitle: "الدرس الثالث: الهمزات والتاءات",
     lesson3CardDesc: "همزة الوصل والقطع، والتاء المفتوحة والمربوطة",
+    lesson4CardTitle: "الدرس الرابع: المبتدأ والخبر",
+    lesson4CardDesc: "أركان الجملة الاسمية وعلامة الرفع",
+    lesson5CardTitle: "الدرس الخامس: الألف اللينة",
+    lesson5CardDesc: "متى تُكتب ألفًا ومتى تُكتب ياءً",
+    lesson6CardTitle: "الدرس السادس: أنواع المعارف",
+    lesson6CardDesc: "الضمير، اسم الإشارة، الموصول، العلم، المعرّف بأل",
+    lesson7CardTitle: "الدرس السابع: الفاعل والمفعول به",
+    lesson7CardDesc: "من قام بالفعل ومن وقع عليه الفعل",
     reviewBtn: "مراجعة",
     backToMenuBtn: "رجوع للقائمة الرئيسية",
     lessonPill: "الدرس الأول", lessonTitle: "أنواعُ الكَلِمة",
     lesson2Pill: "الدرس الثاني", lesson2Title: "أنواعُ الجُموع",
     lesson3Pill: "الدرس الثالث", lesson3Title: "الهمزات والتاءات",
+    lesson4Pill: "الدرس الرابع", lesson4Title: "المبتدأ والخبر",
+    lesson5Pill: "الدرس الخامس", lesson5Title: "الألف اللينة",
+    lesson6Pill: "الدرس السادس", lesson6Title: "أنواع المعارف",
+    lesson7Pill: "الدرس السابع", lesson7Title: "الفاعل والمفعول به",
     lessonDesc: "اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين",
+    alifFamilyTitle: "قصة الألف اللينة",
+    alifFamilyDesc: "الألفُ اللينةُ هي ألفٌ ساكنةٌ تقع في آخر الكلمة، ولها شكلان: ألفٌ طويلة (ا) أو ألفٌ مقصورة (ى)، ولكل شكلٍ قاعدةٌ تُعرَف بالرجوع إلى أصل الكلمة.",
+    alifV3Title: "ألف اللين في الفعل الثلاثي", alifV3En: "Soft Alif in 3-Letter Verbs",
+    alifV3Desc: "نرجع إلى الفعل المضارع: إن كانت الألف واوًا في المضارع (يَفعُو) نكتبها ألفًا (ا)، وإن كانت ياءً (يَفعِي) نكتبها ياءً (ى).",
+    alifV3Example: "مثال: دَعَا ⬅️ يَدْعُو ⬅️ ألف (ا)",
+    alifNon3Title: "ألف اللين في غير الثلاثي", alifNon3En: "Soft Alif in Non-3-Letter Words",
+    alifNon3Desc: "في الفعل والاسم اللذين يزيدان على ثلاثة أحرف، تُكتب الألف اللينة ياءً (ى) في الغالب.",
+    alifNon3Example: "مثال: اهْتَدَى، الحَلْوى ⬅️ ياء (ى)",
+    alifExcTitle: "كلماتٌ نحفظها (استثناءات)", alifExcEn: "Words to Memorize (Exceptions)",
+    alifExcDesc: "بعض الكلمات الثلاثية القليلة تُكتب بالألف الطويلة رغم أن قاعدتها المتوقعة غير ذلك، فنحفظها كما هي.",
+    alifExcExample: "مثال: رِضَا، عَصَا",
+    alifTrickTitle: "🪄 السر العجيب: كيف أعرف أصل الألف؟",
+    alifTrickDesc: "إن كانت الكلمة فعلًا ثلاثيًا، ارجع إلى المضارع: يَفعُو ⬅️ ألف، يَفعِي ⬅️ ياء. وإن كانت الكلمة غير ثلاثية (فعلًا أو اسمًا)، فالأصل الغالب هو الياء.",
+    alifChallenge1Title: "«دَعَا المؤمنُ ربَّه»", alifChallenge1Desc: "دَعَا ثلاثيٌّ، من «يَدْعُو» ⬅️ تُكتب ألفًا.",
+    alifChallenge2Title: "«اهْتَدَى المسافرُ إلى الطريق»", alifChallenge2Desc: "اهْتَدَى غيرُ ثلاثي ⬅️ تُكتب ياءً.",
+    alifChallenge3Title: "«يرجو الحُجَّاجُ رِضَا الله»", alifChallenge3Desc: "رِضَا من الكلمات المستثناة ⬅️ تُكتب ألفًا.",
+    alifChallenge4Title: "«الإفراطُ في تناول الحَلْوى»", alifChallenge4Desc: "الحَلْوى غيرُ ثلاثي ⬅️ تُكتب ياءً.",
+    marifaFamilyTitle: "قصة أسرة المعارف",
+    marifaFamilyDesc: "المعرفةُ اسمٌ يدلّ على شيء معيّن ومحدّد. ولها خمسةُ أفراد في هذه الأسرة: الضمير، واسم الإشارة، والاسم الموصول، والعلم، والمعرّف بأل.",
+    damirTitle: "الضمير", damirEn: "Pronoun",
+    damirDesc: "كلمةٌ تدلّ على متكلمٍ أو مخاطبٍ أو غائبٍ، ولا تحتاج إلى اسمٍ قبلها.",
+    damirExample: "مثال: أَنْتَ، هُوَ، هِيَ",
+    isharaTitle: "اسم الإشارة", isharaEn: "Demonstrative Pronoun",
+    isharaDesc: "كلمةٌ تُستخدَم للإشارة إلى شيءٍ قريبٍ أو بعيد.",
+    isharaExample: "مثال: هَذَا، هَذِهِ، أُولَئِكَ",
+    mawsulTitle: "الاسم الموصول", mawsulEn: "Relative Pronoun",
+    mawsulDesc: "كلمةٌ تحتاج إلى جملةٍ بعدها تُكمِل معناها (صلة الموصول).",
+    mawsulExample: "مثال: الَّذِي، الَّتِي، الَّذِينَ",
+    alamTitle: "العَلَم", alamEn: "Proper Noun",
+    alamDesc: "اسمٌ يدلّ على شخصٍ أو مكانٍ بعينه، ولا يحتاج إلى «أل» ليصبح معرفة.",
+    alamExample: "مثال: مُحَمَّدٌ، هِنْدُ، مَكَّةُ",
+    alTitle: "المعرَّف بأل", alEn: "Defined with \"Al\"",
+    alDesc: "اسمٌ نكرةٌ أضفنا إلى أوّله «أل» فأصبح معرفة.",
+    alExample: "مثال: القَلَمُ، الحَليبُ، الكِتَابُ",
+    marifaTrickTitle: "🪄 السر العجيب: كيف أُميّز نوع المعرفة؟",
+    marifaTrickDesc: "تشير لمتكلم أو مخاطب أو غائب ⬅️ ضمير. تشير لقريب أو بعيد ⬅️ اسم إشارة. يتبعها جملة تُكمل معناها ⬅️ اسم موصول. اسم شخص أو مكان بلا «أل» ⬅️ علم. نكرة دخلت عليها «أل» ⬅️ معرَّف بأل.",
+    fmFamilyTitle: "قصة الجملة الفعلية الكاملة",
+    fmFamilyDesc: "الجملة الفعلية تبدأ بفعل، وبعده غالبًا فاعلٌ يقوم بالفعل، وقد يأتي بعدهما مفعولٌ به وقع عليه الفعل.",
+    faailTitle: "الفاعل", faailEn: "The Doer (Fa'il)",
+    faailDesc: "اسمٌ مرفوعٌ يدلّ على من قام بالفعل، ويأتي بعد الفعل غالبًا.",
+    faailExample: "مثال: تَفَقَّدَ الفَلَّاحُ الزَّرْعَ ⬅️ الفاعل: الفَلَّاحُ",
+    mafoolTitle: "المفعول به", mafoolEn: "The Direct Object",
+    mafoolDesc: "اسمٌ منصوبٌ وقع عليه فعل الفاعل، ويأتي بعد الفاعل غالبًا.",
+    mafoolExample: "مثال: تَفَقَّدَ الفَلَّاحُ الزَّرْعَ ⬅️ المفعول به: الزَّرْعَ",
+    fmTrickTitle: "🪄 السر العجيب: كيف أُميّز الفاعل من المفعول به؟",
+    fmTrickDesc: "اسأل: «مَن فعل؟» فالجواب فاعلٌ مرفوع. ثم اسأل: «فعل ماذا؟» فالجواب مفعولٌ به منصوب. مثال: راجعَ التلميذُ الدرسَ. مَن راجع؟ التلميذُ (فاعل). راجعَ ماذا؟ الدرسَ (مفعول به).",
+    fmChallenge1Title: "«تَفَقَّدَ الفَلَّاحُ الزَّرْعَ»", fmChallenge1Desc: "الفاعل: الفَلَّاحُ — المفعول به: الزَّرْعَ.",
+    fmChallenge2Title: "«رَاجَعَ التِّلمِيذُ الدَّرْسَ»", fmChallenge2Desc: "الفاعل: التِّلمِيذُ — المفعول به: الدَّرْسَ.",
+    fmChallenge3Title: "«يَحترمُ السَّائِقُ إِشَارَاتِ المُرُور»", fmChallenge3Desc: "الفاعل: السَّائِقُ — المفعول به: إِشَارَاتِ المُرُور.",
+    mkFamilyTitle: "قصة الجملة الاسمية",
+    mkFamilyDesc: "الجملة الاسمية تبدأ باسم، ولها ركنان أساسيان لا تكتمل بدونهما: المبتدأ والخبر، وكلاهما مرفوع.",
+    mubtadaTitle: "المبتدأ", mubtadaEn: "Subject (Mubtada')",
+    mubtadaDesc: "اسمٌ معرفةٌ يقع غالبًا في أوّل الجملة الاسمية، وهو الذي نتحدّث عنه، وهو مرفوعٌ.",
+    mubtadaExample: "مثال: الشمسُ ساطعةٌ ⬅️ المبتدأ: الشمسُ",
+    khabarTitle: "الخبر", khabarEn: "Predicate (Khabar)",
+    khabarDesc: "يُكمِل معنى الجملة ويُخبِر عن المبتدأ، وهو مرفوعٌ أيضًا، وقد يكون كلمةً واحدة أو جملة.",
+    khabarExample: "مثال: الشمسُ ساطعةٌ ⬅️ الخبر: ساطعةٌ",
+    rafaaTitle: "علامة الرفع", rafaaEn: "The Sign of Rafaa",
+    rafaaDesc: "المبتدأ والخبر كلاهما مرفوعٌ، وعلامةُ رفع الاسم المفرد هي الضمّةُ الظاهرة في آخره.",
+    rafaaExample: "مثال: المدينةُ نظيفةٌ ⬅️ ضمّةٌ على التاء والفاء",
+    mkTrickTitle: "🪄 السر العجيب: كيف أُميّزُ المبتدأ من الخبر؟",
+    mkTrickDesc: "اسأل: «مَن هذا؟» أو «ما هذا؟» فالجواب هو المبتدأ. ثم اسأل: «ماذا عنه؟» أو «كيف هو؟» فالجواب هو الخبر. مثال: مَن الجديُّ؟ العمل ⬅️ مبتدأ. كيف هو؟ مفيدٌ ⬅️ خبر.",
+    mkChallenge1Title: "«أَزْهَارُ الحَديقَةِ فَوَّاحَةٌ»", mkChallenge1Desc: "المبتدأ: أَزْهَارُ الحَديقَةِ — الخبر: فَوَّاحَةٌ.",
+    mkChallenge2Title: "«المَدينَةُ نَظيفَةٌ»", mkChallenge2Desc: "المبتدأ: المَدينَةُ — الخبر: نَظيفَةٌ.",
+    mkChallenge3Title: "«العَمَلُ الجِديُّ مُفيدٌ»", mkChallenge3Desc: "المبتدأ: العَمَلُ الجِديُّ — الخبر: مُفيدٌ.",
     hamzaTaFamilyTitle: "قصة الهمزتين والتاءين",
     hamzaTaFamilyDesc: "في أول الكلمة همزتان مختلفتا الشخصية، وفي آخرها تاءان مختلفتا الشخصية أيضًا. تعالَ نتعرّف عليهما بالحيل الذكية!",
     hamzaSectionTitle: "همزة الوصل وهمزة القطع",
@@ -748,6 +1130,19 @@ const I18N = {
     adviceWasl: "راجع همزة الوصل: تُكتب ألفًا بلا رأس همزة (ا)، وتختفي في النطق عند وصل الكلام، فجرّبي اختبار الواو أو الفاء.",
     adviceMaftouha: "راجع التاء المفتوحة: تبقى تُنطق (ت) دائمًا، حتى عند الوقف عليها بالسكون.",
     adviceMarbouta: "راجع التاء المربوطة: تتحوّل إلى صوت (هـ) عند الوقف عليها بالسكون، فجرّبي اختبار الوقف.",
+    adviceMubtada: "راجع المبتدأ: هو الاسم الذي نبدأ به الجملة الاسمية ونتحدّث عنه، وهو مرفوعٌ غالبًا.",
+    adviceKhabar: "راجع الخبر: هو الذي يُكمِل معنى الجملة ويُخبِر عن المبتدأ، وهو مرفوعٌ أيضًا.",
+    adviceRafaa: "راجع علامة الرفع: المبتدأ والخبر كلاهما مرفوعٌ، وعلامة رفع الاسم المفرد هي الضمّة الظاهرة.",
+    adviceAlif: "راجع الفعل الثلاثي: ارجع إلى المضارع، فإن كانت الألف واوًا (يفعُو) اكتبها ألفًا (ا).",
+    adviceYaa: "راجع الفعل والاسم غير الثلاثي: الألف اللينة فيهما تُكتب ياءً (ى) في الغالب.",
+    adviceHifz: "راجع الكلمات المستثناة مثل «رِضَا»: بعض الكلمات لا تتبع القاعدة، فنحفظها كما هي.",
+    adviceDamir: "راجع الضمير: كلمة تدلّ على متكلم أو مخاطب أو غائب، بلا اسم قبلها.",
+    adviceIshara: "راجع اسم الإشارة: يُستخدَم للإشارة إلى شيء قريب أو بعيد.",
+    adviceMawsul: "راجع الاسم الموصول: يحتاج إلى جملة بعده تُكمل معناه.",
+    adviceAlam: "راجع العلم: اسمٌ لشخص أو مكان بعينه، بلا حاجة إلى «أل».",
+    adviceAl: "راجع المعرَّف بأل: اسمٌ نكرة أضفنا إليه «أل» فأصبح معرفة.",
+    adviceFaail: "راجع الفاعل: اسمٌ مرفوعٌ يدلّ على من قام بالفعل، ويأتي بعد الفعل غالبًا.",
+    adviceMafool: "راجع المفعول به: اسمٌ منصوبٌ وقع عليه فعل الفاعل.",
     retryBtn: "إعادة المحاولة",
     footer: "لغتي الجميلة — إعداد: الأستاذة أمل الحسن",
     nameRequired: "من فضلك اكتب اسمك أولًا",
@@ -763,6 +1158,7 @@ const I18N = {
   },
   en: {
     brandTitle: "My Beautiful Language", brandSub: "Grade 5 — Saudi Curriculum",
+    backNavBtn: "Back",
     appTitle: "My Beautiful Language",
     creditLine: "Prepared by: Ms. Amal Alhasan",
     loginDesc: "Sign in with your name to access your lessons",
@@ -776,16 +1172,97 @@ const I18N = {
     lessonNum1: "1",
     lessonNum2: "2",
     lessonNum3: "3",
+    lessonNum4: "4",
+    lessonNum5: "5",
+    lessonNum6: "6",
+    lessonNum7: "7",
     lesson2CardTitle: "Lesson 2: أنواعُ الجُموع (Types of Plurals)",
     lesson2CardDesc: "Singular and plural, and the three plural types",
     lesson3CardTitle: "Lesson 3: الهمزات والتاءات (Hamzas & Ta's)",
     lesson3CardDesc: "Hamzat Al-Wasl & Al-Qat', and Open & Tied Ta'",
+    lesson4CardTitle: "Lesson 4: المبتدأ والخبر (Subject & Predicate)",
+    lesson4CardDesc: "The two parts of a nominal sentence, and the sign of Rafaa",
+    lesson5CardTitle: "Lesson 5: الألف اللينة (The Soft Alif)",
+    lesson5CardDesc: "When it's written as alif, and when as yaa",
+    lesson6CardTitle: "Lesson 6: أنواع المعارف (Types of Definite Nouns)",
+    lesson6CardDesc: "Pronoun, demonstrative, relative, proper noun, \"al\"-defined",
+    lesson7CardTitle: "Lesson 7: الفاعل والمفعول به (Subject & Object)",
+    lesson7CardDesc: "Who did the action, and who received it",
     reviewBtn: "Review",
     backToMenuBtn: "Back to main menu",
     lessonPill: "Lesson 1", lessonTitle: "أنواعُ الكَلِمة (Word Types)",
     lesson2Pill: "Lesson 2", lesson2Title: "أنواعُ الجُموع (Types of Plurals)",
     lesson3Pill: "Lesson 3", lesson3Title: "الهمزات والتاءات (Hamzas & Ta's)",
+    lesson4Pill: "Lesson 4", lesson4Title: "المبتدأ والخبر (Subject & Predicate)",
+    lesson5Pill: "Lesson 5", lesson5Title: "الألف اللينة (The Soft Alif)",
+    lesson6Pill: "Lesson 6", lesson6Title: "أنواع المعارف (Types of Definite Nouns)",
+    lesson7Pill: "Lesson 7", lesson7Title: "الفاعل والمفعول به (Subject & Object)",
     lessonDesc: "Read the explanation carefully before moving to the games and exercises",
+    alifFamilyTitle: "The Story of the Soft Alif",
+    alifFamilyDesc: "The soft alif is a silent alif at the end of a word, with two shapes: a tall alif (ا) or a dotless alif maqsura (ى) — and each shape has a rule found by tracing the word's root.",
+    alifV3Title: "ألف اللين في الفعل الثلاثي", alifV3En: "Soft Alif in 3-Letter Verbs",
+    alifV3Desc: "Go back to the present-tense verb: if the alif comes from a waw (يَفعُو), write it as a tall alif (ا); if from a yaa (يَفعِي), write it as an alif maqsura (ى).",
+    alifV3Example: "Example: دَعَا (called) ⬅️ يَدْعُو ⬅️ tall alif (ا)",
+    alifNon3Title: "ألف اللين في غير الثلاثي", alifNon3En: "Soft Alif in Non-3-Letter Words",
+    alifNon3Desc: "In verbs and nouns of more than three letters, the soft alif is usually written as alif maqsura (ى).",
+    alifNon3Example: "Example: اهْتَدَى, الحَلْوى ⬅️ alif maqsura (ى)",
+    alifExcTitle: "كلماتٌ نحفظها (استثناءات)", alifExcEn: "Words to Memorize (Exceptions)",
+    alifExcDesc: "A few 3-letter words are written with a tall alif even though the expected rule would say otherwise, so we memorize them as they are.",
+    alifExcExample: "Example: رِضَا (contentment), عَصَا (stick)",
+    alifTrickTitle: "🪄 The Secret Trick: How Do I Find the Alif's Origin?",
+    alifTrickDesc: "If the word is a 3-letter verb, go back to the present tense: يَفعُو ⬅️ alif, يَفعِي ⬅️ yaa. If the word (verb or noun) has more than three letters, the usual origin is yaa.",
+    alifChallenge1Title: "«دَعَا المؤمنُ ربَّه»", alifChallenge1Desc: "دَعَا is a 3-letter verb from «يَدْعُو» ⬅️ written as alif.",
+    alifChallenge2Title: "«اهْتَدَى المسافرُ إلى الطريق»", alifChallenge2Desc: "اهْتَدَى has more than 3 letters ⬅️ written as yaa.",
+    alifChallenge3Title: "«يرجو الحُجَّاجُ رِضَا الله»", alifChallenge3Desc: "رِضَا is an exception word ⬅️ written as alif.",
+    alifChallenge4Title: "«الإفراطُ في تناول الحَلْوى»", alifChallenge4Desc: "الحَلْوى has more than 3 letters ⬅️ written as yaa.",
+    marifaFamilyTitle: "The Story of the Definite-Noun Family",
+    marifaFamilyDesc: "A definite noun (معرفة) refers to something specific and known. This family has five members: the pronoun, the demonstrative, the relative pronoun, the proper noun, and the \"al\"-defined noun.",
+    damirTitle: "الضمير", damirEn: "Pronoun",
+    damirDesc: "A word referring to the speaker, the listener, or someone absent — it needs no noun before it.",
+    damirExample: "Examples: أَنْتَ (you), هُوَ (he), هِيَ (she)",
+    isharaTitle: "اسم الإشارة", isharaEn: "Demonstrative Pronoun",
+    isharaDesc: "A word used to point to something near or far.",
+    isharaExample: "Examples: هَذَا (this), هَذِهِ (this, fem.), أُولَئِكَ (those)",
+    mawsulTitle: "الاسم الموصول", mawsulEn: "Relative Pronoun",
+    mawsulDesc: "A word that needs a following clause to complete its meaning.",
+    mawsulExample: "Examples: الَّذِي (who/which, masc.), الَّتِي (fem.), الَّذِينَ (plural)",
+    alamTitle: "العَلَم", alamEn: "Proper Noun",
+    alamDesc: "A noun naming a specific person or place — it needs no \"al\" to become definite.",
+    alamExample: "Examples: مُحَمَّدٌ (Muhammad), هِنْدُ (Hind), مَكَّةُ (Makkah)",
+    alTitle: "المعرَّف بأل", alEn: "Defined with \"Al\"",
+    alDesc: "An indefinite noun that becomes definite once we add \"al\" (أل) to its start.",
+    alExample: "Examples: القَلَمُ (the pen), الحَليبُ (the milk), الكِتَابُ (the book)",
+    marifaTrickTitle: "🪄 The Secret Trick: Telling the Types Apart",
+    marifaTrickDesc: "Refers to speaker/listener/absent ⬅️ pronoun. Points to near/far ⬅️ demonstrative. Followed by a completing clause ⬅️ relative pronoun. Names a specific person/place with no \"al\" ⬅️ proper noun. An indefinite noun with \"al\" added ⬅️ \"al\"-defined.",
+    fmFamilyTitle: "The Story of a Complete Verbal Sentence",
+    fmFamilyDesc: "A verbal sentence starts with a verb, usually followed by a subject that does the action, and sometimes an object that receives it.",
+    faailTitle: "الفاعل", faailEn: "The Doer (Fa'il)",
+    faailDesc: "A noun in the nominative case naming who did the action — it usually comes right after the verb.",
+    faailExample: "Example: تَفَقَّدَ الفَلَّاحُ الزَّرْعَ (The farmer checked the crop) ⬅️ Subject: الفَلَّاحُ",
+    mafoolTitle: "المفعول به", mafoolEn: "The Direct Object",
+    mafoolDesc: "A noun in the accusative case that receives the subject's action — it usually comes after the subject.",
+    mafoolExample: "Example: تَفَقَّدَ الفَلَّاحُ الزَّرْعَ (The farmer checked the crop) ⬅️ Object: الزَّرْعَ",
+    fmTrickTitle: "🪄 The Secret Trick: Telling Subject from Object",
+    fmTrickDesc: "Ask: \"Who did it?\" — the answer is the subject (nominative). Then ask: \"Did what?\" — the answer is the object (accusative). Example: راجعَ التلميذُ الدرسَ. Who reviewed? التلميذُ (subject). Reviewed what? الدرسَ (object).",
+    fmChallenge1Title: "«تَفَقَّدَ الفَلَّاحُ الزَّرْعَ»", fmChallenge1Desc: "Subject: الفَلَّاحُ — Object: الزَّرْعَ.",
+    fmChallenge2Title: "«رَاجَعَ التِّلمِيذُ الدَّرْسَ»", fmChallenge2Desc: "Subject: التِّلمِيذُ — Object: الدَّرْسَ.",
+    fmChallenge3Title: "«يَحترمُ السَّائِقُ إِشَارَاتِ المُرُور»", fmChallenge3Desc: "Subject: السَّائِقُ — Object: إِشَارَاتِ المُرُور.",
+    mkFamilyTitle: "The Story of the Nominal Sentence",
+    mkFamilyDesc: "A nominal sentence starts with a noun, and has two main parts it can't do without: the subject (مبتدأ) and the predicate (خبر) — both in the nominative (رفع) case.",
+    mubtadaTitle: "المبتدأ", mubtadaEn: "Subject (Mubtada')",
+    mubtadaDesc: "A definite noun that usually comes at the start of a nominal sentence — it's what we're talking about, and it's in the nominative case.",
+    mubtadaExample: "Example: الشمسُ ساطعةٌ (The sun is shining) ⬅️ Subject: الشمسُ",
+    khabarTitle: "الخبر", khabarEn: "Predicate (Khabar)",
+    khabarDesc: "Completes the sentence's meaning and tells us about the subject. It's also in the nominative case, and can be one word or a whole clause.",
+    khabarExample: "Example: الشمسُ ساطعةٌ (The sun is shining) ⬅️ Predicate: ساطعةٌ",
+    rafaaTitle: "علامة الرفع", rafaaEn: "The Sign of Rafaa",
+    rafaaDesc: "Both the subject and predicate are in the nominative (رفع) case — the sign of rafaa on a singular noun is a visible damma at the end.",
+    rafaaExample: "Example: المدينةُ نظيفةٌ (The city is clean) ⬅️ a damma on both words",
+    mkTrickTitle: "🪄 The Secret Trick: Telling Subject from Predicate",
+    mkTrickDesc: "Ask: \"Who/what is this?\" — the answer is the subject. Then ask: \"What about it?\" or \"How is it?\" — the answer is the predicate. Example: Who/what is «الجديّ»? العمل ⬅️ subject. How is it? مفيدٌ ⬅️ predicate.",
+    mkChallenge1Title: "«أَزْهَارُ الحَديقَةِ فَوَّاحَةٌ»", mkChallenge1Desc: "Subject: أَزْهَارُ الحَديقَةِ — Predicate: فَوَّاحَةٌ.",
+    mkChallenge2Title: "«المَدينَةُ نَظيفَةٌ»", mkChallenge2Desc: "Subject: المَدينَةُ — Predicate: نَظيفَةٌ.",
+    mkChallenge3Title: "«العَمَلُ الجِديُّ مُفيدٌ»", mkChallenge3Desc: "Subject: العَمَلُ الجِديُّ — Predicate: مُفيدٌ.",
     hamzaTaFamilyTitle: "The Tale of the Hamzas and the Ta's",
     hamzaTaFamilyDesc: "At the start of a word there are two hamzas with different personalities, and at its end there are two ta's with different personalities too. Let's meet them through smart tricks!",
     hamzaSectionTitle: "Hamzat Al-Wasl & Hamzat Al-Qat'",
@@ -888,6 +1365,19 @@ const I18N = {
     adviceWasl: "Review Hamzat Al-Wasl: it's written as a plain alif with no hamza mark (ا), and disappears in pronunciation when speech connects — try the waw or faa test.",
     adviceMaftouha: "Review the Open Ta': it stays pronounced \"T\" always, even when you stop on it with a pause.",
     adviceMarbouta: "Review the Tied Ta': it turns into an \"H\" sound when you stop on it with a pause — try the freeze test.",
+    adviceMubtada: "Review the subject (مبتدأ): it's the noun that starts the nominal sentence and that we're talking about, usually in the nominative case.",
+    adviceKhabar: "Review the predicate (خبر): it completes the sentence's meaning and tells us about the subject, also in the nominative case.",
+    adviceRafaa: "Review the sign of rafaa: both the subject and predicate are in the nominative case, and a singular noun's sign of rafaa is a visible damma.",
+    adviceAlif: "Review 3-letter verbs: go back to the present tense — if the alif comes from a waw (يفعُو), write it as a tall alif (ا).",
+    adviceYaa: "Review verbs and nouns with more than three letters: the soft alif in them is usually written as yaa (ى).",
+    adviceHifz: "Review exception words like «رِضَا»: some words don't follow the rule, so we memorize them as they are.",
+    adviceDamir: "Review the pronoun: a word referring to the speaker, listener, or someone absent, with no noun before it.",
+    adviceIshara: "Review the demonstrative: used to point to something near or far.",
+    adviceMawsul: "Review the relative pronoun: it needs a following clause to complete its meaning.",
+    adviceAlam: "Review the proper noun: names a specific person or place, with no need for \"al\".",
+    adviceAl: "Review the \"al\"-defined noun: an indefinite noun that becomes definite once \"al\" is added.",
+    adviceFaail: "Review the subject: a noun in the nominative case naming who did the action, usually right after the verb.",
+    adviceMafool: "Review the direct object: a noun in the accusative case that receives the subject's action.",
     retryBtn: "Try again",
     footer: "My Beautiful Language — Prepared by: Ms. Amal Alhasan",
     nameRequired: "Please type your name first",
@@ -1006,6 +1496,134 @@ const QUESTIONS_L3 = [
 const ADVICE_KEY_L3 = { qat:"adviceQat", wasl:"adviceWasl", maftouha:"adviceMaftouha", marbouta:"adviceMarbouta" };
 
 /* =====================================================
+   Quiz data — Lesson 4: المبتدأ والخبر
+   ===================================================== */
+const QUESTIONS_L4 = [
+  { q:{ ar:"الجملةُ الاسميةُ تتكوّنُ من:", en:"The nominal sentence is made up of:" },
+    options: ["فعلٍ وفاعلٍ", "مبتدأٍ وخبرٍ", "حرفِ جرٍّ واسمٍ مجرور"], correct: 1, category:"mubtada" },
+  { q:{ ar:"في جملةِ «الشمسُ ساطعةٌ» المبتدأُ هو:", en:"In the sentence «الشمسُ ساطعةٌ» the subject is:" },
+    options: ["الشمسُ", "ساطعةٌ"], correct: 0, category:"mubtada" },
+  { q:{ ar:"في جملةِ «الشمسُ ساطعةٌ» الخبرُ هو:", en:"In the sentence «الشمسُ ساطعةٌ» the predicate is:" },
+    options: ["الشمسُ", "ساطعةٌ"], correct: 1, category:"khabar" },
+  { q:{ ar:"في جملةِ «المَدينَةُ نَظيفَةٌ» المبتدأُ هو:", en:"In the sentence «المَدينَةُ نَظيفَةٌ» the subject is:" },
+    options: ["المَدينَةُ", "نَظيفَةٌ"], correct: 0, category:"mubtada" },
+  { q:{ ar:"في جملةِ «العَمَلُ الجِديُّ مُفيدٌ» الخبرُ هو:", en:"In the sentence «العَمَلُ الجِديُّ مُفيدٌ» the predicate is:" },
+    options: ["العَمَلُ الجِديُّ", "مُفيدٌ"], correct: 1, category:"khabar" },
+  { q:{ ar:"المبتدأُ والخبرُ كلاهما:", en:"The subject and predicate are both:" },
+    options: ["منصوبان", "مرفوعان", "مجروران"], correct: 1, category:"rafaa" },
+  { q:{ ar:"علامةُ رفعِ الاسمِ المفردِ غالبًا هي:", en:"The sign of rafaa on a singular noun is usually:" },
+    options: ["الضمّةُ", "الفتحةُ", "الكسرةُ"], correct: 0, category:"rafaa" },
+  { q:{ ar:"في جملةِ «أَزْهَارُ الحَديقَةِ فَوَّاحَةٌ» المبتدأُ هو:", en:"In the sentence «أَزْهَارُ الحَديقَةِ فَوَّاحَةٌ» the subject is:" },
+    options: ["أَزْهَارُ الحَديقَةِ", "فَوَّاحَةٌ"], correct: 0, category:"mubtada" },
+  { q:{ ar:"وظيفةُ الخبرِ في الجملةِ الاسميةِ:", en:"The role of the predicate in a nominal sentence is:" },
+    options: ["يُكمِل معنى الجملة ويُخبِر عن المبتدأ", "يربطُ بين كلمتين", "يدلُّ على زمنِ الفعل"], correct: 0, category:"khabar" },
+  { q:{ ar:"المبتدأُ في الجملةِ الاسميةِ غالبًا:", en:"The subject in a nominal sentence usually:" },
+    options: ["يأتي أوّلَ الجملةِ وهو معرفة", "يأتي آخرَ الجملةِ وهو نكرة"], correct: 0, category:"mubtada" },
+  { q:{ ar:"في جملةِ «الطالبُ مُجتَهِدٌ» الخبرُ هو:", en:"In the sentence «الطالبُ مُجتَهِدٌ» the predicate is:" },
+    options: ["الطالبُ", "مُجتَهِدٌ"], correct: 1, category:"khabar" },
+  { q:{ ar:"في جملةِ «الكِتابُ مُفيدٌ» المبتدأُ هو:", en:"In the sentence «الكِتابُ مُفيدٌ» the subject is:" },
+    options: ["الكِتابُ", "مُفيدٌ"], correct: 0, category:"mubtada" }
+];
+
+const ADVICE_KEY_L4 = { mubtada:"adviceMubtada", khabar:"adviceKhabar", rafaa:"adviceRafaa" };
+
+/* =====================================================
+   Quiz data — Lesson 5: الألف اللينة
+   ===================================================== */
+const QUESTIONS_L5 = [
+  { q:{ ar:"«دَعَا» أصلُها من المضارع «يَدْعُو»، فالألف اللينة فيها تُكتب:", en:"«دَعَا» comes from the present tense «يَدْعُو», so its soft alif is written:" },
+    options: ["ألفًا (ا)", "ياءً (ى)"], correct: 0, category:"alif" },
+  { q:{ ar:"«اهْتَدَى» فعلٌ غيرُ ثلاثي، فالألف اللينة فيه تُكتب غالبًا:", en:"«اهْتَدَى» is a non-3-letter verb, so its soft alif is usually written:" },
+    options: ["ألفًا (ا)", "ياءً (ى)"], correct: 1, category:"yaa" },
+  { q:{ ar:"«الحَلْوى» اسمٌ غيرُ ثلاثي، فالألف اللينة فيه تُكتب:", en:"«الحَلْوى» is a non-3-letter noun, so its soft alif is written:" },
+    options: ["ألفًا (ا)", "ياءً (ى)"], correct: 1, category:"yaa" },
+  { q:{ ar:"«رِضَا» من الكلمات التي:", en:"«رِضَا» is one of the words that:" },
+    options: ["نتّبع فيها القاعدة العامة", "نحفظها كما هي (استثناء)"], correct: 1, category:"hifz" },
+  { q:{ ar:"أصلُ «سَعَى» من المضارع «يَسْعَى»، فالألف تُكتب:", en:"«سَعَى» comes from «يَسْعَى», so its alif is written:" },
+    options: ["ألفًا", "ياءً"], correct: 1, category:"yaa" },
+  { q:{ ar:"أصلُ «غَزَا» من المضارع «يَغْزُو»، فالألف تُكتب:", en:"«غَزَا» comes from «يَغْزُو», so its alif is written:" },
+    options: ["ألفًا", "ياءً"], correct: 0, category:"alif" },
+  { q:{ ar:"القاعدةُ العامة للألف اللينة في الفعل والاسم غير الثلاثي أنّها تُكتب:", en:"The general rule for the soft alif in non-3-letter verbs and nouns is that it's written:" },
+    options: ["ألفًا دائمًا", "ياءً غالبًا"], correct: 1, category:"yaa" },
+  { q:{ ar:"لمعرفةِ أصلِ الألف اللينة في الفعل الثلاثي نرجع إلى:", en:"To find the origin of the soft alif in a 3-letter verb, we go back to:" },
+    options: ["الفعل المضارع", "فعل الأمر"], correct: 0, category:"alif" },
+  { q:{ ar:"«عَفَا» من المضارع «يَعْفُو»، فالألف تُكتب:", en:"«عَفَا» comes from «يَعْفُو», so its alif is written:" },
+    options: ["ألفًا", "ياءً"], correct: 0, category:"alif" },
+  { q:{ ar:"«مَشَى» من المضارع «يَمْشِي»، فالألف تُكتب:", en:"«مَشَى» comes from «يَمْشِي», so its alif is written:" },
+    options: ["ألفًا", "ياءً"], correct: 1, category:"yaa" },
+  { q:{ ar:"الكلماتُ القليلة التي تُكتب بالألف رغم كونها استثناءً مثل «رِضَا» نتعامل معها بـ:", en:"The few words written with alif despite being exceptions, like «رِضَا», are handled by:" },
+    options: ["الحفظ", "القياس على القاعدة"], correct: 0, category:"hifz" },
+  { q:{ ar:"«دَعَا» فعلٌ:", en:"«دَعَا» is a:" },
+    options: ["فعلٌ ثلاثي", "فعلٌ غير ثلاثي"], correct: 0, category:"alif" }
+];
+
+const ADVICE_KEY_L5 = { alif:"adviceAlif", yaa:"adviceYaa", hifz:"adviceHifz" };
+
+/* =====================================================
+   Quiz data — Lesson 6: أنواع المعارف
+   ===================================================== */
+const QUESTIONS_L6 = [
+  { q:{ ar:"«أَنْتَ» نوعُ هذه المعرفة:", en:"«أَنْتَ» — what type of definite noun is this?" },
+    options: ["ضمير", "اسمُ إشارة", "عَلَم"], correct: 0, category:"damir" },
+  { q:{ ar:"«هَذِهِ» نوعُ هذه المعرفة:", en:"«هَذِهِ» — what type of definite noun is this?" },
+    options: ["اسمُ إشارة", "ضمير", "اسمٌ موصول"], correct: 0, category:"ishara" },
+  { q:{ ar:"«الَّذِي» نوعُ هذه المعرفة:", en:"«الَّذِي» — what type of definite noun is this?" },
+    options: ["اسمٌ موصول", "عَلَم", "ضمير"], correct: 0, category:"mawsul" },
+  { q:{ ar:"«مُحَمَّدٌ» نوعُ هذه المعرفة:", en:"«مُحَمَّدٌ» — what type of definite noun is this?" },
+    options: ["عَلَم", "معرَّفٌ بأل", "اسمُ إشارة"], correct: 0, category:"alam" },
+  { q:{ ar:"«القَلَمُ» نوعُ هذه المعرفة:", en:"«القَلَمُ» — what type of definite noun is this?" },
+    options: ["معرَّفٌ بأل", "عَلَم", "ضمير"], correct: 0, category:"al" },
+  { q:{ ar:"«هُوَ» نوعُ هذه المعرفة:", en:"«هُوَ» — what type of definite noun is this?" },
+    options: ["ضمير", "اسمٌ موصول", "عَلَم"], correct: 0, category:"damir" },
+  { q:{ ar:"«هَذَا» نوعُ هذه المعرفة:", en:"«هَذَا» — what type of definite noun is this?" },
+    options: ["اسمُ إشارة", "معرَّفٌ بأل", "ضمير"], correct: 0, category:"ishara" },
+  { q:{ ar:"«الَّذِينَ» نوعُ هذه المعرفة:", en:"«الَّذِينَ» — what type of definite noun is this?" },
+    options: ["اسمٌ موصول", "ضمير", "عَلَم"], correct: 0, category:"mawsul" },
+  { q:{ ar:"«هِنْدُ» نوعُ هذه المعرفة:", en:"«هِنْدُ» — what type of definite noun is this?" },
+    options: ["عَلَم", "اسمُ إشارة", "معرَّفٌ بأل"], correct: 0, category:"alam" },
+  { q:{ ar:"«الحَليبُ» نوعُ هذه المعرفة:", en:"«الحَليبُ» — what type of definite noun is this?" },
+    options: ["معرَّفٌ بأل", "اسمٌ موصول", "ضمير"], correct: 0, category:"al" },
+  { q:{ ar:"الكلمةُ التي تحتاج إلى جملةٍ بعدها تُكمِل معناها هي:", en:"The word that needs a following clause to complete its meaning is:" },
+    options: ["اسمٌ موصول", "ضمير", "عَلَم"], correct: 0, category:"mawsul" },
+  { q:{ ar:"الاسمُ الذي يدلّ على شخصٍ أو مكانٍ بعينه دون «أل» يُسمّى:", en:"A noun naming a specific person or place with no \"al\" is called:" },
+    options: ["عَلَمًا", "معرَّفًا بأل", "اسمَ إشارة"], correct: 0, category:"alam" }
+];
+
+const ADVICE_KEY_L6 = { damir:"adviceDamir", ishara:"adviceIshara", mawsul:"adviceMawsul", alam:"adviceAlam", al:"adviceAl" };
+
+/* =====================================================
+   Quiz data — Lesson 7: الفاعل والمفعول به
+   ===================================================== */
+const QUESTIONS_L7 = [
+  { q:{ ar:"في جملةِ «تَفَقَّدَ الفَلَّاحُ الزَّرْعَ» الفاعلُ هو:", en:"In the sentence «تَفَقَّدَ الفَلَّاحُ الزَّرْعَ» the subject is:" },
+    options: ["الفَلَّاحُ", "الزَّرْعَ"], correct: 0, category:"faail" },
+  { q:{ ar:"في جملةِ «تَفَقَّدَ الفَلَّاحُ الزَّرْعَ» المفعولُ به هو:", en:"In the sentence «تَفَقَّدَ الفَلَّاحُ الزَّرْعَ» the object is:" },
+    options: ["الفَلَّاحُ", "الزَّرْعَ"], correct: 1, category:"mafool" },
+  { q:{ ar:"في جملةِ «رَاجَعَ التِّلمِيذُ الدَّرْسَ» الفاعلُ هو:", en:"In the sentence «رَاجَعَ التِّلمِيذُ الدَّرْسَ» the subject is:" },
+    options: ["التِّلمِيذُ", "الدَّرْسَ"], correct: 0, category:"faail" },
+  { q:{ ar:"في جملةِ «رَاجَعَ التِّلمِيذُ الدَّرْسَ» المفعولُ به هو:", en:"In the sentence «رَاجَعَ التِّلمِيذُ الدَّرْسَ» the object is:" },
+    options: ["التِّلمِيذُ", "الدَّرْسَ"], correct: 1, category:"mafool" },
+  { q:{ ar:"في جملةِ «يَحترمُ السَّائِقُ إِشَارَاتِ المُرُور» الفاعلُ هو:", en:"In the sentence «يَحترمُ السَّائِقُ إِشَارَاتِ المُرُور» the subject is:" },
+    options: ["السَّائِقُ", "إِشَارَاتِ المُرُور"], correct: 0, category:"faail" },
+  { q:{ ar:"علامةُ رفعِ الفاعلِ غالبًا:", en:"The sign of rafaa on the subject is usually:" },
+    options: ["الضمّة", "الفتحة"], correct: 0, category:"faail" },
+  { q:{ ar:"علامةُ نصبِ المفعولِ به غالبًا:", en:"The sign of nasb on the object is usually:" },
+    options: ["الضمّة", "الفتحة"], correct: 1, category:"mafool" },
+  { q:{ ar:"الفاعلُ هو الاسمُ الذي:", en:"The subject is the noun that:" },
+    options: ["قامَ بالفعل", "وقعَ عليه الفعل"], correct: 0, category:"faail" },
+  { q:{ ar:"المفعولُ به هو الاسمُ الذي:", en:"The object is the noun that:" },
+    options: ["قامَ بالفعل", "وقعَ عليه فعلُ الفاعل"], correct: 1, category:"mafool" },
+  { q:{ ar:"في جملةِ «يُنَظِّفُ الأطْفَالُ الفَصْلَ» الفاعلُ هو:", en:"In the sentence «يُنَظِّفُ الأطْفَالُ الفَصْلَ» the subject is:" },
+    options: ["الأطْفَالُ", "الفَصْلَ"], correct: 0, category:"faail" },
+  { q:{ ar:"في جملةِ «قَطَفَتِ الفَتَاةُ الزَّهْرَةَ» المفعولُ به هو:", en:"In the sentence «قَطَفَتِ الفَتَاةُ الزَّهْرَةَ» the object is:" },
+    options: ["الفَتَاةُ", "الزَّهْرَةَ"], correct: 1, category:"mafool" },
+  { q:{ ar:"للسؤالِ عن المفعولِ به نسأل:", en:"To ask about the object, we ask:" },
+    options: ["مَن فعل؟", "ماذا فعل؟"], correct: 1, category:"mafool" }
+];
+
+const ADVICE_KEY_L7 = { faail:"adviceFaail", mafool:"adviceMafool" };
+
+/* =====================================================
    Fishing game data (always Arabic — content to solve)
    ===================================================== */
 const FISH_ROUNDS_L1 = [
@@ -1068,6 +1686,66 @@ const FISH_ROUNDS_L3 = [
       {text:"بِنْتٌ", correct:false}, {text:"لَعِبْتُ", correct:false}
   ]}
 ];
+
+/* ---------- Lesson 4 fishing rounds ---------- */
+const FISH_ROUNDS_L4 = [
+  { target: "مبتدأ", items: [
+      {text:"الشمسُ", correct:true}, {text:"المدينةُ", correct:true}, {text:"الطالبُ", correct:true},
+      {text:"ساطعةٌ", correct:false}, {text:"نظيفةٌ", correct:false}, {text:"مجتهدٌ", correct:false}
+  ]},
+  { target: "خبر", items: [
+      {text:"ساطعةٌ", correct:true}, {text:"نظيفةٌ", correct:true}, {text:"مجتهدٌ", correct:true},
+      {text:"الشمسُ", correct:false}, {text:"المدينةُ", correct:false}, {text:"الطالبُ", correct:false}
+  ]}
+];
+
+/* ---------- Lesson 5 fishing rounds ---------- */
+const FISH_ROUNDS_L5 = [
+  { target: "ألف", items: [
+      {text:"دَعَا", correct:true}, {text:"غَزَا", correct:true}, {text:"عَفَا", correct:true},
+      {text:"اهْتَدَى", correct:false}, {text:"الحَلْوى", correct:false}, {text:"سَعَى", correct:false}
+  ]},
+  { target: "ياء", items: [
+      {text:"اهْتَدَى", correct:true}, {text:"الحَلْوى", correct:true}, {text:"سَعَى", correct:true},
+      {text:"دَعَا", correct:false}, {text:"غَزَا", correct:false}, {text:"رِضَا", correct:false}
+  ]}
+];
+
+/* ---------- Lesson 6 fishing rounds ---------- */
+const FISH_ROUNDS_L6 = [
+  { target: "ضمير", items: [
+      {text:"أَنْتَ", correct:true}, {text:"هُوَ", correct:true}, {text:"هِيَ", correct:true},
+      {text:"هَذَا", correct:false}, {text:"القَلَمُ", correct:false}, {text:"مُحَمَّدٌ", correct:false}
+  ]},
+  { target: "اسم إشارة", items: [
+      {text:"هَذَا", correct:true}, {text:"هَذِهِ", correct:true}, {text:"أُولَئِكَ", correct:true},
+      {text:"أَنْتَ", correct:false}, {text:"الَّذِي", correct:false}, {text:"هِنْدُ", correct:false}
+  ]},
+  { target: "اسم موصول", items: [
+      {text:"الَّذِي", correct:true}, {text:"الَّتِي", correct:true}, {text:"الَّذِينَ", correct:true},
+      {text:"هَذَا", correct:false}, {text:"مُحَمَّدٌ", correct:false}, {text:"الحَليبُ", correct:false}
+  ]},
+  { target: "علم", items: [
+      {text:"مُحَمَّدٌ", correct:true}, {text:"هِنْدُ", correct:true}, {text:"مَكَّةُ", correct:true},
+      {text:"القَلَمُ", correct:false}, {text:"هُوَ", correct:false}, {text:"الَّذِي", correct:false}
+  ]},
+  { target: "معرّف بأل", items: [
+      {text:"القَلَمُ", correct:true}, {text:"الحَليبُ", correct:true}, {text:"الكِتَابُ", correct:true},
+      {text:"مُحَمَّدٌ", correct:false}, {text:"أَنْتَ", correct:false}, {text:"هَذِهِ", correct:false}
+  ]}
+];
+
+/* ---------- Lesson 7 fishing rounds ---------- */
+const FISH_ROUNDS_L7 = [
+  { target: "فاعل", items: [
+      {text:"الفَلَّاحُ", correct:true}, {text:"التِّلمِيذُ", correct:true}, {text:"السَّائِقُ", correct:true},
+      {text:"الزَّرْعَ", correct:false}, {text:"الدَّرْسَ", correct:false}, {text:"إِشَارَاتِ", correct:false}
+  ]},
+  { target: "مفعول به", items: [
+      {text:"الزَّرْعَ", correct:true}, {text:"الدَّرْسَ", correct:true}, {text:"إِشَارَاتِ", correct:true},
+      {text:"الفَلَّاحُ", correct:false}, {text:"التِّلمِيذُ", correct:false}, {text:"السَّائِقُ", correct:false}
+  ]}
+];
 const FISH_POS = {
   6:[{top:6,left:6},{top:10,left:58},{top:36,left:30},{top:42,left:76},{top:66,left:8},{top:74,left:54}],
   4:[{top:10,left:12},{top:16,left:60},{top:54,left:22},{top:64,left:64}]
@@ -1103,6 +1781,38 @@ const MEMORY_PAIRS_L3 = [
   { id:3, cat:"nominal",label:"تاء مربوطة",   instance:"مَدْرَسَةٌ" }
 ];
 
+/* ---------- Lesson 4 memory pairs ---------- */
+const MEMORY_PAIRS_L4 = [
+  { id:0, cat:"noun",    label:"مبتدأ (اسم مفرد)",  instance:"الشمسُ" },
+  { id:1, cat:"verb",    label:"خبر (صفة مفردة)",   instance:"ساطعةٌ" },
+  { id:2, cat:"letter",  label:"مبتدأ (اسم بصفة)",  instance:"العملُ الجديُّ" },
+  { id:3, cat:"nominal", label:"خبر (كلمة واحدة)",  instance:"مفيدٌ" }
+];
+
+/* ---------- Lesson 5 memory pairs ---------- */
+const MEMORY_PAIRS_L5 = [
+  { id:0, cat:"noun",   label:"ألف (فعل ثلاثي من واو)", instance:"دَعَا" },
+  { id:1, cat:"verb",   label:"ياء (غير ثلاثي)",        instance:"اهْتَدَى" },
+  { id:2, cat:"letter", label:"ياء (اسم غير ثلاثي)",    instance:"الحَلْوى" },
+  { id:3, cat:"nominal",label:"ألف (كلمة نحفظها)",       instance:"رِضَا" }
+];
+
+/* ---------- Lesson 6 memory pairs ---------- */
+const MEMORY_PAIRS_L6 = [
+  { id:0, cat:"noun",   label:"ضمير",         instance:"أَنْتَ" },
+  { id:1, cat:"verb",   label:"اسم إشارة",    instance:"هَذِهِ" },
+  { id:2, cat:"letter", label:"اسم موصول",    instance:"الَّذِي" },
+  { id:3, cat:"nominal",label:"علم",          instance:"هِنْدُ" },
+  { id:4, cat:"verbal", label:"معرّف بأل",    instance:"الحَليبُ" }
+];
+
+/* ---------- Lesson 7 memory pairs ---------- */
+const MEMORY_PAIRS_L7 = [
+  { id:0, cat:"noun",   label:"فاعل (بعد الفعل مباشرة)", instance:"الفَلَّاحُ" },
+  { id:1, cat:"verb",   label:"مفعول به (بعد الفاعل)",   instance:"الزَّرْعَ" },
+  { id:2, cat:"letter", label:"فاعل (ضمّة)",             instance:"السَّائِقُ" },
+  { id:3, cat:"nominal",label:"مفعول به (فتحة)",         instance:"إِشَارَاتِ المُرُور" }
+];
 let QUESTIONS = QUESTIONS_L1;
 let ADVICE_KEY = ADVICE_KEY_L1;
 let currentLessonSheetName = "أنواع الكلمة";
@@ -1143,13 +1853,41 @@ function applyI18n(){
   if (studentName) updateMenuWelcome();
   const qTextEl = document.getElementById("qText");
   if (qTextEl && QUESTIONS[currentQ]) qTextEl.textContent = QUESTIONS[currentQ].q[lang];
+  updateBackButtonState();
 }
 
-function showScreen(id){
+let screenHistory = [];
+let currentScreenId = "screen-login";
+
+function showScreen(id, opts){
+  const push = !opts || opts.push !== false;
+  if (push && id !== currentScreenId){
+    screenHistory.push(currentScreenId);
+  }
+  currentScreenId = id;
   document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   window.scrollTo({top:0, behavior:"smooth"});
+  updateBackButtonState();
 }
+
+function updateBackButtonState(){
+  const backBtn = document.getElementById("backBtn");
+  if (!backBtn) return;
+  if (screenHistory.length > 0){
+    backBtn.style.display = "flex";
+    backBtn.textContent = lang === "ar" ? "›" : "‹";
+    backBtn.title = t("backNavBtn");
+  } else {
+    backBtn.style.display = "none";
+  }
+}
+
+document.getElementById("backBtn").addEventListener("click", ()=>{
+  if (screenHistory.length === 0) return;
+  const prev = screenHistory.pop();
+  showScreen(prev, {push:false});
+});
 
 /* ---------- login -> menu ---------- */
 document.getElementById("startBtn").addEventListener("click", ()=>{
@@ -1181,6 +1919,18 @@ document.getElementById("lesson2ReviewBtn").addEventListener("click", ()=>{
 });
 document.getElementById("lesson3ReviewBtn").addEventListener("click", ()=>{
   showScreen("screen-lesson3");
+});
+document.getElementById("lesson4ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson4");
+});
+document.getElementById("lesson5ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson5");
+});
+document.getElementById("lesson6ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson6");
+});
+document.getElementById("lesson7ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lesson7");
 });
 
 /* ---------- lesson 1 -> game1 ---------- */
@@ -1216,10 +1966,55 @@ document.getElementById("toGamesBtn3").addEventListener("click", ()=>{
   showScreen("screen-game1");
 });
 
+/* ---------- lesson 4 -> game1 ---------- */
+document.getElementById("toGamesBtn4").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L4;
+  MEMORY_PAIRS = MEMORY_PAIRS_L4;
+  QUESTIONS = QUESTIONS_L4;
+  ADVICE_KEY = ADVICE_KEY_L4;
+  currentLessonSheetName = "المبتدأ والخبر";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- lesson 5 -> game1 ---------- */
+document.getElementById("toGamesBtn5").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L5;
+  MEMORY_PAIRS = MEMORY_PAIRS_L5;
+  QUESTIONS = QUESTIONS_L5;
+  ADVICE_KEY = ADVICE_KEY_L5;
+  currentLessonSheetName = "الألف اللينة";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- lesson 6 -> game1 ---------- */
+document.getElementById("toGamesBtn6").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L6;
+  MEMORY_PAIRS = MEMORY_PAIRS_L6;
+  QUESTIONS = QUESTIONS_L6;
+  ADVICE_KEY = ADVICE_KEY_L6;
+  currentLessonSheetName = "أنواع المعارف";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- lesson 7 -> game1 ---------- */
+document.getElementById("toGamesBtn7").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_L7;
+  MEMORY_PAIRS = MEMORY_PAIRS_L7;
+  QUESTIONS = QUESTIONS_L7;
+  ADVICE_KEY = ADVICE_KEY_L7;
+  currentLessonSheetName = "الفاعل والمفعول به";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
 /* ---------- result -> back to menu ---------- */
 document.getElementById("backToMenuBtn").addEventListener("click", ()=>{
   updateMenuWelcome();
-  showScreen("screen-menu");
+  screenHistory = [];
+  showScreen("screen-menu", {push:false});
 });
 
 /* =====================================================
