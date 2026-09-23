@@ -275,6 +275,34 @@
     <div class="card">
       <div class="login-hero">
         <h1 id="menuWelcome"></h1>
+        <p data-i18n="menuTopSub">اختر قسمًا لتبدأ</p>
+      </div>
+      <div class="lesson-item" id="categoryReviewBtn" style="cursor:pointer;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" style="font-size:20px;">📚</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="reviewSectionTitle">مراجعة</h3>
+            <p data-i18n="reviewSectionDesc">7 دروس جاهزة للمراجعة</p>
+          </div>
+        </div>
+      </div>
+      <div class="lesson-item" id="categoryUnit1Btn" style="cursor:pointer;margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num" style="font-size:20px;">📘</div>
+          <div class="lesson-item-text">
+            <h3 data-i18n="unit1SectionTitle">الوحدة الأولى</h3>
+            <p data-i18n="unit1SectionDesc">دروس الوحدة الأولى من الكتاب</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY: REVIEW LESSONS LIST -->
+  <section class="screen" id="screen-category-review">
+    <div class="card">
+      <div class="login-hero">
+        <h1 data-i18n="reviewSectionTitle">مراجعة</h1>
         <p data-i18n="menuSub">اختر الدرس الذي تريد مراجعته</p>
       </div>
       <div class="lesson-item">
@@ -354,6 +382,92 @@
         </div>
         <button class="btn btn-primary btn-inline" id="lesson7ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
       </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY: UNIT 1 LESSONS LIST -->
+  <section class="screen" id="screen-category-unit1">
+    <div class="card">
+      <div class="login-hero">
+        <h1 data-i18n="unit1SectionTitle">الوحدة الأولى</h1>
+        <p data-i18n="unit1SectionDesc">دروس الوحدة الأولى من الكتاب</p>
+      </div>
+      <div id="unit1LessonsList">
+        <div class="lesson-item">
+          <div class="lesson-item-top">
+            <div class="lesson-item-num" data-i18n="lessonNumU1L1">١</div>
+            <div class="lesson-item-text">
+              <h3 data-i18n="lessonU1L1CardTitle">الدرس الأول: اللسان</h3>
+              <p data-i18n="lessonU1L1CardDesc">قصة الطبيب وتلميذه، وأفعال اللسان الجيدة والسيئة</p>
+              <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-inline" id="lessonU1L1ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIT 1 - LESSON 1: اللسان -->
+  <section class="screen" id="screen-lessonU1L1">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill" data-i18n="u1l1Pill">الوحدة الأولى — الدرس الأول</span>
+        <h1 data-i18n="u1l1Title">اللسان</h1>
+        <p data-i18n="lessonDesc">اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="u1IntroTitle">أخلاقٌ وفضائلُ</h2>
+        <p data-i18n="u1IntroDesc">قال تعالى: ﴿وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ﴾. في هذه الوحدة نتعلّم عن الأخلاق الحسنة، ونبدأ بدرسٍ عن أهمّ عضوٍ في جسمك: لسانُك.</p>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="tongueStoryTitle">قصة الطبيب وتلميذه</h2>
+        <p data-i18n="tongueStoryDesc">أرسل طبيبٌ تلميذَه إلى السوق ليشتري له أجودَ قطعةِ لحمٍ، فعاد التلميذُ ومعه لسانٌ. وفي يومٍ آخر طلب منه أن يشتري أردأَ قطعةِ لحمٍ، فعاد التلميذُ ومعه لسانٌ أيضًا! سأله الطبيبُ عن السبب، فقال التلميذُ: «لم أجد في جسم الإنسان قطعةً أجودَ من اللسان ولا أردأَ منه».</p>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3 data-i18n="goodTongueTitle">اللسانُ الجيّدُ</h3>
+          <span class="en-term" data-i18n="goodTongueEn">A Good Tongue</span>
+          <p data-i18n="goodTongueDesc">اللسانُ الجيّدُ هو اللسانُ الصادقُ، وهو أجودُ قطعةٍ في جسم الإنسان إذا استُعمِل في الخير.</p>
+          <span class="example" data-i18n="goodTongueExample">مثال: قراءةُ القرآن، قولُ الصدق، ذكرُ الله تعالى، إفشاءُ السلام، النصيحة</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3 data-i18n="badTongueTitle">اللسانُ السيّئُ</h3>
+          <span class="en-term" data-i18n="badTongueEn">A Bad Tongue</span>
+          <p data-i18n="badTongueDesc">إذا استُعمِل اللسانُ في الشرّ، صار أردأَ قطعةٍ في جسم الإنسان.</p>
+          <span class="example" data-i18n="badTongueExample">مثال: الكذبُ، الغيبةُ، النميمةُ، الشتمُ، الاستهزاءُ</span>
+        </div>
+      </div>
+
+      <div class="family-intro">
+        <h2 data-i18n="tongueTrickTitle">💡 حكمة القصة</h2>
+        <p data-i18n="tongueTrickDesc">اللسانُ نفسه لا يتغيّر، لكنّ استخدامَه هو الذي يجعله أجودَ شيءٍ أو أردأَ شيء. لهذا وصفنا التلميذَ بأنه حكيمٌ، لأنه فهم هذه الحقيقة.</p>
+      </div>
+
+      <div class="section-title" data-i18n="quickChallengeTitle">🧩 لعبة التحدي السريع</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4 data-i18n="tongueChallenge1Title">«اللسانُ الجيّدُ هو اللسانُ الصادقُ»</h4>
+          <p data-i18n="tongueChallenge1Desc">عبارة صحيحة ✓</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="tongueChallenge2Title">«كان الطبيبُ يعاقبُ تلميذَه بإرسالِه إلى السوق»</h4>
+          <p data-i18n="tongueChallenge2Desc">عبارة غير صحيحة ✗ — كان يختبره ويعلّمه، لا يعاقبه.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="tongueChallenge3Title">«اشترى التلميذُ في اليوم الأول أردأَ قطعةِ لحمٍ»</h4>
+          <p data-i18n="tongueChallenge3Desc">عبارة غير صحيحة ✗ — اشترى أجودَ قطعةٍ في اليوم الأول.</p>
+        </div>
+        <div class="sentence-card">
+          <h4 data-i18n="tongueChallenge4Title">«نستطيع أن نصف التلميذَ أنه حكيمٌ»</h4>
+          <p data-i18n="tongueChallenge4Desc">عبارة صحيحة ✓</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtnU1L1" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
     </div>
   </section>
 
@@ -931,6 +1045,32 @@ const I18N = {
     startBtn: "دخول",
     menuWelcomePrefix: "أهلًا",
     menuSub: "اختر الدرس الذي تريد مراجعته",
+    menuTopSub: "اختر قسمًا لتبدأ",
+    reviewSectionTitle: "مراجعة",
+    reviewSectionDesc: "7 دروس جاهزة للمراجعة",
+    unit1SectionTitle: "الوحدة الأولى",
+    unit1SectionDesc: "دروس الوحدة الأولى من الكتاب",
+    lessonNumU1L1: "١",
+    lessonU1L1CardTitle: "الدرس الأول: اللسان",
+    lessonU1L1CardDesc: "قصة الطبيب وتلميذه، وأفعال اللسان الجيدة والسيئة",
+    u1l1Pill: "الوحدة الأولى — الدرس الأول",
+    u1l1Title: "اللسان",
+    u1IntroTitle: "أخلاقٌ وفضائلُ",
+    u1IntroDesc: "قال تعالى: ﴿وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ﴾. في هذه الوحدة نتعلّم عن الأخلاق الحسنة، ونبدأ بدرسٍ عن أهمّ عضوٍ في جسمك: لسانُك.",
+    tongueStoryTitle: "قصة الطبيب وتلميذه",
+    tongueStoryDesc: "أرسل طبيبٌ تلميذَه إلى السوق ليشتري له أجودَ قطعةِ لحمٍ، فعاد التلميذُ ومعه لسانٌ. وفي يومٍ آخر طلب منه أن يشتري أردأَ قطعةِ لحمٍ، فعاد التلميذُ ومعه لسانٌ أيضًا! سأله الطبيبُ عن السبب، فقال التلميذُ: «لم أجد في جسم الإنسان قطعةً أجودَ من اللسان ولا أردأَ منه».",
+    goodTongueTitle: "اللسانُ الجيّدُ", goodTongueEn: "A Good Tongue",
+    goodTongueDesc: "اللسانُ الجيّدُ هو اللسانُ الصادقُ، وهو أجودُ قطعةٍ في جسم الإنسان إذا استُعمِل في الخير.",
+    goodTongueExample: "مثال: قراءةُ القرآن، قولُ الصدق، ذكرُ الله تعالى، إفشاءُ السلام، النصيحة",
+    badTongueTitle: "اللسانُ السيّئُ", badTongueEn: "A Bad Tongue",
+    badTongueDesc: "إذا استُعمِل اللسانُ في الشرّ، صار أردأَ قطعةٍ في جسم الإنسان.",
+    badTongueExample: "مثال: الكذبُ، الغيبةُ، النميمةُ، الشتمُ، الاستهزاءُ",
+    tongueTrickTitle: "💡 حكمة القصة",
+    tongueTrickDesc: "اللسانُ نفسه لا يتغيّر، لكنّ استخدامَه هو الذي يجعله أجودَ شيءٍ أو أردأَ شيء. لهذا وصفنا التلميذَ بأنه حكيمٌ، لأنه فهم هذه الحقيقة.",
+    tongueChallenge1Title: "«اللسانُ الجيّدُ هو اللسانُ الصادقُ»", tongueChallenge1Desc: "عبارة صحيحة ✓",
+    tongueChallenge2Title: "«كان الطبيبُ يعاقبُ تلميذَه بإرسالِه إلى السوق»", tongueChallenge2Desc: "عبارة غير صحيحة ✗ — كان يختبره ويعلّمه، لا يعاقبه.",
+    tongueChallenge3Title: "«اشترى التلميذُ في اليوم الأول أردأَ قطعةِ لحمٍ»", tongueChallenge3Desc: "عبارة غير صحيحة ✗ — اشترى أجودَ قطعةٍ في اليوم الأول.",
+    tongueChallenge4Title: "«نستطيع أن نصف التلميذَ أنه حكيمٌ»", tongueChallenge4Desc: "عبارة صحيحة ✓",
     lesson1CardTitle: "الدرس الأول: أنواعُ الكَلِمة",
     lesson1CardDesc: "الاسمُ، والفعلُ، والحرفُ، وأنواع الجملة",
     lessonReadyTag: "✓ جاهز للمراجعة",
@@ -1143,6 +1283,9 @@ const I18N = {
     adviceAl: "راجع المعرَّف بأل: اسمٌ نكرة أضفنا إليه «أل» فأصبح معرفة.",
     adviceFaail: "راجع الفاعل: اسمٌ مرفوعٌ يدلّ على من قام بالفعل، ويأتي بعد الفعل غالبًا.",
     adviceMafool: "راجع المفعول به: اسمٌ منصوبٌ وقع عليه فعل الفاعل.",
+    adviceGoodTongue: "راجع أفعال اللسان الجيدة: قراءة القرآن، قول الصدق، ذكر الله، إفشاء السلام، النصيحة.",
+    adviceBadTongue: "راجع أفعال اللسان السيئة: الكذب، الغيبة، النميمة، الشتم، الاستهزاء.",
+    adviceTongueStory: "راجع قصة الطبيب وتلميذه: اشترى التلميذ اللسان مرتين، لأنه أجود قطعة أو أردأ قطعة بحسب استخدامه.",
     retryBtn: "إعادة المحاولة",
     footer: "لغتي الجميلة — إعداد: الأستاذة أمل الحسن",
     nameRequired: "من فضلك اكتب اسمك أولًا",
@@ -1166,6 +1309,32 @@ const I18N = {
     startBtn: "Enter",
     menuWelcomePrefix: "Welcome",
     menuSub: "Choose the lesson you'd like to review",
+    menuTopSub: "Choose a section to begin",
+    reviewSectionTitle: "Review",
+    reviewSectionDesc: "7 lessons ready to review",
+    unit1SectionTitle: "Unit 1",
+    unit1SectionDesc: "Unit 1 lessons from the textbook",
+    lessonNumU1L1: "1",
+    lessonU1L1CardTitle: "Lesson 1: اللسان (The Tongue)",
+    lessonU1L1CardDesc: "The doctor and his student, and the tongue's good and bad deeds",
+    u1l1Pill: "Unit 1 — Lesson 1",
+    u1l1Title: "اللسان (The Tongue)",
+    u1IntroTitle: "Morals and Virtues",
+    u1IntroDesc: "Allah says: \"And indeed, you are of a great moral character.\" In this unit we learn about good manners, starting with a lesson about one of the most important parts of your body: your tongue.",
+    tongueStoryTitle: "The Story of the Doctor and His Student",
+    tongueStoryDesc: "A doctor sent his student to the market to buy him the best piece of meat, and the student came back with a tongue. Another day, he asked him to buy the worst piece of meat, and the student came back with a tongue again! The doctor asked him why, and the student said: \"I found no piece in the human body better or worse than the tongue.\"",
+    goodTongueTitle: "اللسانُ الجيّدُ", goodTongueEn: "A Good Tongue",
+    goodTongueDesc: "A good tongue is a truthful one — it is the best piece in the human body when used for good.",
+    goodTongueExample: "Examples: reading the Quran, telling the truth, remembering Allah, spreading greetings, giving advice",
+    badTongueTitle: "اللسانُ السيّئُ", badTongueEn: "A Bad Tongue",
+    badTongueDesc: "If the tongue is used for evil, it becomes the worst piece in the human body.",
+    badTongueExample: "Examples: lying, backbiting, gossiping, cursing, mocking",
+    tongueTrickTitle: "💡 The Story's Wisdom",
+    tongueTrickDesc: "The tongue itself doesn't change, but how it's used is what makes it the best or the worst thing. That's why we described the student as wise — because he understood this truth.",
+    tongueChallenge1Title: "«اللسانُ الجيّدُ هو اللسانُ الصادقُ»", tongueChallenge1Desc: "True statement ✓",
+    tongueChallenge2Title: "«كان الطبيبُ يعاقبُ تلميذَه بإرسالِه إلى السوق»", tongueChallenge2Desc: "False statement ✗ — he was testing and teaching him, not punishing him.",
+    tongueChallenge3Title: "«اشترى التلميذُ في اليوم الأول أردأَ قطعةِ لحمٍ»", tongueChallenge3Desc: "False statement ✗ — he bought the best piece on the first day.",
+    tongueChallenge4Title: "«نستطيع أن نصف التلميذَ أنه حكيمٌ»", tongueChallenge4Desc: "True statement ✓",
     lesson1CardTitle: "Lesson 1: أنواعُ الكَلِمة (Word Types)",
     lesson1CardDesc: "Noun, Verb, Particle, and sentence types",
     lessonReadyTag: "✓ Ready to review",
@@ -1378,6 +1547,9 @@ const I18N = {
     adviceAl: "Review the \"al\"-defined noun: an indefinite noun that becomes definite once \"al\" is added.",
     adviceFaail: "Review the subject: a noun in the nominative case naming who did the action, usually right after the verb.",
     adviceMafool: "Review the direct object: a noun in the accusative case that receives the subject's action.",
+    adviceGoodTongue: "Review the tongue's good deeds: reading the Quran, telling the truth, remembering Allah, spreading greetings, giving advice.",
+    adviceBadTongue: "Review the tongue's bad deeds: lying, backbiting, gossiping, cursing, mocking.",
+    adviceTongueStory: "Review the doctor and student story: the student bought the tongue twice, since it's the best or the worst piece depending on how it's used.",
     retryBtn: "Try again",
     footer: "My Beautiful Language — Prepared by: Ms. Amal Alhasan",
     nameRequired: "Please type your name first",
@@ -1624,6 +1796,38 @@ const QUESTIONS_L7 = [
 const ADVICE_KEY_L7 = { faail:"adviceFaail", mafool:"adviceMafool" };
 
 /* =====================================================
+   Quiz data — Unit 1, Lesson 1: اللسان
+   ===================================================== */
+const QUESTIONS_U1L1 = [
+  { q:{ ar:"اشترى التلميذُ في اليوم الأول:", en:"On the first day, the student bought:" },
+    options: ["أجودَ قطعةِ لحمٍ", "أردأَ قطعةِ لحمٍ"], correct: 0, category:"story" },
+  { q:{ ar:"اشترى التلميذُ في اليوم الثاني:", en:"On the second day, the student bought:" },
+    options: ["أجودَ قطعةِ لحمٍ", "أردأَ قطعةِ لحمٍ"], correct: 1, category:"story" },
+  { q:{ ar:"القطعةُ التي اشتراها التلميذُ في المرّتين كانت:", en:"The piece the student bought both times was:" },
+    options: ["اللسانُ", "الكبدُ"], correct: 0, category:"story" },
+  { q:{ ar:"لماذا اختار التلميذُ اللسانَ؟", en:"Why did the student choose the tongue?" },
+    options: ["لأنه لم يجد أجودَ منه ولا أردأَ", "لأنه رخيصُ الثمن"], correct: 0, category:"story" },
+  { q:{ ar:"اللسانُ الجيّدُ هو اللسانُ:", en:"A good tongue is a tongue that is:" },
+    options: ["الصادقُ", "الكاذبُ"], correct: 0, category:"good" },
+  { q:{ ar:"من الأفعال الجيدة للسان:", en:"Among the tongue's good deeds is:" },
+    options: ["قراءةُ القرآن", "الغيبةُ"], correct: 0, category:"good" },
+  { q:{ ar:"من الأفعال السيئة للسان:", en:"Among the tongue's bad deeds is:" },
+    options: ["النصيحةُ", "النميمةُ"], correct: 1, category:"bad" },
+  { q:{ ar:"سببُ اختيارِ الطبيبِ لذلك التلميذِ:", en:"The reason the doctor chose that student:" },
+    options: ["لأنه ذكيٌّ يحبُّه كثيرًا", "لأنه ابنُه"], correct: 0, category:"story" },
+  { q:{ ar:"نستطيعُ أن نصفَ التلميذَ في القصة بأنه:", en:"We can describe the student in the story as:" },
+    options: ["حكيمٌ", "كسولٌ"], correct: 0, category:"story" },
+  { q:{ ar:"إفشاءُ السلامِ يدلُّ على أنّ اللسانَ:", en:"Spreading greetings shows that the tongue is:" },
+    options: ["أجودُ قطعةٍ", "أردأُ قطعةٍ"], correct: 0, category:"good" },
+  { q:{ ar:"الاستهزاءُ بالآخرينَ يدلُّ على أنّ اللسانَ:", en:"Mocking others shows that the tongue is:" },
+    options: ["أجودُ قطعةٍ", "أردأُ قطعةٍ"], correct: 1, category:"bad" },
+  { q:{ ar:"ذكرُ اللهِ تعالى من:", en:"Remembering Allah is among:" },
+    options: ["الأفعالِ الجيدةِ للسان", "الأفعالِ السيئةِ للسان"], correct: 0, category:"good" }
+];
+
+const ADVICE_KEY_U1L1 = { good:"adviceGoodTongue", bad:"adviceBadTongue", story:"adviceTongueStory" };
+
+/* =====================================================
    Fishing game data (always Arabic — content to solve)
    ===================================================== */
 const FISH_ROUNDS_L1 = [
@@ -1746,6 +1950,18 @@ const FISH_ROUNDS_L7 = [
       {text:"الفَلَّاحُ", correct:false}, {text:"التِّلمِيذُ", correct:false}, {text:"السَّائِقُ", correct:false}
   ]}
 ];
+
+/* ---------- Unit 1, Lesson 1 fishing rounds ---------- */
+const FISH_ROUNDS_U1L1 = [
+  { target: "فعل جيد للسان", items: [
+      {text:"قراءة القرآن", correct:true}, {text:"قول الصدق", correct:true}, {text:"إفشاء السلام", correct:true},
+      {text:"الكذب", correct:false}, {text:"الغيبة", correct:false}, {text:"الشتم", correct:false}
+  ]},
+  { target: "فعل سيئ للسان", items: [
+      {text:"الكذب", correct:true}, {text:"النميمة", correct:true}, {text:"الاستهزاء", correct:true},
+      {text:"ذكر الله تعالى", correct:false}, {text:"النصيحة", correct:false}, {text:"قراءة القرآن", correct:false}
+  ]}
+];
 const FISH_POS = {
   6:[{top:6,left:6},{top:10,left:58},{top:36,left:30},{top:42,left:76},{top:66,left:8},{top:74,left:54}],
   4:[{top:10,left:12},{top:16,left:60},{top:54,left:22},{top:64,left:64}]
@@ -1813,6 +2029,15 @@ const MEMORY_PAIRS_L7 = [
   { id:2, cat:"letter", label:"فاعل (ضمّة)",             instance:"السَّائِقُ" },
   { id:3, cat:"nominal",label:"مفعول به (فتحة)",         instance:"إِشَارَاتِ المُرُور" }
 ];
+
+/* ---------- Unit 1, Lesson 1 memory pairs ---------- */
+const MEMORY_PAIRS_U1L1 = [
+  { id:0, cat:"noun",   label:"فعل جيد (يقرأ)",   instance:"قراءة القرآن" },
+  { id:1, cat:"verb",   label:"فعل سيئ (يكذب)",   instance:"الكذب" },
+  { id:2, cat:"letter", label:"فعل جيد (ينصح)",   instance:"النصيحة" },
+  { id:3, cat:"nominal",label:"فعل سيئ (يستهزئ)", instance:"الاستهزاء" }
+];
+
 let QUESTIONS = QUESTIONS_L1;
 let ADVICE_KEY = ADVICE_KEY_L1;
 let currentLessonSheetName = "أنواع الكلمة";
@@ -1910,6 +2135,14 @@ function updateMenuWelcome(){
   if (el) el.textContent = `${t("menuWelcomePrefix")} ${studentName} 👋`;
 }
 
+/* ---------- top menu -> category screens ---------- */
+document.getElementById("categoryReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-category-review");
+});
+document.getElementById("categoryUnit1Btn").addEventListener("click", ()=>{
+  showScreen("screen-category-unit1");
+});
+
 /* ---------- menu -> lesson 1 / lesson 2 ---------- */
 document.getElementById("lesson1ReviewBtn").addEventListener("click", ()=>{
   showScreen("screen-lesson");
@@ -1931,6 +2164,9 @@ document.getElementById("lesson6ReviewBtn").addEventListener("click", ()=>{
 });
 document.getElementById("lesson7ReviewBtn").addEventListener("click", ()=>{
   showScreen("screen-lesson7");
+});
+document.getElementById("lessonU1L1ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lessonU1L1");
 });
 
 /* ---------- lesson 1 -> game1 ---------- */
@@ -2006,6 +2242,17 @@ document.getElementById("toGamesBtn7").addEventListener("click", ()=>{
   QUESTIONS = QUESTIONS_L7;
   ADVICE_KEY = ADVICE_KEY_L7;
   currentLessonSheetName = "الفاعل والمفعول به";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- Unit 1, Lesson 1 -> game1 ---------- */
+document.getElementById("toGamesBtnU1L1").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_U1L1;
+  MEMORY_PAIRS = MEMORY_PAIRS_U1L1;
+  QUESTIONS = QUESTIONS_U1L1;
+  ADVICE_KEY = ADVICE_KEY_U1L1;
+  currentLessonSheetName = "اللسان";
   startFishGame();
   showScreen("screen-game1");
 });
