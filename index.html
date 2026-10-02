@@ -113,6 +113,10 @@
   .lesson-head p{color:var(--ink-soft);font-size:14px;margin:0;}
 
   .family-intro{background:linear-gradient(135deg,#eef6f3,#f7f3e6);border-radius:14px;padding:16px 18px;margin-bottom:18px;font-size:14px;line-height:1.85;}
+  .poem-box{background:#fbf8ee;border:1.5px solid var(--gold);border-radius:14px;padding:18px 20px;margin-bottom:18px;text-align:center;}
+  .poem-box h2{margin:0 0 12px;font-size:16px;color:var(--teal-dark);}
+  .poem-box .poem-line{font-size:15.5px;font-weight:700;color:var(--ink);line-height:2.1;margin:0;}
+  .poem-box .poem-refrain{font-size:13px;color:var(--ink-soft);font-weight:600;margin:0 0 10px;}
   .family-intro h2{margin:0 0 6px;font-size:16px;color:var(--teal-dark);}
 
   .concept-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0;}
@@ -534,6 +538,27 @@
           <h4 data-i18n="u1l2Challenge4Title">«ذِفْراه»</h4>
           <p data-i18n="u1l2Challenge4Desc">معناها: مؤخّرةُ رأسِه.</p>
         </div>
+      </div>
+
+      <div class="section-title" data-i18n="u1l2Part2Title">الجزءُ الثاني: حفظُ الحقوقِ</div>
+      <div class="family-intro">
+        <p data-i18n="u1l2Part2Intro">من مظاهرِ حسنِ الخلقِ أيضًا: حفظُ حقوقِ الوطنِ والناسِ والبيئةِ من حولنا. في هذه القصيدةِ يُقسِمُ الشاعرُ ألّا يكون سببًا في أذًى لبلدِه أو مالِه أو زرعِه أو حتى الطيورِ المغرِّدةِ.</p>
+      </div>
+      <div class="poem-box">
+        <h2 data-i18n="poemTitle">قصيدةُ حفظِ الحقوقِ</h2>
+        <p class="poem-line" data-i18n="poemLine1">أَقْسَمْتُ بِالصَّمَدِ الواحدِ الأَحَدِ</p>
+        <p class="poem-line" data-i18n="poemLine2">أَلّا تكونَ يدي حَرْبًا على بَلَدي</p>
+        <p class="poem-refrain" data-i18n="poemRefrain">واللهُ مُعْتَمَدي</p>
+        <p class="poem-line" data-i18n="poemLine3">لَنْ أُفْسِدَ السَّكَنا والمَلْبَسَ الحَسَنا</p>
+        <p class="poem-line" data-i18n="poemLine4">والمالَ والوطنا بالحِقْدِ والحَسَدِ</p>
+        <p class="poem-refrain" data-i18n="poemRefrain2">واللهُ مُعْتَمَدي</p>
+        <p class="poem-line" data-i18n="poemLine5">لَنْ أُتلِفَ الشَّجَرا والزَّرعَ والزَّهْرا</p>
+        <p class="poem-line" data-i18n="poemLine6">أو أُلحِقَ الضَّرَرا بالطّائرِ الغَرِدِ</p>
+        <p class="poem-refrain" data-i18n="poemRefrain3">واللهُ مُعْتَمَدي</p>
+      </div>
+      <div class="family-intro">
+        <h2 data-i18n="poemMeaningTitle">💡 معنى القصيدةِ</h2>
+        <p data-i18n="poemMeaningDesc">يتعهّدُ الشاعرُ ألّا تمتدَّ يدُه بالأذى إلى وطنِه، ولا إلى سكنِه ومالِه وملبسِه بالحقدِ والحسدِ، ولا إلى الشجرِ والزرعِ والزهرِ والطيورِ المغرِّدةِ. وهذا تطبيقٌ آخرُ لخُلقِ الرفقِ الذي تعلّمناه من قصةِ الجملِ الشاكي، لكنْ هنا يشملُ الوطنَ والبيئةَ كلَّها.</p>
       </div>
 
       <button class="btn btn-primary" id="toGamesBtnU1L2" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
@@ -1159,6 +1184,20 @@ const I18N = {
     u1l2Challenge2Title: "«جَبَذَه»", u1l2Challenge2Desc: "معناها: شدَّه بقوةٍ.",
     u1l2Challenge3Title: "«غليظُ الحاشيةِ»", u1l2Challenge3Desc: "معناها: أطرافُ ردائه قاسيةٌ.",
     u1l2Challenge4Title: "«ذِفْراه»", u1l2Challenge4Desc: "معناها: مؤخّرةُ رأسِه.",
+    u1l2Part2Title: "الجزءُ الثاني: حفظُ الحقوقِ",
+    u1l2Part2Intro: "من مظاهرِ حسنِ الخلقِ أيضًا: حفظُ حقوقِ الوطنِ والناسِ والبيئةِ من حولنا. في هذه القصيدةِ يُقسِمُ الشاعرُ ألّا يكون سببًا في أذًى لبلدِه أو مالِه أو زرعِه أو حتى الطيورِ المغرِّدةِ.",
+    poemTitle: "قصيدةُ حفظِ الحقوقِ",
+    poemLine1: "أَقْسَمْتُ بِالصَّمَدِ الواحدِ الأَحَدِ",
+    poemLine2: "أَلّا تكونَ يدي حَرْبًا على بَلَدي",
+    poemRefrain: "واللهُ مُعْتَمَدي",
+    poemLine3: "لَنْ أُفْسِدَ السَّكَنا والمَلْبَسَ الحَسَنا",
+    poemLine4: "والمالَ والوطنا بالحِقْدِ والحَسَدِ",
+    poemRefrain2: "واللهُ مُعْتَمَدي",
+    poemLine5: "لَنْ أُتلِفَ الشَّجَرا والزَّرعَ والزَّهْرا",
+    poemLine6: "أو أُلحِقَ الضَّرَرا بالطّائرِ الغَرِدِ",
+    poemRefrain3: "واللهُ مُعْتَمَدي",
+    poemMeaningTitle: "💡 معنى القصيدةِ",
+    poemMeaningDesc: "يتعهّدُ الشاعرُ ألّا تمتدَّ يدُه بالأذى إلى وطنِه، ولا إلى سكنِه ومالِه وملبسِه بالحقدِ والحسدِ، ولا إلى الشجرِ والزرعِ والزهرِ والطيورِ المغرِّدةِ. وهذا تطبيقٌ آخرُ لخُلقِ الرفقِ الذي تعلّمناه من قصةِ الجملِ الشاكي، لكنْ هنا يشملُ الوطنَ والبيئةَ كلَّها.",
     lesson1CardTitle: "الدرس الأول: أنواعُ الكَلِمة",
     lesson1CardDesc: "الاسمُ، والفعلُ، والحرفُ، وأنواع الجملة",
     lessonReadyTag: "✓ جاهز للمراجعة",
@@ -1445,6 +1484,20 @@ const I18N = {
     u1l2Challenge2Title: "«جَبَذَه»", u1l2Challenge2Desc: "Meaning: pulled it forcefully.",
     u1l2Challenge3Title: "«غليظُ الحاشيةِ»", u1l2Challenge3Desc: "Meaning: the edges of his cloak were rough.",
     u1l2Challenge4Title: "«ذِفْراه»", u1l2Challenge4Desc: "Meaning: behind its ears/the back of its head.",
+    u1l2Part2Title: "Part Two: Preserving Rights",
+    u1l2Part2Intro: "Another sign of good character is preserving the rights of one's homeland, people, and the environment around us. In this poem, the poet swears he will never be a cause of harm to his country, wealth, crops, or even the singing birds.",
+    poemTitle: "The Poem of Preserving Rights",
+    poemLine1: "أَقْسَمْتُ بِالصَّمَدِ الواحدِ الأَحَدِ",
+    poemLine2: "أَلّا تكونَ يدي حَرْبًا على بَلَدي",
+    poemRefrain: "واللهُ مُعْتَمَدي",
+    poemLine3: "لَنْ أُفْسِدَ السَّكَنا والمَلْبَسَ الحَسَنا",
+    poemLine4: "والمالَ والوطنا بالحِقْدِ والحَسَدِ",
+    poemRefrain2: "واللهُ مُعْتَمَدي",
+    poemLine5: "لَنْ أُتلِفَ الشَّجَرا والزَّرعَ والزَّهْرا",
+    poemLine6: "أو أُلحِقَ الضَّرَرا بالطّائرِ الغَرِدِ",
+    poemRefrain3: "واللهُ مُعْتَمَدي",
+    poemMeaningTitle: "💡 The Poem's Meaning",
+    poemMeaningDesc: "The poet pledges that his hand will never bring harm to his homeland, nor to his home, wealth, or clothing through spite or envy, nor to trees, crops, flowers, or singing birds. This is another application of the gentleness we learned from the story of the Complaining Camel — but here it extends to one's whole homeland and environment.",
     lesson1CardTitle: "Lesson 1: أنواعُ الكَلِمة (Word Types)",
     lesson1CardDesc: "Noun, Verb, Particle, and sentence types",
     lessonReadyTag: "✓ Ready to review",
