@@ -113,6 +113,10 @@
   .lesson-head p{color:var(--ink-soft);font-size:14px;margin:0;}
 
   .family-intro{background:linear-gradient(135deg,#eef6f3,#f7f3e6);border-radius:14px;padding:16px 18px;margin-bottom:18px;font-size:14px;line-height:1.85;}
+  .text-box{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:18px;line-height:2;font-size:14.5px;}
+  .text-box h2{margin:0 0 10px;font-size:16px;color:var(--teal-dark);text-align:center;}
+  .text-box p{margin:0 0 8px;}
+  .text-box p.src{font-size:12px;color:var(--ink-soft);margin:10px 0 0;}
   .poem-box{background:#fbf8ee;border:1.5px solid var(--gold);border-radius:14px;padding:18px 20px;margin-bottom:18px;text-align:center;}
   .poem-box h2{margin:0 0 12px;font-size:16px;color:var(--teal-dark);}
   .poem-box .poem-line{font-size:15.5px;font-weight:700;color:var(--ink);line-height:2.1;margin:0;}
@@ -256,7 +260,6 @@
         </div>
       </div>
     </div>
-    <button class="lang-btn" id="langToggle" type="button">English</button>
   </div>
 
   <!-- SCREEN 1: LOGIN -->
@@ -451,6 +454,17 @@
             </div>
           </div>
           <button class="btn btn-primary btn-inline" id="lessonU1L5ReviewBtn" type="button" data-i18n="reviewBtn">مراجعة</button>
+        </div>
+        <div class="lesson-item" style="margin-top:12px;">
+          <div class="lesson-item-top">
+            <div class="lesson-item-num">٦</div>
+            <div class="lesson-item-text">
+              <h3>الدرس السادس: الاستراتيجيةُ القرائيّةُ</h3>
+              <p>ثلاثةُ أجزاءٍ: الاستطلاعُ، والأسئلةُ، وتطبيقُهما معًا</p>
+              <span class="lesson-item-tag" data-i18n="lessonReadyTag">✓ جاهز للمراجعة</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-inline" id="lessonU1L6ReviewBtn" type="button">الأجزاء</button>
         </div>
       </div>
     </div>
@@ -954,6 +968,257 @@
       </div>
 
       <button class="btn btn-primary" id="toGamesBtnU1L5" type="button" data-i18n="toGamesBtn">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <!-- UNIT 1 - LESSON 6: الاستراتيجية القرائية (hub) -->
+  <section class="screen" id="screen-lessonU1L6">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill">الوحدة الأولى — الدرس السادس</span>
+        <h1>الاستراتيجيةُ القرائيّةُ</h1>
+        <p>ثلاثةُ أجزاءٍ، لكلِّ جزءٍ شرحُه وألعابُه واختبارُه</p>
+      </div>
+      <div class="family-intro">
+        <h2>لماذا نتعلّمُها؟</h2>
+        <p>لقراءةِ نصٍّ من النصوصِ قراءةً مركّزةً تُمكّنُني من حفظِ معلوماتِه، واسترجاعِها عند الحاجةِ. وفي هذه الوحدةِ سأتدرّبُ - إن شاء اللهُ - على الخطوتين الأولى والثانيةِ: أستطلعُ وأسألُ.</p>
+      </div>
+
+      <div class="section-title">إستراتيجيّةُ الخطواتِ الخمسِ</div>
+      <div class="verb-chain">
+        <div class="verb-chip"><strong>١ أستطلعُ</strong></div>
+        <div class="verb-chip"><strong>٢ أسألُ</strong></div>
+        <div class="verb-chip"><strong>٣ أقرأُ</strong></div>
+        <div class="verb-chip"><strong>٤ أستذكرُ</strong></div>
+        <div class="verb-chip"><strong>٥ أراجعُ</strong></div>
+      </div>
+
+      <div class="lesson-item" style="margin-top:14px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num">١</div>
+          <div class="lesson-item-text">
+            <h3>الجزءُ الأولُ: الاستطلاعُ</h3>
+            <p>أستطلعُ نصَّ «الخلق» وأضعُ عنوانًا لكلِّ فقرةٍ</p>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lessonU1L6P1Btn" type="button">ابدأ الجزء</button>
+      </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num">٢</div>
+          <div class="lesson-item-text">
+            <h3>الجزءُ الثاني: الأسئلةُ مفاتيحُ المعرفةِ</h3>
+            <p>أدواتُ السؤالِ، وقصةُ السلحفاةِ: عنوانٌ وسؤالٌ لكلِّ فقرةٍ</p>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lessonU1L6P2Btn" type="button">ابدأ الجزء</button>
+      </div>
+      <div class="lesson-item" style="margin-top:12px;">
+        <div class="lesson-item-top">
+          <div class="lesson-item-num">٣</div>
+          <div class="lesson-item-text">
+            <h3>الجزءُ الثالث: أُطبّقُ الخطوتين معًا</h3>
+            <p>قصةُ التفّاحةِ: عنوانٌ وسؤالٌ لكلِّ فقرةٍ</p>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-inline" id="lessonU1L6P3Btn" type="button">ابدأ الجزء</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-lessonU1L6P1">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill">الاستراتيجية القرائية — الجزء الأول</span>
+        <h1>الاستطلاعُ: أخذُ فكرةٍ عامّةٍ عن النصِّ</h1>
+        <p>اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3>ما الاستطلاعُ؟</h3>
+          <p>قراءةٌ سريعةٌ لأجزاءِ النصِّ البارزةِ (العنوانِ، العناوينِ الجانبيّةِ، السطرِ الأولِ من كلِّ فقرةٍ، الكلماتِ البارزةِ، الرسومِ والصورِ والجداولِ المصاحبةِ للنصِّ ...)؛ وذلك لأخذِ فكرةٍ عامّةٍ عن النصِّ.</p>
+          <span class="example">الهدفُ: فكرةٌ عامّةٌ عن النصِّ قبل قراءتِه</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3>كيف أستطلعُ النصَّ؟</h3>
+          <p>أُلقي نظرةً سريعةً على الأجزاءِ الرئيسةِ في النصِّ. وإذا لم يكن للنصِّ عناوينُ جانبيّةٌ وضعتُ عنوانًا لكلِّ فقرةٍ، فعنوانُ الفقرةِ بمثابةِ الفكرةِ الرئيسةِ لها.</p>
+          <span class="example">بهذا أعرفُ: عن أيِّ شيءٍ يتحدّثُ النصُّ، وعن أيِّ شيءٍ تتحدّثُ كلُّ فقرةٍ فيه</span>
+        </div>
+      </div>
+
+      <div class="section-title">✏️ أُطبّقُ: أستطلعُ نصَّ «الخلق»</div>
+      <div class="text-box">
+        <h2>الخُلُقُ</h2>
+        <p>الخُلُقُ هو شعورُ الإنسانِ أنّه مسؤولٌ أمامَ نفسِه عمّا يجبُ أن يفعلَ؛ لذلك لا أُسمّي الكريمَ كريمًا حتى تتساوى عندَه صدقةُ السرِّ وصدقةُ العلانيةِ، ولا الرحيمَ رحيمًا حتى يبكيَ قلبُه قبلَ أن تبكيَ عيناهُ، ولا الصادقَ صادقًا حتى يصدقَ في أفعالِه كصدقِه في أقوالِه.</p>
+        <p>لا ينفعُ الإنسانَ أن يكونَ مانعُه من الشرِّ خوفَه من العقابِ، وإنّما ينفعُه أن يكونَ ضميرُه هاديَه الذي يهتدي به في طريقِ حياتِه.</p>
+        <p>الخُلُقُ هو الدمعةُ التي تسيلُ في عينِ الرحيمِ كلّما وقعتْ عينُه على منظرِ الفقرِ والشقاءِ.</p>
+        <p>الخُلُقُ هو العرقُ الذي ينحدرُ من جبينِ الحييِّ خجلًا أمامَ السائلِ المحتاجِ الذي لا يستطيعُ ردَّه، ولا يستطيعُ معونتَه.</p>
+        <p>هو الصرخةُ التي يصرخُها الشجاعُ في وجهِ مَن يجترئُ على إهانةِ وطنِه، أو العبثِ بكرامةِ قومِه.</p>
+        <p>وخلاصةُ القولِ أنّ الخُلُقَ هو أداءُ الواجبِ لذاتِه، بصرفِ النظرِ عمّا يترتّبُ عليه من النتائجِ؛ فمَن أرادَ أن يُعلّمَ الناسَ مكارمَ الأخلاقِ فليُحيِ ضمائرَهم، وليُثبّتْ في نفوسِهم الشعورَ بالرغبةِ في الفضيلةِ والنفورِ من الرذيلةِ.</p>
+        <p class="src">من كتاب العبرات لمصطفى لطفي المنفلوطي (بتصرّف).</p>
+      </div>
+      <div class="section-title">🧩 عناوينُ الفقراتِ (مقترحةٌ)</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4>الفقرةُ الأولى («الخلقُ هو شعورُ الإنسانِ ...»)</h4>
+          <p>مفهومُ الخلقِ (العنوانُ الواردُ في الكتابِ).</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ الثانيةُ («لا ينفعُ الإنسانَ ...»)</h4>
+          <p>الضميرُ الهادي.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقراتُ: الدمعةُ، والعرقُ، والصرخةُ</h4>
+          <p>مظاهرُ الخلقِ: الرحمةُ والحياءُ والشجاعةُ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ الأخيرةُ («وخلاصةُ القولِ ...»)</h4>
+          <p>خلاصةُ الخلقِ: أداءُ الواجبِ لذاتِه.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtnU1L6P1" type="button">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-lessonU1L6P2">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill">الاستراتيجية القرائية — الجزء الثاني</span>
+        <h1>الأسئلةُ مفاتيحُ المعرفةِ والإبداعِ</h1>
+        <p>اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3>الأسئلةُ مفاتيحُ المعرفةِ والإبداعِ</h3>
+          <p>نستخدمُ أدواتِ السؤالِ لنفهمَ النصَّ ونفكّرَ فيه: ما، متى، أين، كم، كيف، مَن، لماذا.</p>
+          <span class="example">كلُّ أداةٍ تسألُ عن شيءٍ مختلفٍ</span>
+        </div>
+        <div class="concept-card c-verb">
+          <h3>كيف أصوغُ سؤالًا مناسبًا عن فقرةٍ؟</h3>
+          <p>١) أستطلعُ الفقرةَ (أتصفّحُها). ٢) أضعُ لها عنوانًا إن لم يكن لها عنوانٌ. ٣) أعتمدُ على عنوانِ الفقرةِ في صياغةِ السؤالِ. ٤) أضعُ أسئلةً أخرى قد أراها مناسبةً من خلالِ استطلاعي النصَّ.</p>
+        </div>
+      </div>
+
+      <div class="section-title">❓ ماذا تسألُ كلُّ أداةٍ؟</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4>«ما»</h4>
+          <p>للسؤالِ عن الشيءِ أو الحدثِ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>«متى»</h4>
+          <p>للسؤالِ عن الزمانِ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>«أين»</h4>
+          <p>للسؤالِ عن المكانِ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>«كم»</h4>
+          <p>للسؤالِ عن العددِ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>«كيف»</h4>
+          <p>للسؤالِ عن الحالِ أو الطريقةِ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>«مَن»</h4>
+          <p>للسؤالِ عن الشخصِ.</p>
+        </div>
+        <div class="sentence-card">
+          <h4>«لماذا»</h4>
+          <p>للسؤالِ عن السببِ.</p>
+        </div>
+      </div>
+
+      <div class="section-title">✏️ أُطبّقُ: قصةُ السلحفاةِ</div>
+      <div class="text-box">
+        <h2>قصةُ السلحفاةِ</h2>
+        <p>١) وجدَ ولدٌ سلحفاةً تزحفُ في الحديقةِ، وعندما حملَها أدخلتِ السلحفاةُ رأسَها وأطرافَها داخلَ درعِها خوفًا من الولدِ، فأخذَ الولدُ عصًا وأرادَ فتحَ الدرعِ بالقوّةِ، فقالَ له أبوهُ: لا بدَّ أن تكونَ رحيمًا بالحيواناتِ.</p>
+        <p>٢) أخذَ الأبُ السلحفاةَ ووضعَها قربَ المدفأةِ، وبعدَ قليلٍ أخرجتِ السلحفاةُ رأسَها وأطرافَها من الدرعِ وزحفتْ على الأرضِ بهدوءٍ.</p>
+        <p>٣) قالَ الأبُ: الناسُ يا بنيَّ كالسلحفاةِ، فلا تحاولْ إرغامَ إنسانٍ على فعلِ شيءٍ، بل لاطفْه وأظهرْ له عطفَك تجدْ أنّه يفعلُ ما تريدُ.</p>
+        <p>٤) قالَ الولدُ: صدقتَ يا أبي، حسنُ التعاملِ مطلوبٌ مع جميعِ المخلوقاتِ، أمرَ اللهُ به - سبحانَه - واستجابَ له المخلوقُ.</p>
+        <p class="src">قصةٌ من كتابِ الطالبِ (الاستراتيجيةُ القرائيّةُ، أطبّقُ ٢).</p>
+      </div>
+      <div class="section-title">🧩 عنوانٌ وسؤالٌ لكلِّ فقرةٍ (مقترحٌ)</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4>الفقرةُ ١: «العنفُ»</h4>
+          <p>السؤالُ: ما الطريقةُ التي استخدمَها الولدُ كي يُخرجَ السلحفاةَ من درعِها؟ (الواردُ في الكتابِ)</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٢: «اللطفُ»</h4>
+          <p>السؤالُ: ماذا فعلَ الأبُ كي تخرجَ السلحفاةُ من درعِها؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٣: «الناسُ كالسلحفاةِ»</h4>
+          <p>السؤالُ: بمَ شبّهَ الأبُ الناسَ؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٤: «حسنُ التعاملِ مع المخلوقاتِ»</h4>
+          <p>السؤالُ: مَن أمرَ بحسنِ التعاملِ مع جميعِ المخلوقاتِ؟</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtnU1L6P2" type="button">ابدأ الألعاب التفاعلية</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-lessonU1L6P3">
+    <div class="card">
+      <div class="lesson-head">
+        <span class="eyebrow-pill">الاستراتيجية القرائية — الجزء الثالث</span>
+        <h1>أُطبّقُ الخطوتين معًا</h1>
+        <p>اقرأ الشرح جيدًا قبل الانتقال إلى الألعاب والتمارين</p>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-card c-noun">
+          <h3>خطّتي في القراءةِ</h3>
+          <p>أستطلعُ القصةَ، وأضعُ عنوانًا لكلِّ فقرةٍ يلخّصُ فكرتَها، ثم أصوغُ سؤالًا عن كلِّ فقرةٍ معتمدًا على عنوانِها.</p>
+          <span class="example">أستطلعُ ← أضعُ عنوانًا ← أسألُ</span>
+        </div>
+      </div>
+
+      <div class="section-title">✏️ أُطبّقُ: قصةُ التفّاحةِ</div>
+      <div class="text-box">
+        <h2>قصةُ التفّاحةِ</h2>
+        <p>١) يُحكى أنّ ولدينِ طمّاعينِ كانا يتنزّهانِ في طريقٍ بينَ البساتينِ الجميلةِ، وبينما هما يسيرانِ ويتحدّثانِ، مرَّ بهما فلّاحٌ يجرُّ حمارَه، يحملُ عليه نتاجَ بستانِه، وبيدِه تُفّاحةٌ كبيرةٌ.</p>
+        <p>٢) كانَ الفلّاحُ كريمًا ... فلمّا شاهدَ الولدينِ سلّمَ عليهما، وقدّمَ لهما التفّاحةَ ومضى مستعجلًا، وهو يظنُّ أنّهما صديقانِ يحبُّ أحدُهما الآخرَ ... وأنّهما سيتقاسمانِ التفّاحةَ بالتساوي.</p>
+        <p>٣) قالَ الولدُ الذي تناولَ التفّاحةَ: إنّها لي. وقالَ الآخرُ: إنّ الفلّاحَ أعطانا إيّاها جميعًا.. ولو أعطاكَها وحدَك لقالَ: هي لك، وأرادَ أن ينتزعَها منه، وتنازعا طويلًا وكانَ كلُّ واحدٍ منهما يريدُ الاستئثارَ بها دونَ الآخرِ.</p>
+        <p>٤) اتّفقا أن يحتكما إلى أوّلِ إنسانٍ يمرُّ بهما، ولكنَّ كلَّ واحدٍ منهما كانَ يفكّرُ بحيلةٍ ليأخذَ التفّاحةَ كلَّها لنفسِه. وطالَ انتظارُهما، ولم يمرَّ بهما أحدٌ، وأخذا يتشاجرانِ ويتعاركانِ وحاولَ كلٌّ منهما التقاطَها أثناءَ الشجارِ، ولكنَّ التفّاحةَ سقطتْ في النهرِ القريبِ منهما.</p>
+        <p>٥) مرَّ عندَ ذلك رجلٌ فصلَ بينهما وسألَهما عن سببِ الخلافِ، فلمّا قصّا عليه القصّةَ وهما يتألّمانِ، ضحكَ منهما وقالَ: هذا جزاءُ الطمعِ، ولو أحبَّ كلٌّ منكما الآخرَ لاستفادَ. فعن أنسٍ رضي الله عنه أنّ النبيَّ ﷺ قالَ: «لا يؤمنُ أحدُكم حتى يحبَّ لأخيه ما يحبُّ لنفسِه» (رواه مسلم، رقم ٤٥).</p>
+        <p class="src">د. شوقي أبو خليل ونزار أباظة: حكايات من تراث الطفولة، دار الفكر، دمشق، سوريا.</p>
+      </div>
+      <div class="section-title">🧩 عنوانٌ وسؤالٌ لكلِّ فقرةٍ (مقترحٌ)</div>
+      <div class="sentence-grid">
+        <div class="sentence-card">
+          <h4>الفقرةُ ١: «نزهةُ الولدينِ»</h4>
+          <p>السؤالُ: مَن مرَّ بالولدينِ؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٢: «كرمُ الفلّاحِ»</h4>
+          <p>السؤالُ: ماذا قدّمَ الفلّاحُ للولدينِ؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٣: «التنازعُ على التفّاحةِ»</h4>
+          <p>السؤالُ: لماذا تنازعَ الولدانِ؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٤: «الاحتكامُ والشجارُ»</h4>
+          <p>السؤالُ: أين سقطتِ التفّاحةُ؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الفقرةُ ٥: «جزاءُ الطمعِ»</h4>
+          <p>السؤالُ: ماذا قالَ الرجلُ للولدينِ؟</p>
+        </div>
+        <div class="sentence-card">
+          <h4>الحديثُ الشريفُ</h4>
+          <p>«لا يؤمنُ أحدُكم حتى يحبَّ لأخيه ما يحبُّ لنفسِه»: يعلّمُنا أن نحبَّ للآخرين ما نحبُّ لأنفسِنا، فلا طمعَ ولا شجارَ.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="toGamesBtnU1L6P3" type="button">ابدأ الألعاب التفاعلية</button>
     </div>
   </section>
 
@@ -1967,6 +2232,13 @@ const I18N = {
     u1l5P3D: "قصةٌ عن الكذبِ أو النميمةِ أو الغيبةِ، تُبيّنُ خاتمتُها العاقبةَ الوخيمةَ على صاحبِها وعلى المجتمعِ الذي يعيشُ فيه.",
     adviceTahlil: "راجع التفريقَ بين الأمرِ والنهيِ والخبرِ في الآياتِ، وبين الفعلِ الماضي والمضارعِ والأمرِ.",
     adviceUslub: "راجع أسلوبَ التفضيلِ: «الصمتُ أفضلُ من الكلامِ بلا فائدةٍ»، و«القراءةُ أنفعُ من العبثِ بالهاتفِ».",
+    adviceIstitlaa: "راجع الاستطلاعَ: نظرةٌ سريعةٌ على العنوانِ والعناوينِ الجانبيّةِ والصورِ والجداولِ، وعنوانُ الفقرةِ هو فكرتُها الرئيسةُ.",
+    adviceKhuluqText: "راجع نصَّ «الخلق»: مفهومُ الخلقِ، والضميرُ الهادي، ومظاهرُ الخلقِ، والخلاصةُ: أداءُ الواجبِ لذاتِه.",
+    adviceAsila: "راجع أدواتِ السؤالِ: ما، متى، أين، كم، كيف، مَن، لماذا، وأعتمدُ على عنوانِ الفقرةِ في صياغةِ السؤالِ.",
+    adviceTurtle: "راجع قصةَ السلحفاةِ: العنفُ لا يفتحُ الدرعَ، واللطفُ يجعلُها تخرجُ، والناسُ كالسلحفاةِ.",
+    adviceApple: "راجع قصةَ التفّاحةِ: كرمُ الفلّاحِ، ثم التنازعُ، ثم سقوطُ التفّاحةِ في النهرِ، ثم قولُ الرجلِ: هذا جزاءُ الطمعِ.",
+    adviceStrategy2: "راجع الخطوتين: أستطلعُ، ثم أضعُ عنوانًا لكلِّ فقرةٍ، ثم أصوغُ سؤالًا اعتمادًا على العنوانِ.",
+    adviceHadithLove: "راجع الحديثَ: «لا يؤمنُ أحدُكم حتى يحبَّ لأخيه ما يحبُّ لنفسِه» رواه مسلم.",
     adviceKhuluqVerse: "راجع آيةَ ﴿وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ﴾: وُصِفَ بها النبيُّ ﷺ، و(إنّ) تفيدُ التوكيدَ.",
     retryBtn: "إعادة المحاولة",
     footer: "لغتي الجميلة — إعداد: الأستاذة أمل الحسن",
@@ -2842,6 +3114,51 @@ const QUESTIONS_U1L5 = [
 const ADVICE_KEY_U1L5 = { akhwa:"adviceAkhwa", sukhria:"adviceSukhria", zann:"adviceZann", taaruf:"adviceTaaruf", tahlil:"adviceTahlil", uslub:"adviceUslub" };
 
 /* =====================================================
+   Quiz data — Unit 1, Lesson 6 (الاستراتيجية القرائية) — الأجزاء ١ و٢ و٣
+   ===================================================== */
+const QUESTIONS_U1L6P1 = [
+  { q:{ ar:"الاستطلاعُ هو:" }, options:["قراءةٌ سريعةٌ لأجزاءِ النصِّ البارزةِ لأخذِ فكرةٍ عامّةٍ عنه", "حفظُ النصِّ كاملًا"], correct:0, category:"istitlaa" },
+  { q:{ ar:"من الأجزاءِ البارزةِ في النصِّ التي أستطلعُها:" }, options:["العنوانُ والعناوينُ الجانبيّةُ والصورُ والجداولُ", "آخرُ كلمةٍ في النصِّ فقط"], correct:0, category:"istitlaa" },
+  { q:{ ar:"إذا لم يكن للنصِّ عناوينُ جانبيّةٌ فإنّي:" }, options:["أضعُ عنوانًا لكلِّ فقرةٍ", "أتركُ النصَّ دونَ قراءةٍ"], correct:0, category:"istitlaa" },
+  { q:{ ar:"عنوانُ الفقرةِ بمثابةِ:" }, options:["الفكرةِ الرئيسةِ لها", "آخرِ جملةٍ فيها"], correct:0, category:"istitlaa" },
+  { q:{ ar:"بالاستطلاعِ أعرفُ:" }, options:["عن أيِّ شيءٍ يتحدّثُ النصُّ وكلُّ فقرةٍ فيه", "كم عددُ حروفِ النصِّ"], correct:0, category:"istitlaa" },
+  { q:{ ar:"عنوانُ الفقرةِ الأولى من نصِّ «الخلق»:" }, options:["مفهومُ الخلقِ", "رحلةٌ إلى السوقِ"], correct:0, category:"khuluq" },
+  { q:{ ar:"العنوانُ المناسبُ للفقرةِ التي تقولُ: «لا ينفعُ الإنسانَ أن يكونَ مانعُه من الشرِّ خوفَه من العقابِ»:" }, options:["الضميرُ الهادي", "الكرمُ والسخاءُ"], correct:0, category:"khuluq" },
+  { q:{ ar:"العنوانُ المناسبُ للفقراتِ التي تذكرُ الدمعةَ والعرقَ والصرخةَ:" }, options:["مظاهرُ الخلقِ", "قصةُ الحيوانِ"], correct:0, category:"khuluq" },
+  { q:{ ar:"خلاصةُ القولِ في النصِّ أنّ الخُلُقَ هو:" }, options:["أداءُ الواجبِ لذاتِه", "أداءُ الواجبِ طمعًا في النتائجِ"], correct:0, category:"khuluq" },
+  { q:{ ar:"نصُّ «الخلق» مأخوذٌ من كتابِ:" }, options:["العبراتِ للمنفلوطيِّ", "حكاياتٍ من تراثِ الطفولةِ"], correct:0, category:"khuluq" }
+];
+const ADVICE_KEY_U1L6P1 = { istitlaa:"adviceIstitlaa", khuluq:"adviceKhuluqText" };
+
+const QUESTIONS_U1L6P2 = [
+  { q:{ ar:"الأسئلةُ مفاتيحُ:" }, options:["المعرفةِ والإبداعِ", "الحفظِ فقط"], correct:0, category:"asila" },
+  { q:{ ar:"للسؤالِ عن المكانِ أستخدمُ:" }, options:["أين", "متى"], correct:0, category:"asila" },
+  { q:{ ar:"للسؤالِ عن الزمانِ أستخدمُ:" }, options:["متى", "كم"], correct:0, category:"asila" },
+  { q:{ ar:"للسؤالِ عن العددِ أستخدمُ:" }, options:["كم", "مَن"], correct:0, category:"asila" },
+  { q:{ ar:"للسؤالِ عن السببِ أستخدمُ:" }, options:["لماذا", "أين"], correct:0, category:"asila" },
+  { q:{ ar:"أعتمدُ في صياغةِ السؤالِ على:" }, options:["عنوانِ الفقرةِ", "لونِ الورقةِ"], correct:0, category:"asila" },
+  { q:{ ar:"من الأسئلةِ المناسبةِ للفقرةِ الأولى من قصةِ السلحفاةِ:" }, options:["ما الطريقةُ التي استخدمَها الولدُ كي يُخرجَ السلحفاةَ من درعِها؟", "كم عمرُ الأبِ؟"], correct:0, category:"turtle" },
+  { q:{ ar:"عنوانُ الفقرةِ الأولى في قصةِ السلحفاةِ:" }, options:["العنفُ", "اللطفُ"], correct:0, category:"turtle" },
+  { q:{ ar:"وضعَ الأبُ السلحفاةَ:" }, options:["قربَ المدفأةِ", "في النهرِ"], correct:0, category:"turtle" },
+  { q:{ ar:"قالَ الأبُ: الناسُ يا بنيَّ كـ:" }, options:["السلحفاةِ", "الجبلِ"], correct:0, category:"turtle" }
+];
+const ADVICE_KEY_U1L6P2 = { asila:"adviceAsila", turtle:"adviceTurtle" };
+
+const QUESTIONS_U1L6P3 = [
+  { q:{ ar:"مرَّ بالولدينِ:" }, options:["فلّاحٌ يجرُّ حمارَه", "تاجرٌ يركبُ فرسًا"], correct:0, category:"qissa" },
+  { q:{ ar:"كانتْ بيدِ الفلّاحِ:" }, options:["تُفّاحةٌ كبيرةٌ", "سلّةُ عنبٍ"], correct:0, category:"qissa" },
+  { q:{ ar:"قدّمَ الفلّاحُ التفّاحةَ للولدينِ وهو يظنُّ أنّهما:" }, options:["صديقانِ يتقاسمانِها بالتساوي", "أخوانِ يتخاصمانِ"], correct:0, category:"qissa" },
+  { q:{ ar:"قالَ الولدُ الذي تناولَ التفّاحةَ:" }, options:["إنّها لي", "إنّها لكَ"], correct:0, category:"qissa" },
+  { q:{ ar:"اتّفقَ الولدانِ أن يحتكما إلى:" }, options:["أوّلِ إنسانٍ يمرُّ بهما", "القاضي"], correct:0, category:"qissa" },
+  { q:{ ar:"سقطتِ التفّاحةُ في:" }, options:["النهرِ القريبِ", "البئرِ"], correct:0, category:"qissa" },
+  { q:{ ar:"قالَ الرجلُ الذي فصلَ بينهما:" }, options:["هذا جزاءُ الطمعِ", "هذا جزاءُ الكرمِ"], correct:0, category:"qissa" },
+  { q:{ ar:"العنوانُ المناسبُ للفقرةِ التي تحكي تنازعَ الولدينِ على التفّاحةِ:" }, options:["التنازعُ على التفّاحةِ", "كرمُ الفلّاحِ"], correct:0, category:"strategy" },
+  { q:{ ar:"السؤالُ المناسبُ للفقرةِ الأخيرةِ:" }, options:["ماذا قالَ الرجلُ للولدينِ؟", "كم عمرُ الفلّاحِ؟"], correct:0, category:"strategy" },
+  { q:{ ar:"الحديثُ الذي ختمتْ به القصةُ:" }, options:["«لا يؤمنُ أحدُكم حتى يحبَّ لأخيه ما يحبُّ لنفسِه»", "«إنّما الأعمالُ بالنيّاتِ»"], correct:0, category:"hadith" }
+];
+const ADVICE_KEY_U1L6P3 = { qissa:"adviceApple", strategy:"adviceStrategy2", hadith:"adviceHadithLove" };
+
+/* =====================================================
    Fishing game data (always Arabic — content to solve)
    ===================================================== */
 const FISH_ROUNDS_L1 = [
@@ -3030,6 +3347,49 @@ const FISH_ROUNDS_U1L5 = [
       {text:"التقوى", correct:false}, {text:"الإصلاحُ", correct:false}, {text:"التعارفُ", correct:false}
   ]}
 ];
+/* ---------- Unit 1, Lesson 6 fishing rounds ---------- */
+const FISH_ROUNDS_U1L6P1 = [
+  { target: "من أجزاءِ النصِّ البارزةِ", items: [
+      {text:"العنوانُ", correct:true}, {text:"العناوينُ الجانبيّةُ", correct:true}, {text:"الصورُ والجداولُ", correct:true},
+      {text:"حفظُ النصِّ كلِّه", correct:false}, {text:"نسخُ النصِّ", correct:false}, {text:"إهمالُ العنوانِ", correct:false}
+  ]},
+  { target: "عنوانٌ لفقرةٍ من نصِّ «الخلق»", items: [
+      {text:"مفهومُ الخلقِ", correct:true}, {text:"الضميرُ الهادي", correct:true}, {text:"مظاهرُ الخلقِ", correct:true},
+      {text:"رحلةٌ إلى السوقِ", correct:false}, {text:"أنواعُ الحيواناتِ", correct:false}, {text:"وصفُ الطقسِ", correct:false}
+  ]},
+  { target: "من الخطواتِ الخمسِ", items: [
+      {text:"أستطلعُ", correct:true}, {text:"أسألُ", correct:true}, {text:"أقرأُ", correct:true}, {text:"أستذكرُ", correct:true}, {text:"أراجعُ", correct:true},
+      {text:"أُهملُ", correct:false}
+  ]}
+];
+const FISH_ROUNDS_U1L6P2 = [
+  { target: "من أدواتِ السؤالِ", items: [
+      {text:"ما", correct:true}, {text:"متى", correct:true}, {text:"أين", correct:true},
+      {text:"في", correct:false}, {text:"على", correct:false}, {text:"ثمَّ", correct:false}
+  ]},
+  { target: "من أدواتِ السؤالِ", items: [
+      {text:"كم", correct:true}, {text:"كيف", correct:true}, {text:"مَن", correct:true}, {text:"لماذا", correct:true},
+      {text:"إلى", correct:false}, {text:"عن", correct:false}
+  ]},
+  { target: "سؤالٌ مناسبٌ عن قصةِ السلحفاةِ", items: [
+      {text:"ماذا فعلَ الأبُ؟", correct:true}, {text:"بمَ شبّهَ الأبُ الناسَ؟", correct:true}, {text:"كيف حاولَ الولدُ فتحَ الدرعِ؟", correct:true},
+      {text:"العنفُ", correct:false}, {text:"اللطفُ", correct:false}, {text:"حسنُ التعاملِ", correct:false}
+  ]}
+];
+const FISH_ROUNDS_U1L6P3 = [
+  { target: "عنوانٌ مناسبٌ لفقرةٍ من القصةِ", items: [
+      {text:"كرمُ الفلّاحِ", correct:true}, {text:"جزاءُ الطمعِ", correct:true}, {text:"التنازعُ على التفّاحةِ", correct:true},
+      {text:"رحلةٌ إلى المدرسةِ", correct:false}, {text:"يومٌ ماطرٌ", correct:false}, {text:"سباقُ الخيلِ", correct:false}
+  ]},
+  { target: "سؤالٌ مناسبٌ عن القصةِ", items: [
+      {text:"ماذا قدّمَ الفلّاحُ للولدينِ؟", correct:true}, {text:"أين سقطتِ التفّاحةُ؟", correct:true}, {text:"لماذا تنازعَ الولدانِ؟", correct:true},
+      {text:"الطمعُ", correct:false}, {text:"الكرمُ", correct:false}, {text:"التفّاحةُ الكبيرةُ", correct:false}
+  ]},
+  { target: "فعلَه الفلّاحُ", items: [
+      {text:"سلّمَ عليهما", correct:true}, {text:"قدّمَ لهما التفّاحةَ", correct:true}, {text:"مضى مستعجلًا", correct:true},
+      {text:"ضحكَ منهما", correct:false}, {text:"فصلَ بينهما", correct:false}, {text:"تشاجرَ معهما", correct:false}
+  ]}
+];
 const FISH_POS = {
   6:[{top:6,left:6},{top:10,left:58},{top:36,left:30},{top:42,left:76},{top:66,left:8},{top:74,left:54}],
   4:[{top:10,left:12},{top:16,left:60},{top:54,left:22},{top:64,left:64}]
@@ -3138,6 +3498,26 @@ const MEMORY_PAIRS_U1L5 = [
   { id:3, cat:"nominal", label:"ضدُّ «أجرٍ»",      instance:"إثمٌ" }
 ];
 
+/* ---------- Unit 1, Lesson 6 memory pairs ---------- */
+const MEMORY_PAIRS_U1L6P1 = [
+  { id:0, cat:"noun",    label:"«الخلقُ هو شعورُ الإنسانِ أنّه مسؤولٌ»",      instance:"مفهومُ الخلقِ" },
+  { id:1, cat:"verb",    label:"«لا ينفعُ الإنسانَ خوفُه من العقابِ»",         instance:"الضميرُ الهادي" },
+  { id:2, cat:"letter",  label:"الدمعةُ والعرقُ والصرخةُ",                      instance:"مظاهرُ الخلقِ" },
+  { id:3, cat:"nominal", label:"«الخلقُ هو أداءُ الواجبِ لذاتِه»",              instance:"خلاصةُ القولِ" }
+];
+const MEMORY_PAIRS_U1L6P2 = [
+  { id:0, cat:"noun",    label:"«مَن»",   instance:"السؤالُ عن الشخصِ" },
+  { id:1, cat:"verb",    label:"«أين»",   instance:"السؤالُ عن المكانِ" },
+  { id:2, cat:"letter",  label:"«متى»",   instance:"السؤالُ عن الزمانِ" },
+  { id:3, cat:"nominal", label:"«كم»",    instance:"السؤالُ عن العددِ" }
+];
+const MEMORY_PAIRS_U1L6P3 = [
+  { id:0, cat:"noun",    label:"«قدّمَ لهما التفّاحةَ ومضى مستعجلًا»",   instance:"كرمُ الفلّاحِ" },
+  { id:1, cat:"verb",    label:"«قالَ كلٌّ منهما: إنّها لي»",              instance:"التنازعُ على التفّاحةِ" },
+  { id:2, cat:"letter",  label:"«سقطتِ التفّاحةُ في النهرِ»",              instance:"الاحتكامُ والشجارُ" },
+  { id:3, cat:"nominal", label:"«لو أحبَّ كلٌّ منكما الآخرَ لاستفادَ»",    instance:"جزاءُ الطمعِ" }
+];
+
 let QUESTIONS = QUESTIONS_L1;
 let ADVICE_KEY = ADVICE_KEY_L1;
 let currentLessonSheetName = "أنواع الكلمة";
@@ -3157,7 +3537,6 @@ let currentCorrectIndices = [];
 function applyI18n(){
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  document.getElementById("langToggle").textContent = lang === "ar" ? "English" : "العربية";
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
     if (I18N[lang][key] !== undefined){
@@ -3280,6 +3659,18 @@ document.getElementById("lessonU1L4ReviewBtn").addEventListener("click", ()=>{
 });
 document.getElementById("lessonU1L5ReviewBtn").addEventListener("click", ()=>{
   showScreen("screen-lessonU1L5");
+});
+document.getElementById("lessonU1L6ReviewBtn").addEventListener("click", ()=>{
+  showScreen("screen-lessonU1L6");
+});
+document.getElementById("lessonU1L6P1Btn").addEventListener("click", ()=>{
+  showScreen("screen-lessonU1L6P1");
+});
+document.getElementById("lessonU1L6P2Btn").addEventListener("click", ()=>{
+  showScreen("screen-lessonU1L6P2");
+});
+document.getElementById("lessonU1L6P3Btn").addEventListener("click", ()=>{
+  showScreen("screen-lessonU1L6P3");
 });
 
 /* ---------- lesson 1 -> game1 ---------- */
@@ -3410,6 +3801,39 @@ document.getElementById("toGamesBtnU1L5").addEventListener("click", ()=>{
   QUESTIONS = QUESTIONS_U1L5;
   ADVICE_KEY = ADVICE_KEY_U1L5;
   currentLessonSheetName = "أخلاق المؤمنين";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- Unit 1, Lesson 6, Part 1 -> game1 ---------- */
+document.getElementById("toGamesBtnU1L6P1").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_U1L6P1;
+  MEMORY_PAIRS = MEMORY_PAIRS_U1L6P1;
+  QUESTIONS = QUESTIONS_U1L6P1;
+  ADVICE_KEY = ADVICE_KEY_U1L6P1;
+  currentLessonSheetName = "الاستراتيجية القرائية - الجزء الأول";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- Unit 1, Lesson 6, Part 2 -> game1 ---------- */
+document.getElementById("toGamesBtnU1L6P2").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_U1L6P2;
+  MEMORY_PAIRS = MEMORY_PAIRS_U1L6P2;
+  QUESTIONS = QUESTIONS_U1L6P2;
+  ADVICE_KEY = ADVICE_KEY_U1L6P2;
+  currentLessonSheetName = "الاستراتيجية القرائية - الجزء الثاني";
+  startFishGame();
+  showScreen("screen-game1");
+});
+
+/* ---------- Unit 1, Lesson 6, Part 3 -> game1 ---------- */
+document.getElementById("toGamesBtnU1L6P3").addEventListener("click", ()=>{
+  FISH_ROUNDS = FISH_ROUNDS_U1L6P3;
+  MEMORY_PAIRS = MEMORY_PAIRS_U1L6P3;
+  QUESTIONS = QUESTIONS_U1L6P3;
+  ADVICE_KEY = ADVICE_KEY_U1L6P3;
+  currentLessonSheetName = "الاستراتيجية القرائية - الجزء الثالث";
   startFishGame();
   showScreen("screen-game1");
 });
@@ -3781,12 +4205,6 @@ function sendToSheet(correct, total, pct){
     statusEl.className = "sheet-status err";
   });
 }
-
-/* ---------- language toggle ---------- */
-document.getElementById("langToggle").addEventListener("click", ()=>{
-  lang = lang === "ar" ? "en" : "ar";
-  applyI18n();
-});
 
 /* ---------- init ---------- */
 applyI18n();
